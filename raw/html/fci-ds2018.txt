@@ -1,0 +1,657 @@
+          First-Class Implementations
+
+    Climbing Up the Semantic Tower — At Runtime
+
+
+
+         François-René Rideau, TUNES Project
+
+
+
+
+         DeepSpec Summer School, 2018-07-23
+  http://fare.tunes.org/files/cs/fci-ds2018.pdf
+
+
+
+Based on my PhD thesis (completed in 2017, not defended)
+Also showed at OBT 2018, LambdaConf 2018
+                                                           1
+I. Implementations
+
+
+
+
+                     2
+I.1 A Universal Framework
+
+
+
+
+                            3
+You want a program
+
+
+
+
+                     4
+You have a PC
+
+
+
+
+                5
+You write an implementation
+
+
+
+
+                              6
+In the best possible language
+
+
+
+
+                                7
+The language itself has an implementation
+
+
+
+
+                                            8
+Specific dialects, implementations, versions...
+
+
+
+
+                                                  9
+Compiling is hard, use an IR...
+
+
+
+
+                                  10
+Programming is hard, use a DSL...
+
+
+
+
+                                    11
+What do you mean, x86?
+
+
+
+
+                         12
+There is no bottom!
+
+
+
+
+                      13
+Always finer divisions
+
+
+
+
+                         14
+Existing Semantic Formalisms to Unify
+
+Operational Semantics (Small Step)
+
+Operational Semantics (Big Step)
+
+Labeled Transition Systems
+
+Term Rewriting, Rewrite Logic
+
+Modal Logic, Hoare Logic, Refinement
+
+Partial Order
+
+Abstract State Machines
+
+Denotational Semantics reducing to the above
+
+Denotational Semantics with equational theory
+
+                                                15
+               Category Theory
+
+
+
+Universal: graphs, preorders, labeled transitions...
+
+Simple core: nodes, arrows, structure preservation
+
+Unlimited abstraction: always higher categories
+
+
+
+Structural theorems "for free"
+
+Types, Curry-Howard Isomorphism
+
+Seeking the essential: no incidental punning
+
+
+
+
+                                                       16
+        Computation as Categories
+
+Nodes: states of the computation
+Arrows: transitions between states, traces
+
+
+
+
+Figure conventions:
+- Computation progresses left to right
+- Effect label above, category (subset) below
+- Dotted lines for partiality and other effects
+                                                  17
+(Abstract) Interpretation
+
+
+
+
+                            18
+(Concrete) Implementation
+
+
+
+
+                            19
+I.2 Properties of Implementations
+
+
+
+
+                                    20
+Soundness
+
+
+
+
+            21
+Totality
+
+
+
+
+           22
+Completeness
+
+
+
+
+               23
+Liveness
+
+
+
+
+           24
+Observability (aka PCLSRing)
+
+
+
+
+                               25
+Observability (aka PCLSRing)
+
+
+
+
+       ... not composable!
+
+
+
+
+                               26
+Observability + Completeness
+
+
+
+
+         Composable!
+
+
+
+
+                               27
+II. First-class Implementations
+
+
+
+
+                                  28
+II.1 Protocol Extraction
+
+
+
+
+                           29
+        Protocol: Categories (in Agda)
+
+
+
+record Category … : Set … where …
+  field
+    Obj : Set …
+    _⇒_ : Rel Obj …
+    id : ∀ {A} → (A ⇒ A)
+    _∘_ : ∀ {A B C} → (B ⇒ C) → (A ⇒ B) → (A ⇒ C)
+  …
+
+   Showing fields with computational content
+
+   Many more fields for logical specification
+
+
+
+
+                                                    30
+    Protocol: Categories (in Haskell)
+
+
+class Cat s where
+  type Arr s :: *
+  dom :: (Arr s) ⟶ s
+  cod :: (Arr s) ⟶ s
+  idArr :: s ⟶ (Arr s)
+  composeArr :: (Arr s) ⟶ (Arr s) ⤏ (Arr s)
+
+
+
+Pure total functions: ⟶
+
+Effectful functions: ⤏ (partial, non-det…)
+
+
+
+
+                                              31
+Protocol: Operational Semantics
+
+
+
+
+   class (Cat s) ⇒ OpSem s where
+     run :: s ⤏ Arr s
+     done :: s ⟶ Bool
+     advance :: s ⤏ Arr s
+     eval :: s ⤏ Arr s
+
+
+
+
+                                   32
+         Protocol: Implementation
+
+
+
+
+    class Impl a c where
+      interpret :: c ⤏ a
+      interpretArr :: (Arr c) ⤏ (Arr a)
+
+
+
+So far, a (partial) functor from c to a
+
+Arr = pirate sound = functorial map
+
+
+
+
+                                          33
+Protocol: Totality
+
+
+
+
+implement :: a ⤏ c
+
+
+
+
+                     34
+       Protocol: Completeness
+
+
+
+
+implementArr :: c ⟶ (Arr a) ⤏ (Arr c)
+
+
+
+
+                                        35
+Protocol: Completeness (with Dependent Types)
+
+
+
+
+    implementArr :: c ⟶ (Arr a) ⤏ (Arr c)
+
+    implement⇒ : ∀ (c : C.o) {a a' : A.o}
+    (f : C.⇒ a a') {Φ.o c a} → ∃(λ {c' : C.o} →
+    ∃(λ (g : C.⇒ c c') → Φ.⇒ g f))
+
+
+
+                                                  36
+      Protocol: Liveness
+
+
+
+
+advanceInterpretation :: c ⤏ Arr c
+
+
+
+
+                                     37
+Protocol: Observability (PCLSRing)
+
+
+
+
+       safePoint :: c ⤏ Arr c
+
+     safeArrow :: Arr c ⤏ Arr c
+
+
+
+
+                                     38
+II.2 The Semantic Tower
+
+
+
+
+                          39
+      Compilation (1)
+
+
+
+
+implement :: (Impl a c) ⇒ a ⤏ c
+
+
+
+
+                                  40
+      Compilation (2)
+
+
+
+
+interpret :: (Impl a s) ⇒ s ⤏ a
+implement :: (Impl a c) ⇒ a ⤏ c
+
+
+
+
+                                  41
+           Compilation (3)
+
+
+
+
+u :: OpSem -- specify up to what rewrites
+interpret :: (Impl u s) ⇒ s ⤏ u
+implement :: (Impl u c) ⇒ u ⤏ c
+
+
+
+
+                                            42
+           Static Type Systems
+
+
+
+
+Subject reduction: T contains no exomorphisms
+
+
+                                                43
+Semantic Tower
+
+
+
+
+                 44
+The Tower is not Linear
+
+
+
+
+                          45
+III. Applications
+
+
+
+
+                    46
+III.1 Reconciling Reflection and Semantics
+
+
+
+
+                                             47
+         More reinterpretations...
+
+
+Aspect-Oriented Programming
+
+Erlang-style Fault Tolerance
+
+Developing, Refactoring
+
+Migration: Mobility, GC, JIT, Zero Copy, Reconfig...
+
+Dynamic Control: implicit IO, virtualization...
+
+Reflective Towers: Turtles all the way down...
+
+Interaction: Operating System Shell, IDE, ...
+
+Architecture: Meta-Objects, not reducible to libraries
+
+
+
+                                                         48
+     Fruitful change in Perspective
+
+
+
+
+Correctness
+
+Composability
+
+Runtime Optimization
+
+Retroactive Features
+
+Predictable Cost-Reduction
+
+
+
+
+                                      49
+      Requirement: Full Abstraction
+
+
+
+Computations have a clear opaque bottom:
+
+- It’s perfectly clear what the bottom is
+
+- The bottom is totally opaque
+
+
+
+Indeed, what’s below can change at runtime!
+
+Alternatively, include what’s "below" in the spec
+
+Needed: explicit language or system support
+
+
+
+
+                                                    50
+III.2 Natural Transformations of Implementations
+
+
+
+
+                                                   51
+                 Instrumentation
+
+
+Tracing, Logging, Stepping, Profiling
+
+Omniscient debugging, Comparative Debugging
+
+Code and Data Coverage
+
+Resource Accounting, Access Control
+
+Parallelization, Optimistic Evaluation
+
+Orthogonal persistence
+
+Virtualization
+
+Optimizations
+
+
+
+                                              52
+           Natural Transformation
+
+Twist: dual of nat. transf. on dual of (partial) funct.
+
+Adjunction: forget details added by the
+instrumentation
+
+
+
+Automatic Instrumentation
+
+Universal transformations
+
+Composable transformations
+
+Amenable to formal reasoning
+
+
+
+Open problem, but promiseful approach
+                                                          53
+Conclusion
+
+
+
+
+             54
+               Common Theme
+
+
+
+Programming in the Large, not in the Small
+
+
+
+Software Architecture that Scales
+
+
+
+Semantics matter
+
+
+
+Dimensions of Modularity beyond the usual
+
+
+
+
+                                             55
+           The Take Home Points
+
+Reason about Implementations: Category Theory!
+Observability: Key neglected concept — safe points
+
+
+
+Practical Protocol Extraction: First-Class Impl.
+Explore the Semantic Tower — at runtime!
+
+
+
+Principled Applications: Migration, etc.
+Natural Transformations generalize Instrumentation
+
+
+
+Runtime Reflection and Static Semantics
+Price: Full Abstraction, Observability, Interpretation
+                                                         56
+                   Challenge
+
+
+
+Put First-class Implementations in your platform
+
+
+
+Factor your software into meta-levels
+
+
+
+Develop Generic Tooling, Reflective Architecture
+
+
+
+     Enjoy simplification, robustness, security
+
+
+
+
+                                                   57
+                The Meta-Story
+
+My contribution is mostly not technical.
+
+It is more ambitious:
+
+
+
+
+                                           58
+                The Meta-Story
+
+My contribution is mostly not technical.
+
+It is more ambitious:
+
+    A change of point of view about computing
+
+
+
+My thesis (undefended):
+https://bit.ly/FarePhD
+My blog: https://ngnghm.github.io/
+Ancient: https://tunes.org/
+
+
+
+Legicash is hiring Coq developers
+Legicash is looking for Academic Collaborators
+                                                 59
+

@@ -1,0 +1,366 @@
+# Slides: SHU 2025
+
+- URL: https://fare.tunes.org/files/cs/poof/slides-2025-shu.html
+- Date: 2025
+- Fetched: 2026-10-01T22:09Z (pandoc)
+- Author: François-René Rideau (Faré)
+
+---
+
+[MuKn.com]
+
+Prototypes:
+Object-Orientation,
+Functionally
+
+ 
+
+                   fix = (λ (p t) (Y (λ (s) (p s t))))
+                   mix = (λ (p q) (λ (s u) (p s (q s u))))
+
+ 
+
+François-René Rideau <fare@mukn.com>
+Alex Knauth <alexander@knauth.org>
+Nada Amin <namin@seas.harvard.edu>
+
+http://github.com/metareflection/poof
+
+ 
+
+SHU 2025-03-21
+
+ 
+
+PgDn: next
+
+PgUp: previous
+
+↑ ↓ ← → ESC ⏎
+
+Touchscreen: swipe down until you must swipe right
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- 
+- Introduction: In Lieu of a Presentation
+- Why Pure Functional Prototype OO ?
+- Prototype OO in a Nutshell
+- Conclusion: Paradigm War and Peace
+
+Introduction: In Lieu of a Presentation
+
+The Talk I Won’t be Giving Today
+
+Redo of Scheme Workshop 2021
+
+Redo of LambdaConf 2024
+
+In Depth Presentation of Prototypes
+
+In Depth Much Anything
+
+Computer Science
+
+Introduction: In Lieu of a Presentation
+
+The Talk I’ll Be Giving Instead
+
+Extension of NJPLS 2023
+
+Why care about Prototype OO
+
+A Taste of Prototype OO
+
+Insights learned along the way
+
+Computing Arts
+
+Introduction: In Lieu of a Presentation
+
+What OO is not about
+
+Classes
+
+“Encapsulation”, “Information Hiding”
+
+Inheritance vs Composition, OO vs FP
+
+Mutation everywhere
+
+Message Passing everywhere
+
+Introduction: In Lieu of a Presentation
+
+What OO is about
+
+Modularity: limited knowledge in
+
+Incrementality: limited knowledge out
+
+... Intralinguistically
+
+A way to organize software development
+
+... to support Division of Labor
+
+Introduction: In Lieu of a Presentation
+
+Prototype OO
+
+Proto: KRL'75 Ani'76 ThingLab'77 T'83 Self'85 JS'95
+
+Class: Simula'67 Smalltalk'76 Flavors'79 C++'79 Java'96
+
+OO w/o Classes… sometimes w/o Objects!
+
+Not as well known, yet more fundamental
+
+(λ (self super) body ...)
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- 
+- Introduction: In Lieu of a Presentation
+- Why Pure Functional Prototype OO ?
+- Prototype OO in a Nutshell
+- Conclusion: Paradigm War and Peace
+
+Why Pure Functional Prototype OO ?
+
+Great for Semantic Insight
+
+OO semantics simplest & clearest
+
+More fundamental than Class OO
+
+Simplest OO types — and no simpler
+
+Laziness, statefulness, modularity
+
+Add OO to your language under 100 loc!
+
+Why Pure Functional Prototype OO ?
+
+Great for System Configuration
+
+GCL (2004), Jsonnet (2014), Nix (2015)…
+
+From single computers to distributed systems
+
+Mixins offer or use methods, incremental specification
+
+Large graph where every node is an extension point
+
+Global open recursion, not just local
+
+Why Pure Functional Prototype OO ?
+
+Great for Runtime Type Descriptors
+
+GUI, QuickCheck, Codecs
+
+Neatly decouples values from their interpretation
+
+Dynamic configurations, User-definable, Composable
+
+Tries in 10x less code than Go, 2x less than OCaml
+
+Lightweight, my first code atop any dynamic language
+
+Why Pure Functional Prototype OO ?
+
+Class OO is but Prototype OO at type-level
+
+Class = Proto Type
+
+… JS has Prototypes!
+
+Squint and all OO is Prototypes
+
+… C++ templates are Pure Functional Prototype OO
+
+Use Prototypes & you can do all OO and more
+
+Why Pure Functional Prototype OO ?
+
+This very Presentation!
+
+Pure functional, declarative
+
+Prototype for slides w/ toc in ~125 loc
+
+FP + OO system in 350 loc including autocurry macros
+
+How can the toc include yet-unwritten section titles?
+
+… demo time?
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- 
+- Introduction: In Lieu of a Presentation
+- Why Pure Functional Prototype OO ?
+- Prototype OO in a Nutshell
+- Conclusion: Paradigm War and Peace
+
+Prototype OO in a Nutshell
+
+OO from Scratch
+
+Prototypes: Incremental Modular Specification
+
+(λ (self ; Instance being specified (modularity)
+                super) ; Partial Instance so far (incrementality)
+                …) ; compute a more elaborate partial instance
+
+Mixin Inheritance: compose prototypes!
+More expressive than single-inheritance, and simpler (with HOFs)
+
+Prototype OO in a Nutshell
+
+OO in Two lines
+
+fix = p t) (Y (λ (s) (p s t))))
+mix = (λ (p q) (λ (s u) (p s (q s u))))
+
+instantiate = λ mixin base ↦
+                   Y (λ (self) (mixin self base))
+inherit = λ child parent ↦ λ self super ↦
+                   child self (parent self super)
+
+child, parent: mixins
+self: complete instance            super: partial instance
+
+Prototype OO in a Nutshell
+
+Objects
+
+Just did OO without Objects! (This presentation)
+
+Conflation:      Object = Prototype × Instance
+
+Why? Modular extension points
+
+Confusion: conflation w/o distinction, vocabulary conflict
+
+Abstract vs Concrete Class = Prototype vs Instance
+
+Prototype OO in a Nutshell
+
+Unexpected Insights
+
+Computations vs Values... Laziness matters
+
+Subclassing cannot be subtyping
+
+Pure OO comes before Stateful OO
+
+Multiple inheritance more modular than mixin
+
+Global open loop, library curation — also for classes
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- 
+- Introduction: In Lieu of a Presentation
+- Why Pure Functional Prototype OO ?
+- Prototype OO in a Nutshell
+- Conclusion: Paradigm War and Peace
+
+Conclusion: Paradigm War and Peace
+
+Why did I care about Prototype OO?
+
+Great Usenet Flamewars of OO vs FP
+
+Dysfunctional Programming vs
+                   Objectionable Disorientation
+
+Talking Past Each Other… for Decades
+
+1970s Lisp had both (2000s Scala: with types)
+
+The paper I wished I could have read younger
+
+Conclusion: Paradigm War and Peace
+
+Why So Much Blindness?
+
+Industry doesn’t care enough about Correctness
+
+Academia doesn’t understand Programming In The Large
+
+Both like to ignore the Human Factor
+
+All get stuck in their paradigms
+
+Opposition in mindset, not in logic
+
+Conclusion: Paradigm War and Peace
+
+Two Mindsets
+
+Compositionality for reducible problems
+
+Incrementality for irreducible problems
+
+Brighter than ambitious vs more ambitious than bright
+
+History: OO invented to model complex SIMULAtions
+
+History: FP to formalize computations down their simplest
+
+Conclusion: Paradigm War and Peace
+
+Inhabiting Constraints — But Which?
+
+Every task involves constraint,
+
+Solve the thing without complaint;
+
+There are magic links and chains
+
+Forged to loose our rigid brains.
+
+Structures, strictures, though they bind,
+
+Strangely liberate the mind.
+
+— James Falen, as quoted by dughof
+
+Conclusion: Paradigm War and Peace
+
+Meta-Thesis
+
+Humility, not fanaticism
+
+Incommensurable paradigms? Go wider!
+
+Simplicity matters — so does Complexity
+
+Paradigm: “Systems” vs “Programming Language”
+
+Scheme: λ’s for Semantics, macros for Syntax
+
+Conclusion: Paradigm War and Peace
+
+Thank You!
+
+Theory:          https://github.com/metareflection/poof
+
+Practice:       Gerbil Scheme https://cons.io
+
+X: https://x.com/ngnghm Blog: https://ngnghm.github.io
+
+Hire me — or be hired by me!       <fare@mukn.com>
+
+Plenty more research ideas, code and papers to write…

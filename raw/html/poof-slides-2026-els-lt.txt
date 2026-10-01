@@ -1,0 +1,131 @@
+[cube]
+
+Lambda, the Ultimate Object
+
+Object-Orientation Elucidated <fare@mukn.com>
+
+ 
+
+François-René Rideau <fare@mukn.com>
+
+https://github.com/metareflection/poof
+
+ 
+
+European Lisp Symposium 2026-05-12
+
+ 
+
+PgDn: next
+
+PgUp: previous
+
+↑ ↓ ← → ESC ⏎
+
+Touchscreen: swipe down until you must swipe right
+
+Lambda, the Ultimate Object
+
+Lambda the Ultimate Object
+
+Object-Orientation Elucidated
+
+So far: >10 chapters, >300 pages,
+>200 annotated bibliography entries.
+
+Claude proofreads (finds bugs!) — helps with exercises!
+
+Need help with last technical chapter (efficiency, MOP)
+
+Lambda, the Ultimate Object
+
+1st Third: Informal
+
+1. Introduction: About the Book
+
+2. What Object-Orientation is — Informal Overview
+
+3. What Object-Orientation is not
+
+4. OO as Internal Extensible Modularity
+
+Lambda, the Ultimate Object
+
+2nd Third: Proper Formal Reconstruction
+
+5. Minimal OO
+
+6. Rebuilding OO from its Minimal Core
+
+7. Inheritance: Mixin, Single, Multiple, or Optimal
+
+8. Types for OO
+
+Lambda, the Ultimate Object
+
+Last Third: Advanced + Closing
+
+9. Extending the Scope of OO
+
+10. Efficient Object Implementation
+
+11. Conclusion
+
+Annotated Bibliography
+
+Lambda, the Ultimate Object
+
+Why a Book on OO ?
+
+30 years too late
+
+Yet still decades ahead
+
+Ideas unknown or under-known (even to Lispers!)
+
+Yes CLOS is far ahead overall...
+but not everywhere (FIX THAT!)
+
+Lambda, the Ultimate Object
+
+Maybe new for Lispers
+
+Pure functional approach, laziness, lenses.
+
+Examples in pure Scheme with autocurrying
+
+Magic formula (with autocurrying):
+(def (fix m t) (Y (m t))
+(def (mix p c t s) (c (p t s) s))
+
+NB: Gerbil Scheme builtin objects are stateful
+(but also pure prototype library)
+
+Lambda, the Ultimate Object
+
+C4 Algorithm
+
+C3 is *objectively* better than CLOS linearization
+(Dylan, Python, Perl...)
+
+You can mix "classes and structs"
+(Ruby, Scala).
+
+Both together: C4.
+
+Implemented in Gerbil Scheme.
+(I had Claude do it in C++ templates)
+
+Challenge: make it (optional) default in SBCL(?)
+
+Lambda, the Ultimate Object
+
+Thank You!
+
+Slides:          github.com/metareflection/poof
+
+Join me:       Gerbil Scheme https://cons.io
+
+Blog: ngnghm.github.io     X: x.com/ngnghm
+
+Hire me:       <fahree@gmail.com>

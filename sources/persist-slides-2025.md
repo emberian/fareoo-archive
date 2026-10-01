@@ -1,0 +1,594 @@
+# Orthogonal Persistence talk slides, LambdaConf 2025-05-12
+
+- URL: https://fare.tunes.org/files/cs/persist/slides-2025-lambdaconf.html
+- Date: 2025-05-12
+- Fetched: 2026-10-01T22:09Z (pandoc html->plain)
+- Author: François-René Rideau (Faré)
+
+---
+
+[Mutual Knowledge Systems]
+
+Orthogonal Persistence:
+the Model
+
+ 
+
+François-René Rideau <fare@mukn.com>
+
+http://github.com/mighty-gerbils/gerbil-persist
+
+ 
+
+LambdaConf 2025-05-12
+
+ 
+
+PgDn: next
+
+PgUp: previous
+
+↑ ↓ ← → ESC ⏎
+
+Touchscreen: swipe down until you must swipe right
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Prelude: Orthogonal Persistence?
+
+A Simple Story (1)
+
+  -----------------------------
+  [panel 1][panel 2][panel 3]
+  -----------------------------
+
+Prelude: Orthogonal Persistence?
+
+A Simple Story (2)
+
+  -----------------------------
+  [panel 4][panel 5][panel 6]
+  -----------------------------
+
+Prelude: Orthogonal Persistence?
+
+Persistence
+
+Persistence is when your data survives
+
+Failure model: what does it survive?
+
+Unexpected: power loss, accident, hack, theft, fire, war
+
+Expected: hardware and software end-of-life
+
+Prelude: Orthogonal Persistence?
+
+Orthogonal
+
+Orthogonal: independent from what the program specifies
+
+The system, not the application, persists data
+
+System programmers do it once for all of everyone’s data
+
+Rather than reinvented differently by every application
+
+Prelude: Orthogonal Persistence?
+
+Old Tech Made New Again
+
+OODB 1980s-now: Lisp, Smalltalk, C++, Java…
+
+1980s-1990s: EUMEL, Grasshopper, EROS…
+
+Funding dried 2000s-2010s
+
+Today “Durable Execution”. Renewed research.
+
+Me: From my good old HP28 to ORMs to this vision
+
+Prelude: Orthogonal Persistence?
+
+Thesis (Technical)
+
+Orthogonal Persistence (OP) is the Right Thing™
+
+Persisting Processes simplifies everything else
+
+Database Transactions are the wrong Abstraction
+
+OP completely solves many problems, elevates the rest
+
+Prelude: Orthogonal Persistence?
+
+Thesis (Socio-Economical)
+
+Orthogonal Persistence is Economically Inevitable
+
+OP will drastically change Software Architecture
+
+OP will disrupt existing Business Models
+
+OP will improve Division of Labor
+
+… a Great Business Opportunity TODAY
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Today: Fractal Transience
+
+Disappointing Users’ Natural Assumption
+
+My mom’s book database
+
+Who never lost data to no/bad/lost backups?
+
+C-x C-s in my fingers
+
+“If I didn’t mean for the computer to remember it,
+I wouldn’t type it”
+
+… But don’t modern Apps autopersist data?
+
+Today: Fractal Transience
+
+Vendor Lock-In Persistence
+
+Easy case only: won’t sync across devices, accounts…
+
+Product Cancellation, Change of Ownership, Bankruptcy
+
+Forced Code Upgrade or Lack Thereof
+
+Data Hostage: Pay Bills & Pray Vendor Healthy
+
+Today: Fractal Transience
+
+Developers: Hard Mode
+
+Computers, processes, etc., start empty
+
+Explicitly save and restore all data
+
+Storage Zoo: FS, DB, Web, DVCS…
+
+Fake it the hard way, and leave mess to Admin
+
+Today: Fractal Transience
+
+Hard Problems
+
+Managing Many Out-of-Sync Copies
+
+Fragile Backups
+
+Schema Upgrades
+
+Merging or Splitting Data
+
+Today: Fractal Transience
+
+What If...?
+
+Persistence was the default
+
+No more vendor lock-in
+
+Developers don’t have to care... except specialists
+
+Hard problems are made easier somehow?
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Orthogonal Persistence for Users
+
+It’s Just There
+
+Data “just” persists - Running Processes, too
+
+Code runs in ambient “domain” - persistent VM/container
+
+Interaction (e.g. Editing Document), not “Apps”
+
+Caveat: Subscribe to Backup Storage Provider
+
+Orthogonal Persistence for Users
+
+Example Domains
+
+(me (work (client1 client2 client3 hr))
+         (home (accounting kids cooking diy))
+         (secret (cia kgb mossad))
+         (love (wife lover1 lover2)))
+
+Orthogonal Persistence for Users
+
+Domains
+
+User Creates Sub-Domains
+
+Origin Domain Validates Copy Out / Share Out
+
+Destination Domain Validates Paste In / Share In
+
+Resource Accounting, Backup Configuration
+
+Orthogonal Persistence for Users
+
+Activities
+
+Edit Document, Interact at will
+
+Always Saved, auto retention of old version
+
+Not always publishable
+
+Share some versions with some people, one way or both
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Orthogonal Persistence for Developers
+
+Just Do It
+
+Variables and Processes “just” persist, can be shared
+
+No more save and restore, copy and send
+
+Eliminate 30%-70% of all code — just for variables
+
+Processes may no longer fail mid-invariant
+
+Orthogonal Persistence for Developers
+
+Capabilities
+
+Photo App: save... over net... download extensions
+
+Transient System: App can compromise everything
+
+Persistent System: App can only edit given picture
+
+Wider Reflective Capability Architecture
+
+Orthogonal Persistence for Developers
+
+Security Improvement
+
+Narrower target on which to focus limited resources
+
+Fewer things to get wrong
+
+Smaller attack surface
+
+Flag whoever reaches for forbidden capabilities as hostile
+
+... whether code is written by humans or AI!
+
+Orthogonal Persistence for Developers
+
+Full Abstraction
+
+Strong Separation of concerns
+
+App developer not allowed to see how data is persisted
+
+Persistence Implementer not allowed to see data
+
+User or Admin can configure service and providers
+
+Orthogonal Persistence for Developers
+
+Backup Configuration
+
+All data encrypted with use-once salt
+
+Add/Remove Provider... independent worldwide replicas
+
+Management layer handles RAID replication
+
+Financial layer plans (un)subscriptions
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Programming Model for Fractal Transience
+
+Transient Programming Languages Sucks
+
+PL: Everything is Transient—especially processes
+
+Complex storage protocols
+
+Atomicity super hard
+
+Persistence relies on wetware conventions
+
+Programming Model for Fractal Transience
+
+Databases are Bad (1)
+
+Atomicity, but very bad Package Deal
+
+Terrible programming languages
+
+Horrible Data Model: Everything is a Table, except…
+
+Horrible Evaluation Model: client/server split, speculation…
+
+Programming Model for Fractal Transience
+
+Databases are Bad (2)
+
+No eff* way to persist processes or user-defined code
+
+Databases themselves don’t persist
+
+Databases don’t (de)compose
+
+Rigid Capabilities, Rigid Schema
+
+Programming Model for Fractal Transience
+
+System Myopia
+
+A programming language without good data persistence is
+for toy computations about irrelevant data.
+
+A database without a good programming language is
+for toy data not part of any relevant computation.
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Programming Model for Orthogonal Persistence
+
+Transactions are Bad
+
+Require Global Knowledge
+
+Don’t Compose
+
+Always too small or too big
+
+Low Level Concept, no one wants to use
+
+... Necessary because processes don’t persist
+
+Programming Model for Orthogonal Persistence
+
+Anti-Transactions are Good
+
+“Don’t transact here”, a.k.a. Critical Section
+
+Section itself small, code that uses it large
+
+Local Knowledge Only, Composable
+
+High-Level Concept, already used everywhere
+
+... Possible because processes do persist
+
+Programming Model for Orthogonal Persistence
+
+Don’t Commit, Synchronize
+
+Local constraint, easily automated
+
+Always persist transaction before to send
+
+Just like memory barriers in modern processors
+
+High-Level Concept, already used everywhere
+
+Programming Model for Orthogonal Persistence
+
+Domains are Good
+
+Works with your data model, your execution model, your PL
+
+Identity not tied to a disk, machine, vendor, etc.
+
+Dynamically add or remove backends
+
+Dynamically join (sub)Domains in consensus
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Decoupling Issues from Persistence
+
+Never Save and Copy, Publish and Share
+
+Never Save, Tag Stable Versions
+
+Never Copy and Modify, Fork Versions
+
+Never Copy and Send, Publish and Share
+
+Never Forget, Cache and Remember
+
+Decoupling Issues from Persistence
+
+Never get OOM, manage quotas
+
+Stop processes & escape to metasystem
+
+Adjust and Restart: increase quota, GC, fix bug…
+
+Meta: Predict usage, anticipate increase
+
+Remember correlation of live code and data
+
+Decoupling Issues from Persistence
+
+Never Migrate, Upgrade and Reconfigure
+
+All Schema, Backends will eventually get obsolete
+
+Schema Upgrade support in PL, testing
+
+Reconfigure backends, no lock-in to hw, sw, vendor
+
+Normal operations, not million-dollar crises
+
+Decoupling Issues from Persistence
+
+Never Corrupt, Maintain
+
+No Corruption-prone yet Static language
+
+Low-level or transient code in isolated VMs within Domain
+
+Live systems to cultivate, not dead programs to throw away
+
+Debug using reflection within version forks
+
+Orthogonal Persistence, the Model
+
+Plan of the Talk
+
+- Prelude: Orthogonal Persistence?
+- Today: Fractal Transience
+- Orthogonal Persistence for Users
+- Orthogonal Persistence for Developers
+- Programming Model for Fractal Transience
+- Programming Model for Orthogonal Persistence
+- Decoupling Issues from Persistence
+- Conclusion: Consequences of Orthogonal Persistence
+
+Conclusion: Consequences of Orthogonal Persistence
+
+Thesis (Recap)
+
+Orthogonal Persistence (OP) is the Right Thing™
+
+Persisting Continuations simplifies everything else
+
+Transactions are the wrong abstraction
+
+OP completely solves many problems, elevates the rest
+
+Conclusion: Consequences of Orthogonal Persistence
+
+Different Software Architecture
+
+Reflection, Capabilities, Versioning, Upgrade, Consensus…
+
+Pervasive changes throughout all system
+
+Change mindset from PL to System Paradigm
+
+Run legacy code in managed VMs
+
+Conclusion: Consequences of Orthogonal Persistence
+
+Economic Implications: New Markets
+
+Documents and Modules, not Apps
+
+Local Code, not Spying Advertising App Servers
+
+Competing Blind Storage, not Vertical Monopolies
+
+Admins answer to Users, not to App Vendors
+
+Conclusion: Consequences of Orthogonal Persistence
+
+Social Implications: Better Division of Labor
+
+Users: Empowered, Refocused—Can Delegate Admin
+
+Developers: Less Repetition, More Specialization
+
+Providers: Breaking Vertical Monopolies
+
+Defenders: Better Control on Smaller Attack Surfaces
+
+Conclusion: Consequences of Orthogonal Persistence
+
+Orthogonal Persistence’s Time Has Come!
+
+Whoever makes it usable first will redefine the industry
+
+Model: https://github.com/mighty-gerbils/gerbil-persist
+
+X: https://x.com/ngnghm
+Blog: https://ngnghm.github.io
+
+Opportunities: <fare@mukn.com>

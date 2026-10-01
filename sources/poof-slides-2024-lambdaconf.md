@@ -1,0 +1,831 @@
+# Slides: LambdaConf 2024
+
+- URL: https://fare.tunes.org/files/cs/poof/slides-2024-lambdaconf.html
+- Date: 2024
+- Fetched: 2026-10-01T22:09Z (pandoc)
+- Author: François-René Rideau (Faré)
+
+---
+
+[Mutual Knowledge Systems]
+
+Prototypes:
+Object-Orientation,
+Functionally
+
+ 
+
+                   build = λ b m ↦ Y (m b)
+                   inherit = λ p c u s ↦ c (p u s) s
+
+ 
+
+François-René Rideau <fare@mukn.com>
+
+http://github.com/metareflection/poof
+
+ 
+
+LambdaConf 2024-05-06
+
+ 
+
+PgDn: next
+
+PgUp: previous
+
+↑ ↓ ← → ESC ⏎
+
+Touchscreen: swipe down until you must swipe right
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Prelude: OO vs FP?
+
+Language Wars: OO vs FP
+
+Talking Past Each Other… for Decades
+
+FP in Ivory Towers, OO in Industrial Slums
+
+Videos, Books, Courses… all wrong
+
+“Incommensurable paradigms” (Gabriel)
+
+Prelude: OO vs FP?
+
+Reluctant Peace: OO and FP
+
+Yet, in practice: mutual adoption!
+
+Modern OO languages adopted (limited) FP
+
+Modern FP languages adopted (limited) OO
+
+… Lisp: both unlimited since ~1976
+
+Prelude: OO vs FP?
+
+OO for FP
+
+FP is my tribe — probably yours
+
+Vast evidence that OO matters
+
+To elucidate its semantics — use FP
+
+Expand our Paradigm
+
+Prelude: OO vs FP?
+
+Scheme Workshop 2021 Paper
+
+Why OO matters — Incremental Modularity
+
+What OO is — Constructive Semantics in FP
+
+Demystify fundamental concepts of OO
+
+Prototypes before Classes, Purity before Mutation
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Introduction: Wherefore OO?
+
+What OO isn’t about
+
+Classes
+
+“Encapsulation”, “Information Hiding”
+
+Inheritance vs Composition
+
+Mutation everywhere
+
+Message Passing everywhere
+
+Introduction: Wherefore OO?
+
+What OO is about
+
+Modularity: limited knowledge in
+
+Incrementality: limited knowledge out
+
+... Intralinguistically
+
+A way to organize software development
+
+... to support Division of Labor
+
+Introduction: Wherefore OO?
+
+How OO does it
+
+Ad Hoc Polymorphism: Existentially Quantified Types
+
+Open Recursion: Compose Operators before Fixed-Point
+
+... as First-Class (or Second-Class) Entities
+
+A way to factor software
+
+... in impressionist strokes
+
+Introduction: Wherefore OO?
+
+Incremental Specification
+
+[Inheritance diagram for Integer-Keyed AVL Tree]
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Minimal OO: Mixin Functions
+
+Simplest OO Concept
+
+Target = data structures and algorithms to specify
+
+Spec = modular increment of specification
+
+build :: Base → Spec → Target
+
+inherit :: Spec → Spec → Spec
+
+Minimal OO: Mixin Functions
+
+Mixins: Simplest Spec, modeled as function…
+
+Input 1: (Incrementality) partial target so far as inherited
+Input 2: (Modularity) complete target as referenced
+Output: (Building) further elaborated target as defined
+
+type Spec = Target → Target → Target
+
+We call specs-as-functions “mixins” (or “mixins functions”)
+
+mymixin = λ super self ↦ extend super …
+
+Minimal OO: Mixin Functions
+
+Challenge: Typing Mixins
+
+type Spec = Target → Target → Target
+
+Problem: input 1 and output are partial targets
+
+Easy Solution / Workaround: use dynamic types
+
+type Target = String → Any
+
+Minimal OO: Mixin Functions
+
+Subtyping
+
+type Mixin inherited referenced defined =
+       inherited → referenced → inherited⋂defined
+
+Such type correctly cover what methods are available…
+
+But fail to account for fixed-point on self parameter…
+
+So methods that involve self-reference must be dynamically typed
+
+Minimal OO: Mixin Functions
+
+Subtyping plus higher types
+
+type Mixin inherited referenced defined =
+       ∀ self ⊂ (referenced self),
+             ∀ super ⊂ (inherited self) ⇒
+                   super → self → super⋂(defined self)
+
+No more confusion of inheritance and subtyping
+
+Minimal OO: Mixin Functions
+
+Minimal Kernel for Mixin Functions
+
+type Mixin i r d = ∀ s ⊂ (r s), ∀ t ⊂ (i s) ⇒
+       t → s → t⋂(d s)
+
+build :: top → Mixin (K top) gen gen → Y gen
+build = λ base mixin ↦ Y (mixin base)
+
+inherit :: Mixin i1 r1 d1 → Mixin i2⋂d1 r2 d2 →
+       Mixin i1⋂i2 r1⋂r2 d1⋂d2
+inherit = λ parent child super self ↦
+       child (parent super self) self
+
+Minimal OO: Mixin Functions
+
+Where are my methods?
+
+OO is usually about key-value records
+
+Record = Product of indexed types
+
+Dictionary mapping String to dependent type
+
+method, attribute, field, var, slot, property, member…
+
+You can (and often do) have records without OO!
+
+Minimal OO: Mixin Functions
+
+Record (whether Target or not, untyped)
+
+rtop = λ _ ↦ error "No such method"
+rcons = λ key val rest msg ↦
+       if msg == key
+             then val
+             else rest msg
+
+point = rcons "a" 3 (rcons "b" 4 rtop)
+
+point "a"    ⟶   3
+
+Minimal OO: Mixin Functions
+
+Incremental Specification of Records
+
+Mixin to define one key-value record binding:
+
+kv = λ key val super self ↦
+       rcons key val super
+
+point = build rtop
+       (inherit (kv "b" 4) (kv "a" 3))
+
+point "a"    ⟶   3
+
+Minimal OO: Mixin Functions
+
+Specifying a Non-Constant Value
+
+method = λ key fun super self ↦
+       rcons key (fun (super key) self) super
+
+fudgeX = method "x"
+       λ next self ↦ (self "fudge") * next
+multXY = method "p"
+       λ _ self ↦ (self "x") * (self "y")
+
+Minimal OO: Mixin Functions
+
+Mixins as simplest functional model for OO
+
+Theory: Bracha & Cook, “Mixins” 1990 (w/ records)
+
+Practice: Jsonnet 2014, Nix 2015 (w/ records, untyped)
+
+Types: Oliveira 2009 (w/o records)
+
+Plenty of less simple, less pure precedents
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Inheritance
+
+Inheritance: The Essence of OO
+
+Composing mixins before fixed-point
+
+What distinguishes OO from non-OO
+
+Limited by how well you support subtyping
+
+3 flavors: Single- Mixin- or Multiple-
+
+Inheritance
+
+Mixin Inheritance: The First shall be Last
+
+Simplest form of inheritance… given FP
+
+Relies on higher-order functions, fixed-points, laziness
+
+Requires more elaborate subtypes than usual for FP
+       … or dynamic types, unpopular within FP
+
+Historically discovered last ’90
+
+Used in StrongTalk 1993, PLT Scheme GUI 2006
+
+Inheritance
+
+Single Inheritance: Historical First
+
+type Gen self = self → self
+buildGen :: Gen self → self
+buildGen = Y
+inheritGen :: Gen s → Mixin s t t → Gen s⋂t
+inheritGen = λ parent mixin self ↦
+       mixin (parent self) self
+
+“prefix class” in Simula ’67, Smalltalk ’71
+
+Inheritance
+
+Mixin Inheritance beats Single
+
+Single inheritance can apply mixins, not compose them
+
+Add one mixin at a time at the end of a prefix list
+
+Mixin Inheritance: write mixin once, use many
+
+More for less: More expressive, more incremental
+
+(… Matters because mixins are second-class, at type-level)
+
+Inheritance
+
+Problem: Mixin Dependencies
+
+[c3 linearization example]
+
+Pre-composing mixins is wrong
+[O] [O E] [O D] [O B] [O E O D O B K2]
+[O E O D O B K2 O D O A K3 O B O A O C K1 Z]
+
+Post-composing mixins decreases modularity
+
+Inheritance
+
+Keep Mixin Dependencies Modular?
+
+What if you change a node ?
+
+Manual curation:
+             - users must update when dependencies change
+             - users must track transitive dependencies
+
+Modularity: implementation computes precedence list
+             - users needn’t update when dependencies change
+             - users need only track direct dependencies
+
+Inheritance
+
+Not a Problem for Single Inheritance
+
+Single Inheritance too inexpressive to have the issue
+
+Only one direct super, no duplicate transitive super
+
+prefix property: super’s precedence list is a prefix
+
+⚠️ precedence list often in reverse order, most specific first
+
+Inheritance
+
+Multiple Inheritance beats Mixin
+
+[c3 linearization example]
+
+Automatically linearize the DAG into a precedence list
+
+e.g. [O E D B A C K2 K3 K1 Z]
+
+Inheritance
+
+Multiple Inheritance: Precedence Lists
+
+easy precedence lists: [O] [O A] [O B] [O C]
+
+bad precedence lists:
+                     [O B O A O C K1]
+                     [O A B C D E K1 K2 K3 Z]
+
+C3: preserve coherence properties
+                     [O B A C K1]
+                     [O E D B K2 A K3 C K1 Z]
+
+Inheritance
+
+Combining Multiple and Single Inheritance
+
+Specs with “prefix” property enable optimizations
+
+CLOS: “class” vs “struct” — Scala: “trait” vs “class”
+
+C4: additional coherence property for “prefix” specs
+
+Optimal combination — implemented in Gerbil Scheme
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+OO with(out) Objects
+
+Specifications: OO without Objects
+
+So far, no Class, no Object!
+
+Only Spec (no record) and Target (no inheritance)
+
+Sufficient to produce… these slides
+
+Yet, we recognize (almost?) all of OO
+
+Entire Field a Misnomer… “Inheritance” > “OO”
+
+OO with(out) Objects
+
+Targets beyond Records
+
+Specs for arbitrary “Records”,
+       … with very different representations
+
+Specs for numerical functions, for integers, etc.
+
+But Records allow intermediate aspects of any type
+       … without weird low-level encodings
+
+OO with(out) Objects
+
+Modular Extensibility
+
+Spec for a vast DAG of Records
+
+Which records in the DAG are extension points?
+
+None | Exponential explosion | All of them
+
+Or maybe stage all extensions before computation?
+
+OO with(out) Objects
+
+Conflation: Proto = Spec × Target
+
+Ubiquitous Extensibility at every level
+
+Every “Prototype” is both Spec and Target
+       Proto = Spec × Target
+
+Purity ⇒ Target unique up to observation
+
+THAT is what Prototype OO calls an “object”
+
+OO with(out) Objects
+
+Prototype OO
+
+An “object” (or “instance”) is a Prototype (for a Record)
+
+Prototype is first-class entity conflating Spec and Target
+
+ 
+
+Mutable: Director ’76, ThingLab ’77, T ’82, Self ’86, JS ’95
+
+Pure: Jsonnet 2014, Nix 2015
+
+OO with(out) Objects
+
+Conflation: Specs beyond Mixins
+
+multiple inheritance:
+       type Spec = Mixin × (List Spec)
+
+default values:
+       type Spec = Mixin × (List Spec) × Record
+
+More: “No Such Message” handler, Assertions, Types…
+
+OO with(out) Objects
+
+Conflation: Targets beyond Records
+
+Target can be Conflation of Record, Function, etc.
+
+Callable objects (Smalltalk, T, CLOS, C++, Scala, Java, etc.)
+
+Proxies for any “kind” value
+
+“Pure OO”: No privileged builtins
+
+OO with(out) Objects
+
+Secret to Semantic Simplicity
+
+Recognizing two distinct entities, Spec and Target
+
+Conflation without Distinction = Confusion
+       Lack of awareness ⇒ formalizations that miss the point
+
+Conflation with Distinction = Simplicity
+       “reasonable” semantics, superior ergonomics
+
+Jsonnet (2014) [“Components” in T (1982)]
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Class = Proto Type
+
+Where are the Classes?
+
+Simula ’67, Smalltalk, C++, CLOS, Java, C#, Python…
+
+So much in common with Prototype OO… yet so different!
+
+Is Class OO even the same paradigm?
+
+What relationship between Prototypes and Classes?
+
+Class = Proto Type
+
+Type descriptors!
+
+Target = descriptor for Type and functions (SML module)
+
+Spec = add or override methods for Type
+
+… all at the type-level, at compile-time!
+
+Spec vs Target = Abstract Class vs Concrete Class
+
+Class = Proto Type
+
+Class OO
+
+An “object” (or “instance”) is
+       an element of a Class (seen as its Target Type)
+
+A class is a second-class Prototype for a Type
+
+ 
+
+Mutable: Simula ’67, Smalltalk ’71, Flavors ’82, C++ ’85
+
+Pure: OCaml(?) ’96, OOHaskell 2005
+
+Class = Proto Type
+
+From Type Descriptor to Type
+
+Staging, Existential types, Dependent types…
+
+Most PLs have limited type-level computations
+
+Mixin- vs Single- vs Multiple- inheritance matters
+
+Singleton Class a bit like Prototype, but lacking dynamism
+
+Class = Proto Type
+
+Class vs Typeclass
+
+Class vs Typeclass, vtable vs “dictionary”
+
+Pre-vtable constructor vs burden of dictionary
+
+Type-directed synthesis as meta-level computation
+
+Haskell Typeclasses: good modularity, bad incrementality
+
+Automated translation, see LIL (2012)
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+(Im)Pure Challenges
+
+Pure Functional Specs and Targets
+
+Eager Y: only function targets, no sharing, recomputations
+
+Lazy Y: any (delayed) value, sharing, no recomputations
+
+Target as Computation vs Value (CBPV 1999)
+
+Fixed-Point as co-inductive vs inductive
+
+(Im)Pure Challenges
+
+Pure? Identity for DAG
+
+Multiple Inheritance in Nix: no === for DAG
+
+Unique tag: non-determinism? side-effect?
+
+“Solutions”: State? Monads? Opaque tag? Explicit labels?
+
+Labeling convention: moving computation to wetware
+
+(Im)Pure Challenges
+
+Issues with Side-Effects
+
+Many targets for a same spec? Cloning vs Sharing?
+       Dynamically modify a super? a list of supers?
+
+Class OO: all prototypes are pure… at compile-time
+
+Linearity: more Optimizations, harder Enforcement
+
+Caching: more Sharing, harder Invalidation
+
+(Im)Pure Challenges
+
+Pure? Non-local specification increments
+
+Multimethods, Mutually recursive classes, Friend classes?
+
+Haskell problem: orphan typeclass targets
+
+Hack: side-effect global table, hope for no conflict
+
+Nix solution: the Open Loop is Global
+
+(Im)Pure Challenges
+
+Advanced OOP, purely?
+
+Optics: generalize method to use lens
+
+Advice, CLOS, AOP, before/after/around methods
+
+Method combination: list, and, +, or user-specified
+
+Any advanced topic in OOP?
+
+Prototypes: Object-Orientation, Functionally
+
+Plan of the Talk
+
+- Prelude: OO vs FP?
+- Introduction: Wherefore OO?
+- Minimal OO: Mixin Functions
+- Inheritance
+- OO with(out) Objects
+- Class = Proto Type
+- (Im)Pure Challenges
+- Conclusion: OO is FP
+
+Conclusion: OO is FP
+
+Scheme Workshop 2021 Paper
+
+Why OO matters — Incremental Modularity
+
+What OO is — Constructive Semantics in FP
+
+Demystify fundamental concepts of OO
+
+Prototypes before Classes, Purity before Mutation
+
+Conclusion: OO is FP
+
+Key Concepts
+
+Incrementality & Modularity… intralinguistically
+
+Mixin Functions, composed not just applied
+
+Multiple inheritance:     modular dependencies
+
+Conflation:      Proto target = Spec target × target
+
+Class = Proto Type
+
+Conclusion: OO is FP
+
+Why did I care about Prototype OO?
+
+Great Usenet Flamewars of OO vs FP
+
+Talking Past Each Other… for Decades
+
+Lisp had it all the 1970s
+
+The paper I wished I could have read younger
+
+Conclusion: OO is FP
+
+Why So Much Blindness?
+
+Industry doesn’t care enough about Correctness
+
+Academia doesn’t understand Programming In The Large
+
+Both ignore the Human Factor
+
+All get stuck in their paradigms
+
+Conclusion: OO is FP
+
+Inhabiting Constraints — But Which?
+
+Every task involves constraint,
+
+Solve the thing without complaint;
+
+There are magic links and chains
+
+Forged to loose our rigid brains.
+
+Structures, strictures, though they bind,
+
+Strangely liberate the mind.
+
+— James Falen, as quoted by dughof
+
+Conclusion: OO is FP
+
+Meta-Thesis
+
+Humility, not fanaticism
+
+Incommensurable paradigms? Go wider!
+
+Simplicity matters
+
+λ’s for Semantics, macros for Syntax
+
+Conclusion: OO is FP
+
+Thank You!
+
+Theory:          https://github.com/metareflection/poof
+
+Practice:       https://github.com/fare/gerbil-poo
+
+OO in 30 loc — 80 loc with multiple inheritance
+
+Hire me!       <fare@mukn.com>
