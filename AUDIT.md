@@ -11,7 +11,8 @@ theorems move) and a falsifier.
 What I read (nothing was built or run; I wrote nothing outside `~/dev/fareoo`):
 
 - Mac: `/Users/ember/dev/claudesplosion/planning/{DATAMODEL,PLACE,SURPASS,EVAL,COMPUTE,DEOS,PRIVACY,MUD,CHANNELS}.md`,
-  `SESSION-STATE.md` (head), `planning/place/p-templates.md`, `planning/privacy/k-narrow-hide.md`.
+  `SESSION-STATE.md` (head), `planning/place/{p-templates,k-room-3c}.md`, `planning/privacy/k-narrow-hide.md`.
+  (COMPUTE and CHANNELS: scope note, verdict and headings only — neither changes a finding.)
 - persvati (read-only, over ssh), `P/` = `/home/ember/build/mini-datamodel-20260930/final-warm-b/src`
   at `7961b345` (UMBRELLA-SPLIT): `README.md`, `PROJECT.md`, `ATLAS.md`, `docs/DURABLE-STORE.md`,
   `docs/DISTRIBUTED-DESIGN.md`, `Kernel/World.lean`, `Kernel/ResourceTransaction.lean`,
@@ -111,9 +112,16 @@ A policy source carries `previous : Option Digest` and `Successor` demands
 `version = head.version + 1 ∧ previous = some head.address` (`P/Theory/PolicyInstall.lean:30-52`).
 That is a *version chain*: the new body is whole; nothing in it refers to the old body.
 Rooms: the room cell's law "governs *management*: who may add to the roster, who may
-delegate `under R`, whether the room may be re-lawed" (`PLACE.md` §2.1) — it does not
-reach the cells under the room; "the honest rostered law is *structural*" because "`Pred`
-cannot say 'request/subject ∈ roster fields' (no variable indexing)" (`PLACE.md` §2.1).
+delegate `under R`, whether the room may be re-lawed" (`PLACE.md` §2.1). On branch `k-room-3c` it also
+gates *placement*: "every birth into a room is now gated by the room's law" (a
+`placeObject` request judged by R's committed law at the admission height,
+`planning/place/k-room-3c.md` §"The birth gate"). After birth it does not reach the cell:
+"`TargetSet.RequestLaw` is `True` for `under`, and the controller evaluates the target's
+own law" (same file, §"The room-capability binding"). So a room's law is consulted once
+per child, at the door — the one existing instance of a parent's law bearing on a child,
+and the place K-LAW-INHERIT generalizes. "The honest rostered law is *structural*" because
+"`Pred` cannot say 'request/subject ∈ roster fields' (no variable indexing)" (`PLACE.md`
+§2.1).
 
 **READ.** The only composition available is syntactic: `Pred.all [p, q]` written by whoever
 holds both texts. P-TEMPLATES' laws are assembled exactly so — "the installed law
