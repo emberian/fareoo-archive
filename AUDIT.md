@@ -39,7 +39,12 @@ connectivity") with revocation as a theorem; every activity carries its own law;
 Lean admit function is the implementation, not a model beside one; sources are open; and
 the decision to referee compute by re-execution rather than by a proof system is the one
 Faré's Urbit chapter argues for a world of friends. Mini is *not* Houyhnhnm where Faré's
-principles are about *specification* — the half that is actually OO. A law is one closed
+principles are about *specification* — the half that is actually OO. In his own
+vocabulary (after Wegner): "I concur with Wegner (1987) in calling 'object-based' those
+languages and systems that provide internal modularity (first- or second-class) without
+internal modular extensibility, while reserving 'object-oriented' for languages that do
+also offer inheritance" (`ltuo` §3.2.3) — **Mini today is object-based**: cells with
+laws are first-class modules; nothing in the world extends anything else in the world. A law is one closed
 first-order `Pred` installed on one cell by replacement; it has no `self`, no `super`, no
 parents, and the only way for B to "extend A's law" is to copy A's JSON — a fork. Cell
 kinds, verbs, factory templates and evaluators are closed inductives and pinned profile

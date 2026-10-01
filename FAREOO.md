@@ -110,7 +110,11 @@ incapable of apprehending OO." (`ltuo` §2.1.1).
 Programming' without any actual object!" (`poof` §4.2.1); "Maybe the field should be
 named after Inheritance, or Prototypes, or Incremental Modularity, and banish the word
 'Object' forevermore from its name." (`eoomi` §5.2 OO without Objects). What *is* an
-object, when there is one, is §5 below (conflation).
+object, when there is one, is §5 below (conflation). And objects exist without OO: "I
+concur with Wegner (1987) in calling 'object-based' those languages and systems that
+provide internal modularity (first- or second-class) without internal modular
+extensibility, while reserving 'object-oriented' for languages that do also offer
+inheritance." (`ltuo` §3.2.3) — the demarcation this lane's audit turns on.
 
 **READ.** Generality: the instance need not be a record. "Prototypes are not just for
 records as functions from symbol to value: they can be used to incrementally specify
