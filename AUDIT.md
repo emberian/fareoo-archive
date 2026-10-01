@@ -219,6 +219,12 @@ BRAID-PROOF "flag days store encoding v2, resource view v5, at-height view v2, s
 schema v2"; `tickClock` "verb tag renumbered 7/13 → 11/17 because appendObject holds
 7/13" (`SESSION-STATE.md`, 10-01 entries).
 
+**READ.** The asymmetry in one sentence of his: "Anyone's second-class entities are
+someone else's first-class entities" (`ltuo` §4.4.5). Kinds, verbs and templates are
+first-class for whoever edits the Lean and rebuilds the Host, and second-class (kinds,
+verbs) or fourth-class (templates, name maps) for a friend at the shell. The finding is
+not that Mini lacks the entities; it is *who* holds them first-class.
+
 ### The scenario a friend hits
 
 C wants a "poll" in `commons`: a cell with options, one vote per member, closes at a
