@@ -71,7 +71,7 @@ so re-genesis keeps what it claims to keep by theorem rather than by shell scrip
 | 5 | points of view as lenses; same data, many interfaces (§13) | `Scope.fields` narrowing; hiding root; `view at`; observation ships whole cells; name maps live in template files | **FALLS SHORT** | name maps as cells (an "interface" cell); per-address openings (planned K-FIELDS/D1); a cell may be read under any interface whose addresses it holds | **5** |
 | 6 | conflation: the named thing is both value and spec (§5) | a cell id names a value; extending means re-lawing or re-birthing from a file | **FALLS SHORT** | follows from 1+2: a cell's law and kind are references to prototype cells; `create --from CELL` | (in 2) |
 | 7 | orthogonal persistence; no save; publish = tag + capability (§10) | Store = checkpoint + MAC-chained log of turns; `audit`; `view at`; signed observation under a capability | **AGREES** | — (per-document tagging as a capability on a version: PLACE/DEOS already) | — |
-| 8 | transactions vs atomic sections (§10) | a turn is a global atomic unit | **FORK**, Mini right | — (see §7.7) | — |
+| 8 | transactions vs atomic sections (§10) | a turn is a global atomic unit | **FORK**, Mini right | — (see §7.8) | — |
 | 9 | persistence of processes/continuations (§10) | cells persist; runners (Hermes, grains) are transient outside the kernel; Nock doors persist their state as a cell | **FALLS SHORT**, deliberately | doors as the model for every runner; no change proposed now | 7 |
 | 10 | kernel is as kernel does; no monopoly on invariants (§12) | one Host, one admit; laws decentralize enforcement; `installPolicy` is a verb; overrides are turns | **AGREES** mostly; **FORK** on the fixed bottom | the admit function as a turtle (a meta-world) — named, not scheduled | 8 |
 | 11 | platforms not applications; using is programming (§12) | one client; shell verbs are compositions; grains are instances; laws have a shell grammar | **AGREES**; templates are third-class | templates → prototype cells (finding 2) | — |
@@ -590,7 +590,28 @@ their 'normal' programming languages ... not ... a new minilanguage" (`ch09`); H
 uses "MCP tools = the client contract" (`DEOS.md` §0.1). Faré: "the difference between a
 programmer and a user, is that the programmer knows there is no difference" (`ch07`).
 
-### 7.7 Transactions — a FORK where Mini is right
+### 7.7 Typeclass style: behaviour is kept apart from data — AGREES in style, and it is why the fixes are cheap
+
+**READ.** Faré distinguishes "class style", where "each type element ... carries its own
+type descriptor", from "typeclass style", where "type descriptors and type elements are
+kept distinct and separate ... Type-descriptors are passed 'out of band'" (`ltuo`
+§6.2.4), and prefers the latter for exactly Mini's situation: it "works better when type
+descriptors applied to objects can be extended after those objects are defined" and "when
+the same pieces of data are being reinterpreted as elements of varying types ... that it
+does not make sense to re-conflate the entire data set with every change of point of
+view" (`ltuo` §6.2.4); his forecast is OO "in typeclass style more so than in class
+style" (`ltuo` §11.3.4). Mini is typeclass style throughout: a cell is a plain typed
+store with no behaviour in it (`P/Kernel/World.lean:60-62`); its kind is a registry
+role; its law is a policy addressed from the authority cell
+(`policyAddress : PolicyId → PolicyRevision → Digest`); a capability carries its
+`policyId`/`policyEpoch` out of band (`P/Theory/TypedAuthorization.lean:741-756`).
+And his caveat is the audit in one line: "Type descriptors can be used in any and all of
+those styles without any OO whatsoever" (`ltuo` §6.2.4) — which is where Mini is. The
+good news is structural: because the descriptors are already separate things with
+addresses, findings 1, 2 and 5 add *parents*, *world residence* and *alternates* to
+descriptors that exist; none of them asks cells to change shape.
+
+### 7.8 Transactions — a FORK where Mini is right
 
 **READ.** Faré: "Transactions are Bad: Require Global Knowledge, Don't Compose ...
 Necessary because processes don't persist" (`pslides`); his alternative is atomic sections
@@ -725,7 +746,7 @@ wants both: its default laws are ancestors (1) and its first re-genesis must car
 3 would mint kinds that the next flag day drops.
 
 What *not* to do: do not build the meta-world (finding 8) to satisfy "no fixed bottom";
-do not replace turns with atomic sections (§7.7); do not add a proof system to admission
+do not replace turns with atomic sections (§7.8); do not add a proof system to admission
 to satisfy "semantic tower" (§7.4 — Faré's argument runs the other way for friends); do
 not make `Pred` higher-order (his N3 argument and Mini's are the same).
 
