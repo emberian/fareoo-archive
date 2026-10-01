@@ -15,7 +15,8 @@ Citation key: `poof` = `sources/poof-paper.md` (Scheme Workshop 2021); `eoomi` =
 `sources/persist-slides-2025.md`; `lil` = `sources/lil-ilc2012.md`; `snapl` =
 `sources/snapl2015.md`; `chN` = `sources/houyhnhnm-chNN.md`; `todo` =
 `sources/poof-todo.md`; `gpoo` = `sources/gerbil-poo-prototypes.md`; `els26` =
-`sources/poof-slides-2026-els-src.md`. Tweets: `sources/tweets-oo.md` (see §0).
+`sources/poof-slides-2026-els-src.md`. Tweets: `sources/tweets-oo.md` (see §0). Quotes from the
+`*-src` slide sources are given with their Scribble markup (`@em{…}`, `@(br)`) stripped.
 
 ---
 
