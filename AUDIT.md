@@ -12,7 +12,8 @@ What I read (nothing was built or run; I wrote nothing outside `~/dev/fareoo`):
 
 - Mac: `/Users/ember/dev/claudesplosion/planning/{DATAMODEL,PLACE,SURPASS,EVAL,COMPUTE,DEOS,PRIVACY,MUD,CHANNELS}.md`,
   `SESSION-STATE.md` (head), `planning/place/{p-templates,k-room-3c}.md`, `planning/privacy/k-narrow-hide.md`.
-  (COMPUTE and CHANNELS: scope note, verdict and headings only — neither changes a finding.)
+  (COMPUTE and CHANNELS: scope note, verdict, headings, §2's object preamble and greps for
+  law/template/inherit/re-genesis — they corroborate finding 1 and change none.)
 - persvati (read-only, over ssh), `P/` = `/home/ember/build/mini-datamodel-20260930/final-warm-b/src`
   at `7961b345` (UMBRELLA-SPLIT): `README.md`, `PROJECT.md`, `ATLAS.md`, `docs/DURABLE-STORE.md`,
   `docs/DISTRIBUTED-DESIGN.md`, `Kernel/World.lean`, `Kernel/ResourceTransaction.lean`,
@@ -127,6 +128,19 @@ and the place K-LAW-INHERIT generalizes. "The honest rostered law is *structural
 holds both texts. P-TEMPLATES' laws are assembled exactly so — "the installed law
 `management ; law.player`" — by a Python renderer substituting placeholders into JSON
 files (`planning/place/p-templates.md`, "The grammar and the JSON agree").
+
+**READ — two corroborations.** (a) Reuse of a law today is by pattern: "The template is
+the purse. `AgentGrain.transitionPolicy` is a `Pred` that lists the admissible
+`(status before, status after)` edges ... A job is that, with a different table and one
+atom the purse does not have" (`COMPUTE.md` §2) — the job law is the purse law *retyped*,
+which is Faré's fourth class ("design patterns, as translated into code using editors,
+copy-paste", `ltuo` §4.1.2). (b) Composition by conjunction already exists one level
+up, where friends cannot reach it: the stream kind's registry law set is
+"`StreamLaw ∧ ChannelStoreLaw`" (`CHANNELS.md` §2, CH-EPOCH), and the kind-level
+`CellLaw` is "an invariant for loaded and FINAL post cells" checked beside the cell's own
+policy (`P/Compiler/CanonicalCellRegistry.lean:16-20`). So a cell is *already* judged by
+a conjunction of an ancestor-like law (its kind's) and its own — in Lean, second-class.
+K-LAW-INHERIT is that same combination made a thing in the world.
 
 ### The scenario a friend hits
 
