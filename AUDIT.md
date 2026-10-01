@@ -300,8 +300,9 @@ code upgrade thereby deny these issues, and leave their users helpless" (`ltuo` 
 
 **READ.** The doctrine is explicit and deliberate: "A 'flag day' here means a rebuild, not
 a migration ... make the old shape **refuse to load** rather than reinterpret"
-(`/Users/ember/dev/breadstuffs/CLAUDE.md`, inherited by Mini). The Store says so in its
-refusal table: "store holds a retired whole-image record; re-genesis (no migration)"
+(`/Users/ember/dev/breadstuffs/CLAUDE.md`, the project doctrine this session runs under;
+Mini's own `CLAUDE.md` does not restate it, but the Store and the planning docs apply it).
+The Store says so in its refusal table: "store holds a retired whole-image record; re-genesis (no migration)"
 (`P/docs/DURABLE-STORE.md`, "What refuses to load"). No module in `Theory/`, `Kernel/` or
 `Compiler/` migrates world state across a semantics digest (grep `migrat`/`upgrade`: hits
 are the application-grain package lifecycle and prose). The planned carry is a script:
@@ -699,6 +700,9 @@ not make `Pred` higher-order (his N3 argument and Mini's are the same).
 
 ## 10. ASSUMED (mine) and what I did not read
 
+- **ASSUMED** that the breadstuffs flag-day doctrine is Mini's: Mini's `CLAUDE.md` (57
+  lines, read) does not say it; `docs/DURABLE-STORE.md` ("re-genesis (no migration)"),
+  `PLACE.md` §4.10 and `SURPASS.md` §2(b) enact it.
 - **ASSUMED** that `final`'s laws and kinds are as at `7961b345`; the braids landing
   today (`SESSION-STATE.md` 18:40, 18:55) do not, by their reports, add law inheritance,
   world-resident kinds, or a carry.
