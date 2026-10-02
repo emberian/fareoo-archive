@@ -46,10 +46,15 @@ The rest of this file unfolds that paragraph, then widens to the Houyhnhnm mater
 doctrine — *internalize the process of change, so people can cooperate without
 coordinating* — applied to whole computing systems rather than to programs.
 
-**Tweets.** The scry drip of @Ngnghm (`raw/ngnghm.jsonl`) had delivered **0** tweets
-when this file was first written (the first page lands after a 429 sleep, ~20:14
-local). `sources/tweets-oo.md` is appended as pages arrive; anything from the tweets
-that changes a section below is flagged there with the section number.
+**Tweets.** The scry drip of @Ngnghm (`raw/ngnghm.jsonl`) had delivered **120** of 7,346
+tweets when this file was last revised (2026-10-01 20:15 EDT; they cover 2026-09-21 →
+2026-10-01; pages of 120 arrive between 429 sleeps). All 120 were read; 82 are quoted
+verbatim, threaded, in `sources/tweets-oo.md`, and `sources/tweets-oo-notes.md` says what
+each changes here. In this file they are cited as `tw:<id>`
+(https://x.com/Ngnghm/status/<id>). What they changed: §2 (the equations were
+refactored on 2026-09-22) and §1's demarcation in his own words this morning. The last
+ten days of his timeline are the OO book; nothing in the batch is about persistence,
+kernels or platforms.
 
 ---
 
@@ -114,7 +119,11 @@ object, when there is one, is §5 below (conflation). And objects exist without 
 concur with Wegner (1987) in calling 'object-based' those languages and systems that
 provide internal modularity (first- or second-class) without internal modular
 extensibility, while reserving 'object-oriented' for languages that do also offer
-inheritance." (`ltuo` §3.2.3) — the demarcation this lane's audit turns on.
+inheritance." (`ltuo` §3.2.3) — the demarcation this lane's audit turns on. He applied it
+on the morning this was written, to someone else's book: "it's more about object-based
+programming, i.e. first-class modularity, a topic well-trodden since at least the early
+1970s ... The author fails to grok the centrality of inheritance to OO."
+(`tw:2105594359320027196`, 2026-10-01).
 
 **READ.** Generality: the instance need not be a record. "Prototypes are not just for
 records as functions from symbol to value: they can be used to incrementally specify
@@ -142,6 +151,19 @@ mix = λ child parent self duper ↦ child self (parent self duper)
 (`eoomi` §4.1 Mixin Semantics). The claimed contribution is "promoting composition of
 wrappers rather than their application to a generator as the algebraic structure of
 interest" (`poof` §1.1.2 (b)).
+
+**READ — the current form (2026-09-22).** The argument order has since been refactored;
+his tweet gives all three historical forms: "New refactoring! I'll do: `fix t m = Y (m t)`
+/ `mix c p t s = c (p t s) s` / Instead of the current: `fix m t = Y (m t)` / `mix p c t
+s = c (p t s) s` / Or the original: `fix t m = Y (λ s . m s t)` / `mix c p s t = c s (p s
+t)`" (`tw:2102235440774369599`), for "covariance of mix with traditional precedence list
+order and with function composition" (`tw:2102235443542851968`). And the current type of
+a mixin, which he now calls a *modular extension*: "`type ModExt inherited required
+newlyProvided = ∀ super, self : Type  self ⊂ required self, super ⊂ inherited self ⇒
+super → self → super∩(newlyProvided self)`" (`tw:2102296708512469403`, 2026-09-22) —
+super first, self second, and `required`/`inherited` are functions of `self`. The
+operator is the same in all three; only the order of `self`/`super` and of child/parent
+moved.
 
 **READ.** Modularity and incrementality are distinct and both needed: "merging disjoint
 commuting mixins embodies modularity, but not incrementality ... to achieve it
@@ -320,6 +342,14 @@ additional conflated aspects of a prototype" (`eoomi` §5.3 Conflating More Feat
 Abstract vs concrete classes, Flavors' mixins vs instantiable flavors, were the
 practitioners' implicit recognition (`ltuo` §6.1.8).
 
+**READ.** There are two encodings of the knot, and they are equivalent: the fixed-point
+(Y) encoding used throughout, and the self-application (U) encoding — "the usual trick
+used since Sketchpad 1963 ...: have a record of procedures that take a receiver object as
+(first (or register)) argument" (`tw:2103545161397469244`; `ltuo` §6.1.5); his table of
+analogs is "fixed-point → self-application; Y → U; self → half; super → hyper; mixin →
+hybridizer; ..." (`tw:2103373702767559101`), and Kamin's self-application model is not
+less abstract than Reddy's fixed-point one (`tw:2103390209463161121`).
+
 **INFERRED.** For a system of named resources, conflation says: the thing a friend
 names should be usable *both* as a value to query and as a specification to extend,
 without the author having pre-decided which. If "extending X" requires a different kind
@@ -339,6 +369,14 @@ OO makes classes Second-Class" (`eoomi` §6.1); "Class OO is a lie. There is no 
 thing. All OO is Prototype OO. Some of it is used to metaprogram types and procedures
 on those types." (`todo`). C++ templates are "a full-fledged Pure Functional Lazy
 Dynamically-Typed Prototype OO language at compile-time" (`ltuo` §2.2.3).
+
+**READ.** Types serve OO, not the reverse: "OO is a tool that is useful because better
+richer and further patterns of thought we can express with it compared to without it.
+Types in turn can make this tool even more useful ... Expressing those patterns is the
+purpose; OO is a tool, and types are a tool for the tool." (`tw:2105514909387632942`,
+2026-10-01); "If you spend all your time making the patterns harder or impossible to
+express so you may go easy on the types... you've totally missed the point"
+(`tw:2105518134061109279`).
 
 **READ.** Type descriptors are richer than static types: "additional constraints on
 values beside principal type membership; methods to encode and decode values, to print
@@ -937,5 +975,5 @@ Collected from the above, as checkable demands (each line cites where it comes f
   (2016)" — not located under fare.tunes.org/files; probably a talk. Not read.
 - "Who Controls Your Computer? (And How to make sure it's you)" speech, cited in
   `ch10`: not fetched.
-- The tweets: 0 of 7,346 had arrived at the time of the first draft (see §0 and
-  `sources/tweets-oo.md`).
+- The tweets: 120 of 7,346 had arrived at the last revision (see §0); the 2024–2025
+  tweets, where the persistence and LambdaConf material would be, had not.

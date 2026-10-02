@@ -18,7 +18,9 @@ OO = [r'\boo\b', r'\boop\b', r'object[- ]orient', r'\bobjects?\b', r'prototyp', 
       r'method combination', r'late binding', r'open recursion', r'lambda,? the ultimate', r'\bltuo\b',
       r'\bpoof\b', r'jsonnet', r'\bnix\b', r'typeclass', r'\btrait', r'flavors?\b', r'metaobject',
       r'\bmop\b', r'subtyp', r'subclass', r'encapsulation', r'message passing', r'alan kay', r'simula',
-      r'bracha', r'cook\b', r'delegation', r'\bself language', r'\bexpression problem']
+      r'bracha', r'cook\b', r'delegation', r'\bself language', r'\bexpression problem',
+      r'\bmix\b', r'modext', r'modular extension', r'[uy]-encoding', r'self-application',
+      r'precedence list', r'\bltuo\b', r'cardelli', r'\btapl\b', r'bobrow', r'winograd', r'\bkrl\b']
 HOU = [r'houyhnhnm', r'hunam', r'ngnghm', r'orthogonal persist', r'persisten', r'live upgrade',
        r'schema', r'migrat', r'first-class implementation', r'semantic tower', r'reflect', r'meta-?level',
        r'metaprogram', r'kernel\b', r'platform', r'application', r'division of labou?r', r'point of view',
@@ -68,9 +70,10 @@ def main():
     with open(OUT, 'w') as f:
         f.write('# @Ngnghm tweets relevant to OO foundations and Houyhnhnm computing\n\n')
         f.write(f'- Source: scry twitter archive, drip-fetched by `fetch-ngnghm.py` into `raw/ngnghm.jsonl` (never pulled by this indexer)\n')
-        f.write(f'- Indexed: {datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%MZ")} by `index-tweets.py`\n')
+        f.write(f'- Indexed: {datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%MZ")} by `index-tweets.py`\n')
         f.write(f'- Arrived: {len(byid)} tweets (of 7,346 archived); date range {min(dates) if dates else "-"} .. {max(dates) if dates else "-"}\n')
         f.write(f'- Kept: {n_kept} tweets in {len(kept)} threads ({len(rel)} matched a keyword; a thread is kept whole if any tweet in it matched)\n')
+        f.write('- Reading notes (what these tweets add to or change in FAREOO.md / AUDIT.md): `sources/tweets-oo-notes.md`\n')
         f.write('- Tags: OO = object-orientation keywords; HOU = Houyhnhnm/persistence/platform keywords. Text is verbatim from the archive; `complete=false` means the archive marks the text as possibly truncated.\n\n')
         f.write('Threads are newest-first; within a thread, oldest-first (reply order). `→ id` = in_reply_to; `⟳ id` = quoted.\n\n---\n\n')
         for rt in kept:
