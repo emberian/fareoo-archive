@@ -45,7 +45,10 @@ principles are about *specification* — the half that is actually OO. In his ow
 vocabulary (after Wegner): "I concur with Wegner (1987) in calling 'object-based' those
 languages and systems that provide internal modularity (first- or second-class) without
 internal modular extensibility, while reserving 'object-oriented' for languages that do
-also offer inheritance" (`ltuo` §3.2.3) — **Mini today is object-based**: cells with
+also offer inheritance" (`ltuo` §3.2.3; and on 2026-10-01, of another author's book: "more
+about object-based programming, i.e. first-class modularity ... fails to grok the
+centrality of inheritance to OO", https://x.com/Ngnghm/status/2105594359320027196) —
+**Mini today is object-based**: cells with
 laws are first-class modules; nothing in the world extends anything else in the world. A law is one closed
 first-order `Pred` installed on one cell by replacement; it has no `self`, no `super`, no
 parents, and the only way for B to "extend A's law" is to copy A's JSON — a fork. Cell
@@ -773,4 +776,10 @@ not make `Pred` higher-order (his N3 argument and Mini's are the same).
   SURPASS).
 - **NOT READ at source:** the C3 code in `poof` App. A.1 beyond its statement; the
   `coop.rkt` library.
-- Tweets: see `sources/tweets-oo.md` for what arrived and whether any finding moved.
+- Tweets: 120 of 7,346 had arrived at the last revision (2026-09-21 → 2026-10-01; all
+  read; `sources/tweets-oo.md`, notes in `sources/tweets-oo-notes.md`). **No finding
+  moved.** One sentence was confirmed in his words the same morning: object-based =
+  "first-class modularity"; what makes OO is "the centrality of inheritance"
+  (https://x.com/Ngnghm/status/2105594359320027196). The 2024–2025 tweets (persistence,
+  LambdaConf) had not arrived; if they say anything about upgrade or domains that bears
+  on finding 3 or §7.1, `tweets-oo-notes.md` is where a later pass records it.
