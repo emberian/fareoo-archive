@@ -60,7 +60,7 @@ kernels or platforms.
 
 ## 1. What an object IS: a fixed point over a prototype; `self`, `super`, open recursion
 
-**READ.** The primitive is not the object. "In general, we will call *prototype* such a
+**READ.** The primitive is not the object. "In general, we will call prototype such a
 computation increment." A prototype (initially, a *prototype wrapper*) is "a function of
 two arguments, self and super (or, above, f and b, for fixed-point and base value)"
 (`poof` §1.1.4). The types, in his notation:
