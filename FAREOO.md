@@ -16,7 +16,9 @@ Citation key: `poof` = `sources/poof-paper.md` (Scheme Workshop 2021); `eoomi` =
 `sources/snapl2015.md`; `chN` = `sources/houyhnhnm-chNN.md`; `todo` =
 `sources/poof-todo.md`; `gpoo` = `sources/gerbil-poo-prototypes.md`; `els26` =
 `sources/poof-slides-2026-els-src.md`. Tweets: `sources/tweets-oo.md` (see §0). Quotes from the
-`*-src` slide sources are given with their Scribble markup (`@em{…}`, `@(br)`) stripped.
+`*-src` slide sources are given with their Scribble markup (`@em{…}`, `@(br)`) stripped;
+slide quotes join a slide's title and lines with `:`, `,` or `/`; Markdown emphasis marks
+(`_x_`, `*x*`) inside quoted prose are dropped.
 
 ---
 
@@ -228,7 +230,7 @@ broken system (`ltuo` §7.3.4.1 fn). The flavorful answer is "Cooperation not Co
 resolve between methods that override each other. The newer (1979) 'flavorful'
 viewpoint sees it as a cooperation to harmonize between methods that combine with each
 other." (`ltuo` §2.4.3). In the TODO's blunt form: "wrappers must be CRDTs (which
-[Cook] fails to notice) ... which comes for free if you linearize your ancestors and
+[Cook] fails to notice) ... which comes for free if you linearize your ancestonrs [sic] and
 apply a plain old wrapper" (`todo`).
 
 **READ.** The strict ordering of modularity: "(1) flavorful multiple inheritance with
@@ -239,7 +241,7 @@ inheritance, and (6) no inheritance" (`ltuo` §11.1.8).
 **READ.** Single and multiple together — the *suffix property* and C4 (2024): "what
 enables the optimizations of single inheritance is ... the suffix property: the
 precedence list of a struct is a suffix of that of every descendant of it" (`ltuo`
-§7.4.2); "It is not exactly single inheritance as such that mattered, rather it was the
+§7.4.2); "it was not exactly single inheritance as such that mattered, rather it was the
 suffix property implicit in single inheritance" (`ltuo` §7.4.3). C4 "in addition to the
 constraints of C3, also respects the suffix property for specifications that are
 declared as suffixes" (`ltuo` §7.4.4); shipped in Gerbil Scheme 2024 and as
@@ -335,7 +337,7 @@ exactly "confusing target (subtyping) and specification (subclassing)" (`ltuo` �
 COMMUTE!" (`rc25` "What about Types?").
 
 **READ.** Conflation generalizes: records conflated with functions (T's "closures are a
-poor man's objects") are "an implicit product of several things ... We will call this
+poor man's objects") are an "implicit product of several things ... We will call this
 implicit product a conflation" (`eoomi` §5.2 Conflating Records and Functions);
 defaults, type restrictions, visibility, docs, examples, tests, generators are added "as
 additional conflated aspects of a prototype" (`eoomi` §5.3 Conflating More Features).
