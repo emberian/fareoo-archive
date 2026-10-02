@@ -217,9 +217,9 @@ a parent DAG with a cycle or an inconsistent order must refuse at install with a
 languages only have second-class classes whereas only prototype-based languages have
 first-class classes" (`poof` §5.1.2); type descriptors carry "methods to encode and decode
 values, to print and parse them ... default values ... pseudo-random value generators"
-(`poof` §5.2.1). "The system of course can recognize privacy and performance annotations
-about authorized programs" but "a new picture compression format is automatically usable
-by each and every function that uses pictures throughout the system" (`ch07`). Internal
+(`poof` §5.2.1). A platform makes new kinds of entity usable everywhere at once: "a new picture
+compression format is automatically usable by each and every function that uses pictures
+throughout the system" (`ch07`). Internal
 extensibility means not having to "read, rewrite, or modify any of the previous
 functionality" (`ltuo` §4.2.2); "Fourth-class entities include design patterns, as
 translated into code using editors, copy-paste" (`ltuo` §4.1.2).
