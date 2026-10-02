@@ -20,7 +20,8 @@ OO = [r'\boo\b', r'\boop\b', r'object[- ]orient', r'\bobjects?\b', r'prototyp', 
       r'\bmop\b', r'subtyp', r'subclass', r'encapsulation', r'message passing', r'alan kay', r'simula',
       r'bracha', r'cook\b', r'delegation', r'\bself language', r'\bexpression problem',
       r'\bmix\b', r'modext', r'modular extension', r'[uy]-encoding', r'self-application',
-      r'precedence list', r'\bltuo\b', r'cardelli', r'\btapl\b', r'bobrow', r'winograd', r'\bkrl\b']
+      r'precedence list', r'\bltuo\b', r'cardelli', r'\btapl\b', r'bobrow', r'winograd', r'\bkrl\b',
+      r'\blens', r'\badvise\b', r'sketchpad', r'\bbeta\b', r'repeated inheritance', r'\binner\b', r'simons', r'lieberman', r'\bsteels\b', r'\borbit\b']
 HOU = [r'houyhnhnm', r'hunam', r'ngnghm', r'orthogonal persist', r'persisten', r'live upgrade',
        r'schema', r'migrat', r'first-class implementation', r'semantic tower', r'reflect', r'meta-?level',
        r'metaprogram', r'kernel\b', r'platform', r'application', r'division of labou?r', r'point of view',

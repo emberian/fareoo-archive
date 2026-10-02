@@ -1,9 +1,9 @@
 # @Ngnghm tweets relevant to OO foundations and Houyhnhnm computing
 
 - Source: scry twitter archive, drip-fetched by `fetch-ngnghm.py` into `raw/ngnghm.jsonl` (never pulled by this indexer)
-- Indexed: 2026-10-02T00:15Z by `index-tweets.py`
-- Arrived: 120 tweets (of 7,346 archived); date range 2026-09-21 23:17:27.000000 .. 2026-10-01 10:30:37.000000
-- Kept: 82 tweets in 42 threads (65 matched a keyword; a thread is kept whole if any tweet in it matched)
+- Indexed: 2026-10-02T01:08Z by `index-tweets.py`
+- Arrived: 240 tweets (of 7,346 archived); date range 2026-09-08 22:56:50.000000 .. 2026-10-01 10:30:37.000000
+- Kept: 125 tweets in 65 threads (96 matched a keyword; a thread is kept whole if any tweet in it matched)
 - Reading notes (what these tweets add to or change in FAREOO.md / AUDIT.md): `sources/tweets-oo-notes.md`
 - Tags: OO = object-orientation keywords; HOU = Houyhnhnm/persistence/platform keywords. Text is verbatim from the archive; `complete=false` means the archive marks the text as possibly truncated.
 
@@ -368,11 +368,6 @@ Threads are newest-first; within a thread, oldest-first (reply order). `→ id` 
 - **2102763039447740593** · 2026-09-23 14:12:30.000000 · https://x.com/Ngnghm/status/2102763039447740593 · [-] → 2102681805656817970 complete=1 likes=0
   > ... and apparently you can have an audio call with your clanker assistant to plan the next section of your book while doing like physical activities.
 
-## thread 2102541912691671541 (1 tweets)
-
-- **2102541912691671541** · 2026-09-22 23:33:49.000000 · https://x.com/Ngnghm/status/2102541912691671541 · [OO] → (not his) 2102174746318196794 complete=1 likes=0
-  > TL;DR—Earliest explanation of objects with lambdas, arguably. Clear, not.
-
 ## thread 2102296708512469403 (1 tweets)
 
 - **2102296708512469403** · 2026-09-22 07:19:28.000000 · https://x.com/Ngnghm/status/2102296708512469403 · [OO] → (not his) 2102275830919647232 complete=1 likes=0
@@ -413,9 +408,12 @@ Threads are newest-first; within a thread, oldest-first (reply order). `→ id` 
 - **2102240269621997588** · 2026-09-22 03:35:12.000000 · https://x.com/Ngnghm/status/2102240269621997588 · [OO] → 2102236232143245751 complete=1 likes=0
   > Oh, and clanky found a bug (my giving arguments to mix in the wrong order due to my being lazy wrt currying) while planning the refactoring. Thanks, Claude!
 
-## thread 2102175403070619859 (7 tweets)
+## thread 2102174746318196794 (9 tweets)
 
-- **2102175403070619859** · 2026-09-21 23:17:27.000000 · https://x.com/Ngnghm/status/2102175403070619859 · [-] → (not his) 2102174746318196794 complete=1 likes=1
+- **2102174746318196794** · 2026-09-21 23:14:50.000000 · https://x.com/Ngnghm/status/2102174746318196794 · [OO]  complete=1 likes=0
+  > BLEG: PDF for Luc Steels 1982 "ORBIT: An Applicative View of Object Oriented Programming"—a suspect for the earliest clear explanation of Objects with Lambdas.
+
+- **2102175403070619859** · 2026-09-21 23:17:27.000000 · https://x.com/Ngnghm/status/2102175403070619859 · [-] → 2102174746318196794 complete=1 likes=1
   > Found it! https://t.co/9Lj1sal81s
 
 - **2102488890120835415** · 2026-09-22 20:03:08.000000 · https://x.com/Ngnghm/status/2102488890120835415 · [-] → 2102175403070619859 complete=1 likes=0
@@ -440,4 +438,226 @@ Threads are newest-first; within a thread, oldest-first (reply order). `→ id` 
 - **2102538926569169229** · 2026-09-22 23:21:58.000000 · https://x.com/Ngnghm/status/2102538926569169229 · [-] → 2102502317543305221 complete=1 likes=0
   > A reimplementation on top of CL survives https://t.co/rTP24UxDW8
   > also includes a simplified variant, BOOPS (Beginner's ...).
+
+- **2102541912691671541** · 2026-09-22 23:33:49.000000 · https://x.com/Ngnghm/status/2102541912691671541 · [OO] → 2102174746318196794 complete=1 likes=0
+  > TL;DR—Earliest explanation of objects with lambdas, arguably. Clear, not.
+
+## thread 2102152468842848332 (2 tweets)
+
+- **2102152468842848332** · 2026-09-21 21:46:19.000000 · https://x.com/Ngnghm/status/2102152468842848332 · [-] → (not his) 2102148836126859774 complete=1 likes=0
+  > @ShriramKMurthi @artiegold @techreport Thanks a lot!
+
+- **2102156743887257841** · 2026-09-21 22:03:18.000000 · https://x.com/Ngnghm/status/2102156743887257841 · [OO] → 2102152468842848332 complete=1 likes=0
+  > @ShriramKMurthi @artiegold @techreport Kamin 1988 and Reddy 1988 also both cite an extended abstract from July 1987 of Cook's then-future 1989 thesis "A Denotational Semantics of Inheritance", that may also be or not be available.
+
+## thread 2102146848660054303 (1 tweets)
+
+- **2102146848660054303** · 2026-09-21 21:23:59.000000 · https://x.com/Ngnghm/status/2102146848660054303 · [OO] → (not his) 2102145531791188062 complete=1 likes=0
+  > @ShriramKMurthi @artiegold All I have is:
+  > @TechReport{Cook1987,
+  >   author={William R. Cook},
+  >   title={Self-Referential Models of Inheritance},
+  >   institution={Brown University},
+  >   year={1987},
+  >   month=mar
+  > }
+  > from Wegner's 1987 "Dimensions of Object-Based Language Design", as well as Wegner's description.
+
+## thread 2102146006376645114 (2 tweets)
+
+- **2102146006376645114** · 2026-09-21 21:20:38.000000 · https://x.com/Ngnghm/status/2102146006376645114 · [OO]  complete=1 likes=0
+  > With my definition of OO as Internal Modular Extensibility, Simula is OO. More importantly, Sketchpad isn't (barely: it has all the elements, just not put together), and—ADVISE is! Now, ADVISE is in-place, isn't general purpose (functions only), and doesn't nest. Still qualifies.
+
+- **2102146439421837787** · 2026-09-21 21:22:21.000000 · https://x.com/Ngnghm/status/2102146439421837787 · [OO,HOU] → 2102146006376645114 complete=1 likes=0
+  > It seems pretty clear to me that ADVISE inspired Cannon's method combinations in Flavors, but possibly not directly: Cannon was well integrated in the Lisp hacker community, that used ADVISE, but wasn't particularly well-read personally.
+
+## thread 2102144521416958341 (1 tweets)
+
+- **2102144521416958341** · 2026-09-21 21:14:44.000000 · https://x.com/Ngnghm/status/2102144521416958341 · [OO] → (not his) 2102139975944860046 complete=1 likes=0
+  > @ShriramKMurthi @artiegold Nah, he "found" the 1989 published papers, that are easy to locate, but won't help with the priority search (for what priority is worth—but hey, my book does a lot of that. Did you know that by my objective definition of modular extensibility, Sketchpad isn't OO, but ADVISE is?)
+
+## thread 2102076494755324198 (1 tweets)
+
+- **2102076494755324198** · 2026-09-21 16:44:25.000000 · https://x.com/Ngnghm/status/2102076494755324198 · [OO] ⟳ (not his) 2101994897355976800 complete=1 likes=0
+  > RT @yacinelearning: a lot of students have a hard time with this so let me spell it out:
+  > 
+  > - class is for asking dumb ass questions to someo…
+
+## thread 2101868328083919012 (1 tweets)
+
+- **2101868328083919012** · 2026-09-21 02:57:14.000000 · https://x.com/Ngnghm/status/2101868328083919012 · [OO,HOU] → (not his) 2101807735666839600 complete=1 likes=0
+  > @abdimoalim_ Multiple inheritance is great—if flavorful, as in Lisp, Ruby, Perl, Python, Scala.
+  > 
+  > It's not so good if flavorless, as in Smalltalk, Self, C++, PHP, etc.
+
+## thread 2101805973144826277 (2 tweets)
+
+- **2101805973144826277** · 2026-09-20 22:49:28.000000 · https://x.com/Ngnghm/status/2101805973144826277 · [OO] → (not his) 2101795235047018507 complete=1 likes=0
+  > @kephasp Looks like the usual construction of classes in terms of prototypes indeed... but my! Not the clearest explanation at all.
+
+- **2101806344290316537** · 2026-09-20 22:50:56.000000 · https://x.com/Ngnghm/status/2101806344290316537 · [OO] → 2101805973144826277 complete=1 likes=0
+  > @kephasp For clearer explanations, see my chapter 6, with simple implementation in chapter 9.
+  > 
+  > For earlier explanation than E—Lieberman 1986 is still the best.
+
+## thread 2101558640540807175 (1 tweets)
+
+- **2101558640540807175** · 2026-09-20 06:26:39.000000 · https://x.com/Ngnghm/status/2101558640540807175 · [OO]  complete=1 likes=0
+  > Reading A.J.Simons' JOT series on his Theory of Classification. My, he's verbose, reexplaining plenty of basics before he gets to the point.
+  > 
+  > These days, I can assume my reader will ask his clanker friend about any prerequisites he may be missing, and I go straight to the point.
+
+## thread 2099772083328762145 (1 tweets)
+
+- **2099772083328762145** · 2026-09-15 08:07:31.000000 · https://x.com/Ngnghm/status/2099772083328762145 · [HOU]  complete=1 likes=0
+  > RT @Ngnghm: In the future, Linux will only get exponentially worse to configure, so you'll need the same skills to use it as before, only n…
+
+## thread 2099766701378113699 (3 tweets)
+
+- **2099766701378113699** · 2026-09-15 07:46:08.000000 · https://x.com/Ngnghm/status/2099766701378113699 · [HOU]  complete=1 likes=0
+  > Clanky helped me:
+  > - configure dracut (disguised as initramfs-tools) to include some firmware in its initrd so the GPU would work
+  > - find and remove an old hack I had to disable the GPU
+  > - persistently configure some flag in Brave
+  > So WebGPU now works!
+  > 
+  > Year of Linux on the desktop!!
+
+- **2099767062683947319** · 2026-09-15 07:47:34.000000 · https://x.com/Ngnghm/status/2099767062683947319 · [-] → 2099766701378113699 complete=1 likes=0
+  > In the future, Linux will only get exponentially worse to configure, so you'll need the same skills to use it as before, only now a Clanker sidekick will be necessary to help sysadmin it.
+  > 
+  > Homeostasy of Complexity
+
+- **2099899808400003216** · 2026-09-15 16:35:03.000000 · https://x.com/Ngnghm/status/2099899808400003216 · [-] → 2099767062683947319 complete=1 likes=0
+  > The constant is your tolerance to software configuration bullshit. The more tolerable clankers make the bullshit, the more bullshit you'll tolerate.
+
+## thread 2099635011662004381 (1 tweets)
+
+- **2099635011662004381** · 2026-09-14 23:02:50.000000 · https://x.com/Ngnghm/status/2099635011662004381 · [OO,HOU]  complete=1 likes=1
+  > Marketing idea: rename Nix to Bash++
+  > 
+  > Rationale: Nix is essentially the same pure functional dynamic lazy pattern-matching langeuag as C++, but to metaprogram Bash instead of C.
+
+## thread 2099350753085112472 (1 tweets)
+
+- **2099350753085112472** · 2026-09-14 04:13:18.000000 · https://x.com/Ngnghm/status/2099350753085112472 · [OO]  complete=1 likes=8
+  > I'm starting to understand what the shape of chapter 10 will be: not a bag of tricks for implementers of OO (though I'll cite a few good sources), but perspective on how to think about implementation, correctness, performance, staging, static information, flexibility, tradeoffs.
+
+## thread 2099301167180222465 (3 tweets)
+
+- **2099301167180222465** · 2026-09-14 00:56:16.000000 · https://x.com/Ngnghm/status/2099301167180222465 · [OO]  complete=1 likes=23
+  > Smalltalk was not the first OO language (Simula, KRL)—but the first usable one, which counts at least as much. Mad props to Kay, Ingalls &amp; the rest for making a usable system you could live in, and not just an experimental language.
+
+- **2099301589471145985** · 2026-09-14 00:57:56.000000 · https://x.com/Ngnghm/status/2099301589471145985 · [-] → 2099301167180222465 complete=1 likes=6
+  > Even madder props when you realize how little computing resources they had to get it up and running (though it was still $$$ at the time).
+
+- **2099303127623012797** · 2026-09-14 01:04:03.000000 · https://x.com/Ngnghm/status/2099303127623012797 · [OO] → 2099301589471145985 complete=1 likes=3
+  > (To the question of "was Simula OO" I'd ask back "was homo erectus human?" For KRL, I'd compare with homo neanderthalensis—bigger and stronger than modern humans in a way. But for Smalltalk-76, it's clearly homo sapiens already.)
+
+## thread 2099262607840416229 (1 tweets)
+
+- **2099262607840416229** · 2026-09-13 22:23:02.000000 · https://x.com/Ngnghm/status/2099262607840416229 · [OO] → (not his) 2099149044572471679 complete=1 likes=1
+  > @jedisct1 But—is it based on Nix yet?
+
+## thread 2099259941261353047 (3 tweets)
+
+- **2099259941261353047** · 2026-09-13 22:12:27.000000 · https://x.com/Ngnghm/status/2099259941261353047 · [OO]  complete=1 likes=1
+  > I had another round of AI explaining BETA to me—as my previous attempt was not all that fruitful. Half a year later, I have a better grip on the ways that BETA was great yet terrible. If only they had been part of the conversation instead of speaking their own language.
+
+- **2099260406980026702** · 2026-09-13 22:14:18.000000 · https://x.com/Ngnghm/status/2099260406980026702 · [OO] → 2099259941261353047 complete=1 likes=0
+  > My notes in the bibliography entry for Kristensen &amp; al. 1987, plus chapter 9 section on "inner".
+
+- **2099262965002162686** · 2026-09-13 22:24:27.000000 · https://x.com/Ngnghm/status/2099262965002162686 · [-] → 2099259941261353047 complete=1 likes=0
+  > I like to think that I have improved a bit, but really, the AI was better at explaining, looking into the documentation, and not hallucinating.
+
+## thread 2098867953429037172 (1 tweets)
+
+- **2098867953429037172** · 2026-09-12 20:14:49.000000 · https://x.com/Ngnghm/status/2098867953429037172 · [OO] → (not his) 2098855934923792623 complete=1 likes=2
+  > @debasishg Indeed, my skew lenses generalize lenses by allowing skew between view and update, which is *exactly* what you need for OO's modular extension: updating a (deeply?) nested field in the context of a wider object.
+  > 
+  > Needless to say, they don't work nicely with getter and setter.
+
+## thread 2098317544704630968 (2 tweets)
+
+- **2098317544704630968** · 2026-09-11 07:47:42.000000 · https://x.com/Ngnghm/status/2098317544704630968 · [HOU] → (not his) 2098241879225545205 complete=1 likes=2
+  > @fwbrasil @reggieperry @stylewarning Interlisp had RECORD in 1974. Lisp Machine Lisp had DEFSTRUCT in 1977.
+  > 
+  > When did YOUR language acquire anything like that? Scala never had any remotely equivalent capability before 2004.
+
+- **2098325163905286163** · 2026-09-11 08:17:58.000000 · https://x.com/Ngnghm/status/2098325163905286163 · [HOU] → 2098317544704630968 complete=1 likes=1
+  > @fwbrasil @reggieperry @stylewarning Sorry: Lisp Machine Lisp had DEFSTRUCT *by* 1977 (as witnessed by Alan Bawden when he started). It might have been there in 1976 already. Guy Steele implemented HUNKs in MACLISP in 1976, and they were lower-level than structs, so there was definitely no DEFSTRUCT in 1975.
+
+## thread 2098167437770301684 (2 tweets)
+
+- **2098167437770301684** · 2026-09-10 21:51:13.000000 · https://x.com/Ngnghm/status/2098167437770301684 · [OO,HOU]  complete=1 likes=25
+  > Repeated inheritance is gay and retarded. OO already got the fix: slap a field &amp; proxy the calls—and macro that shit up unless you crazy bitch love boilerplate.
+  > 
+  > But clown-ass Snyder &amp; Stroustrup cooked up some fucked-up mess, then jerk to it like they Einstein. Nigga, you ain't.
+
+- **2098175330213154988** · 2026-09-10 22:22:35.000000 · https://x.com/Ngnghm/status/2098175330213154988 · [-] → 2098167437770301684 complete=1 likes=2
+  > So you want to optimize for the case where you have an A, and a B that contains that A, and you want to talk about that shit in a single pointer instead of 2. Why, you do that a lot? Go see a shrink. Otherwise just use 2 pointers. Now if you insist, I can bitdiddle it. But why???
+
+## thread 2098129355712938159 (1 tweets)
+
+- **2098129355712938159** · 2026-09-10 19:19:54.000000 · https://x.com/Ngnghm/status/2098129355712938159 · [OO] → (not his) 2098120965528203560 complete=1 likes=5
+  > @zooko "Trying to be happy is like trying to build a machine for which the only specification is that it should run noiselessly."
+
+## thread 2097968837865967625 (2 tweets)
+
+- **2097968837865967625** · 2026-09-10 08:42:03.000000 · https://x.com/Ngnghm/status/2097968837865967625 · [OO] → (not his) 2097967249369780610 complete=1 likes=2
+  > @msimoni @k Well, for my OO-in-FP exposé, I implemented autocurrying to avoid lots of consecutive left-parentheses.
+  > 
+  > Also, funcall could be one character.
+
+- **2097969817474990113** · 2026-09-10 08:45:57.000000 · https://x.com/Ngnghm/status/2097969817474990113 · [-] → 2097968837865967625 complete=1 likes=0
+  > @msimoni @k My "curry a call to this function f that isn't automagically currying" syntax is (@ f x y z)
+
+## thread 2097953337266077726 (1 tweets)
+
+- **2097953337266077726** · 2026-09-10 07:40:28.000000 · https://x.com/Ngnghm/status/2097953337266077726 · [HOU]  complete=1 likes=26
+  > Lisp is just lazily typed Haskell.
+  > Haskell is just eagerly typed Lisp.
+
+## thread 2097797570399506693 (2 tweets)
+
+- **2097797570399506693** · 2026-09-09 21:21:30.000000 · https://x.com/Ngnghm/status/2097797570399506693 · [OO]  complete=1 likes=5
+  > Aha. I have now reached a stable point for ch9—with a concluding section 9.5 "Maximal OO" that bookends the formalization effort that started with chapter 5 "Minimal OO".
+  > 
+  > Now to finish chapter 10—Efficient Implementation of OO—including the MOP.
+
+- **2097805234412130558** · 2026-09-09 21:51:57.000000 · https://x.com/Ngnghm/status/2097805234412130558 · [-] → 2097797570399506693 complete=1 likes=1
+  > Chapter 9 has wise epigrams from Isaac Newton, Alfred North Whitehead, Rich Hickey, and... Xzibit (kind of).
+  > 
+  > 255 cited papers / 263 in the queue.
+
+## thread 2097782304332554742 (4 tweets)
+
+- **2097782304332554742** · 2026-09-09 20:20:50.000000 · https://x.com/Ngnghm/status/2097782304332554742 · [-] → (not his) 2096261064459465176 complete=1 likes=2
+  > Pragmatic Programmer is closed. EDP Sciences only does French.
+  > 
+  > Elsevier can't read .odt—but does ask for a PDF instead. Ergo, I passed one very first filter. Small victory.
+
+- **2098140620573282744** · 2026-09-10 20:04:40.000000 · https://x.com/Ngnghm/status/2098140620573282744 · [OO] → 2097782304332554742 complete=1 likes=2
+  > Elsevier &amp; No Starch responded—text under review.
+  > 
+  > Now to complete chapter 10. Just the case of C++ multiple inheritance gives me a headache. There again saved by Ducournau.
+
+- **2099746286102630507** · 2026-09-15 06:25:00.000000 · https://x.com/Ngnghm/status/2099746286102630507 · [-] → 2098140620573282744 complete=1 likes=0
+  > Wiley replied "does not fit with our publishing plans" after 10 days.
+  > 
+  > Making slow progress on chapter 10. Now enjoying LambdaConf.
+
+- **2100344636405436907** · 2026-09-16 22:02:38.000000 · https://x.com/Ngnghm/status/2100344636405436907 · [-] → 2099746286102630507 complete=1 likes=0
+  > Elsevier rejects... are asking for my affiliation and being told I have none. Interesting.
+
+## thread 2097776435943379323 (3 tweets)
+
+- **2097776435943379323** · 2026-09-09 19:57:31.000000 · https://x.com/Ngnghm/status/2097776435943379323 · [OO]  complete=1 likes=10
+  > getter and setter are not an *orthogonal* basis for functional lenses, but view and update (haskell: over) are.
+
+- **2097950638764155001** · 2026-09-10 07:29:44.000000 · https://x.com/Ngnghm/status/2097950638764155001 · [OO] → 2097776435943379323 complete=1 likes=2
+  > The kind of things I'm publishing in a book about OO. Read recently re-completed chapter 9, now with 5% better lenses!
+
+- **2097961511960342721** · 2026-09-10 08:12:57.000000 · https://x.com/Ngnghm/status/2097961511960342721 · [-] → 2097776435943379323 complete=1 likes=1
+  > "Haskell is over!"
 

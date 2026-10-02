@@ -145,6 +145,12 @@ policy (`P/Compiler/CanonicalCellRegistry.lean:16-20`). So a cell is *already* j
 a conjunction of an ancestor-like law (its kind's) and its own — in Lean, second-class.
 K-LAW-INHERIT is that same combination made a thing in the world.
 
+**READ — the floor.** On 2026-09-21 he set the minimum that qualifies as OO under his
+definition: Teitelman's ADVISE (1966), which "is in-place, isn't general purpose
+(functions only), and doesn't nest. Still qualifies." (https://x.com/Ngnghm/status/2102146006376645114).
+Mini's laws are below that floor: a law cannot be *advised* (a clause added before,
+after or around someone else's law without replacing it), only replaced whole.
+
 ### The scenario a friend hits
 
 A founds `lab` with a management law and installs `field state monotone; field state in
@@ -776,9 +782,9 @@ not make `Pred` higher-order (his N3 argument and Mini's are the same).
   SURPASS).
 - **NOT READ at source:** the C3 code in `poof` App. A.1 beyond its statement; the
   `coop.rkt` library.
-- Tweets: 120 of 7,346 had arrived at the last revision (2026-09-21 → 2026-10-01; all
-  read; `sources/tweets-oo.md`, notes in `sources/tweets-oo-notes.md`). **No finding
-  moved.** One sentence was confirmed in his words the same morning: object-based =
+- Tweets: 240 of 7,346 had arrived at the last revision (2026-09-08 → 2026-10-01; all
+  read in two passes; `sources/tweets-oo.md`, notes in `sources/tweets-oo-notes.md`).
+  **No finding moved**; finding 1 gained his stated floor (ADVISE). One sentence was confirmed in his words the same morning: object-based =
   "first-class modularity"; what makes OO is "the centrality of inheritance"
   (https://x.com/Ngnghm/status/2105594359320027196). The 2024–2025 tweets (persistence,
   LambdaConf) had not arrived; if they say anything about upgrade or domains that bears

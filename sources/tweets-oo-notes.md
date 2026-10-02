@@ -108,3 +108,87 @@ platforms, live upgrade or capabilities: the last ten days of his timeline are t
 book. No finding in AUDIT.md moved; FAREOO.md §1–§2 gained the current equations and
 type. The 2024–2025 tweets (where the persistence talk and LambdaConf material would be)
 had not arrived.
+
+## Pass 2 — 2026-10-01 21:10 EDT — 240 tweets had arrived (2026-09-08 22:56 → 2026-10-01 10:30)
+
+Read the 120 new ones (2026-09-08 → 2026-09-21), newest first. Indexer: 125 kept in 65
+threads (96 keyword matches) over the whole 240.
+
+### Adds to FAREOO.md §2 / §9: the floor of "OO" is in-place advice
+
+- **2102146006376645114** (2026-09-21): "With my definition of OO as Internal Modular
+  Extensibility, Simula is OO. More importantly, Sketchpad isn't (barely: it has all the
+  elements, just not put together), and—ADVISE is! Now, ADVISE is in-place, isn't general
+  purpose (functions only), and doesn't nest. Still qualifies." (Teitelman's ADVISE, 1966:
+  advice wrapped around existing functions.) The smallest thing that is OO by his
+  definition is *advising an existing definition in place*. Bears on AUDIT finding 1:
+  Mini's laws cannot even be advised — a law is replaced whole.
+- **2102146439421837787**: "ADVISE inspired Cannon's method combinations in Flavors".
+
+### Adds to FAREOO.md §3 (generalized prototypes) and §13 (points of view): skew lenses
+
+- **2098867953429037172** (2026-09-12): "my skew lenses generalize lenses by allowing skew
+  between view and update, which is *exactly* what you need for OO's modular extension:
+  updating a (deeply?) nested field in the context of a wider object. Needless to say,
+  they don't work nicely with getter and setter."
+- **2097776435943379323**: "getter and setter are not an *orthogonal* basis for functional
+  lenses, but view and update (haskell: over) are."
+- **2097797570399506693** (2026-09-09): chapter 9 reached "a stable point ... with a
+  concluding section 9.5 'Maximal OO' that bookends the formalization effort that started
+  with chapter 5 'Minimal OO'" — the draft fetched today is at least that recent.
+
+### Adds to FAREOO.md §15: a system you live in
+
+- **2099301167180222465** (2026-09-14): "Smalltalk was not the first OO language (Simula,
+  KRL)—but the first usable one, which counts at least as much. Mad props to Kay, Ingalls &
+  the rest for making a usable system you could live in, and not just an experimental
+  language." — ember's brief for Mini in his words ("a world friends inhabit").
+- **2099303127623012797**: "was Simula OO? ... was homo erectus human? For KRL ... homo
+  neanderthalensis ... But for Smalltalk-76, it's clearly homo sapiens already."
+
+### Confirms FAREOO.md §3: flavorful vs flavorless
+
+- **2101868328083919012** (2026-09-21): "Multiple inheritance is great—if flavorful, as in
+  Lisp, Ruby, Perl, Python, Scala. It's not so good if flavorless, as in Smalltalk, Self,
+  C++, PHP, etc."
+- **2098167437770301684** (2026-09-10, crude): repeated inheritance (C++ virtual bases) is
+  not worth language support — "slap a field & proxy the calls—and macro that ... up";
+  the sentence contains a slur and is not quoted further.
+- **2098140620573282744**: "Just the case of C++ multiple inheritance gives me a headache.
+  There again saved by Ducournau." (chapter 10 in progress).
+
+### Adds to FAREOO.md §4 / §6: Nix ≈ C++ templates
+
+- **2099635011662004381** (2026-09-14): "rename Nix to Bash++ ... Nix is essentially the
+  same pure functional dynamic lazy pattern-matching language as C++, but to metaprogram
+  Bash instead of C." — the `ltuo` §2.2.3 point (C++ templates are a pure lazy
+  Prototype-OO language) said from the other side.
+
+### Chapter 10's intended shape (bears on AUDIT §8.2's "tower" fork, lightly)
+
+- **2099350753085112472** (2026-09-14): "not a bag of tricks for implementers of OO ...
+  but perspective on how to think about implementation, correctness, performance, staging,
+  static information, flexibility, tradeoffs."
+
+### Method, history, minor
+
+- **2101384327825133955**: "Committing to a fully annotated bibliography means I have to
+  explain what makes each cited source relevant ... An unannotated citation means
+  nothing." (The discipline this lane's READ/INFERRED tags imitate.)
+- **2100256470273032696**: "even experts generally trust formalism in papers and don't
+  bother checking the formulas. Therefore papers generally shouldn't be trusted the more
+  formal they get." — Mini's "green is not true" (P/README.md) from the reader's side.
+- **2101806344290316537**: classes in terms of prototypes — "see my chapter 6, with simple
+  implementation in chapter 9. For earlier explanation than E—Lieberman 1986 is still the
+  best."
+- **2102174746318196794**, **2102156743887257841**, **2102146848660054303**: the hunt for
+  Steels 1982 (ORBIT) and Cook 1987 ("Self-Referential Models of Inheritance").
+- **2099781655300821313**: "Curry-Howard is not an isomorphism, just an injection from
+  proofs to programs."
+
+### What pass 2 did NOT contain
+
+Still nothing on persistence, kernels, platforms, upgrade or capabilities; the window is
+the book's chapters 9–10. **No AUDIT finding moved.** FAREOO.md gained: the ADVISE floor
+(§2), skew lenses and the view/update basis (§3, §13), "a usable system you could live
+in" (§15).

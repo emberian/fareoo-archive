@@ -48,15 +48,16 @@ The rest of this file unfolds that paragraph, then widens to the Houyhnhnm mater
 doctrine — *internalize the process of change, so people can cooperate without
 coordinating* — applied to whole computing systems rather than to programs.
 
-**Tweets.** The scry drip of @Ngnghm (`raw/ngnghm.jsonl`) had delivered **120** of 7,346
-tweets when this file was last revised (2026-10-01 20:15 EDT; they cover 2026-09-21 →
-2026-10-01; pages of 120 arrive between 429 sleeps). All 120 were read; 82 are quoted
-verbatim, threaded, in `sources/tweets-oo.md`, and `sources/tweets-oo-notes.md` says what
-each changes here. In this file they are cited as `tw:<id>`
-(https://x.com/Ngnghm/status/<id>). What they changed: §2 (the equations were
-refactored on 2026-09-22) and §1's demarcation in his own words this morning. The last
-ten days of his timeline are the OO book; nothing in the batch is about persistence,
-kernels or platforms.
+**Tweets.** The scry drip of @Ngnghm (`raw/ngnghm.jsonl`) had delivered **240** of 7,346
+tweets when this file was last revised (2026-10-01 21:10 EDT; they cover 2026-09-08 →
+2026-10-01; pages of 120 arrive between 429 sleeps, ~53 minutes apart). All 240 were
+read, in two passes; 125 are quoted verbatim, threaded, in `sources/tweets-oo.md`, and
+`sources/tweets-oo-notes.md` says what each pass changed here. In this file they are
+cited as `tw:<id>` (https://x.com/Ngnghm/status/<id>). What they changed: §2 (the
+equations were refactored on 2026-09-22; ADVISE as the floor of OO), §3 and §13 (skew
+lenses), §1 (the object-based demarcation in his own words), §15 ("a usable system you
+could live in"). The three weeks are the OO book's chapters 9–10; nothing in them is
+about persistence, kernels or platforms.
 
 ---
 
@@ -187,6 +188,13 @@ principles" (`ltuo` §11.1.1). The design is a "fixed point in design space": GC
 ~2004), Jsonnet (2014), Nix extensions (2015) and T (1981) all reinvented it (`poof`
 §7.2.2; `eoomi` §3.2.5 "Minimal Design, Maximal Outreach").
 
+**READ.** The floor of what counts: "With my definition of OO as Internal Modular
+Extensibility, Simula is OO. More importantly, Sketchpad isn't (barely: it has all the
+elements, just not put together), and—ADVISE is! Now, ADVISE is in-place, isn't general
+purpose (functions only), and doesn't nest. Still qualifies." (`tw:2102146006376645114`,
+2026-09-21; Teitelman's 1966 advice on existing functions). So the least OO is *advising
+an existing definition in place* — a before/after/around on something you did not write.
+
 **INFERRED.** Because inheritance is a monoid on partial specifications, "a law that
 extends another's law" has an exact meaning in his terms: `mix mine theirs`, where
 `mine` may read `super` (what theirs decided) and `self` (what the whole decides). A
@@ -261,6 +269,15 @@ functional lenses" (`ltuo` §9.1.2). Payoff: "open method specifications can now
 considered individually, then grouped incrementally into larger algebraically coherent
 chunks; at each step, every specification can be parsed, defined, typed, analyzed,
 proved correct, algebraically combined" (`ltuo` §9.1.2).
+
+**READ.** The lens in question is a *skew* lens: "my skew lenses generalize lenses by
+allowing skew between view and update, which is *exactly* what you need for OO's modular
+extension: updating a (deeply?) nested field in the context of a wider object. Needless
+to say, they don't work nicely with getter and setter." (`tw:2098867953429037172`,
+2026-09-12); "getter and setter are not an *orthogonal* basis for functional lenses, but
+view and update (haskell: over) are." (`tw:2097776435943379323`). Flavor, once more:
+"Multiple inheritance is great—if flavorful, as in Lisp, Ruby, Perl, Python, Scala. It's
+not so good if flavorless, as in Smalltalk, Self, C++, PHP, etc." (`tw:2101868328083919012`).
 
 **INFERRED.** The two tests this gives a system: (i) can a third party *declare a
 dependency* between two specifications and have the system order them, or must it
@@ -920,7 +937,11 @@ programmers who are more ambitious than clever." (`ltuo` §11.3.2).
 
 ## 15. What Houyhnhnm computing demands of a system friends live in
 
-Collected from the above, as checkable demands (each line cites where it comes from):
+His own one-line version of the brief, on Smalltalk: "the first usable one, which
+counts at least as much. Mad props to Kay, Ingalls & the rest for making a usable system
+you could live in, and not just an experimental language." (`tw:2099301167180222465`,
+2026-09-14). Collected from the above, as checkable demands (each line cites where it
+comes from):
 
 1. **Persistence is the domain's property, never the program's.** No save, no load; the
    log is the user's events plus recorded non-determinism (`ch02`, `ch03`, `persist`).
@@ -977,5 +998,5 @@ Collected from the above, as checkable demands (each line cites where it comes f
   (2016)" — not located under fare.tunes.org/files; probably a talk. Not read.
 - "Who Controls Your Computer? (And How to make sure it's you)" speech, cited in
   `ch10`: not fetched.
-- The tweets: 120 of 7,346 had arrived at the last revision (see §0); the 2024–2025
+- The tweets: 240 of 7,346 had arrived at the last revision (see §0); the 2024–2025
   tweets, where the persistence and LambdaConf material would be, had not.
