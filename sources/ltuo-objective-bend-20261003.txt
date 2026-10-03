@@ -1,0 +1,186 @@
+Faré → Objective Bend: construction decisions from primary sources
+Codex primary-source scholar, 2026-10-03
+
+READ denotes a primary passage actually examined; PROPOSED denotes a design
+choice for Objective Bend. This is a construction review, not certification that
+the current language implementation has these semantics or completed proofs.
+
+Book: https://fare.tunes.org/files/cs/poof/ltuo.html
+Offline: ../raw/mirrors/ltuo/2026-10-03/ltuo.html
+Provenance/verification: ../raw/mirrors/ltuo/2026-10-03/manifest.json
+Navigation/read coverage: ltuo-mirror-20261003.md
+Exact HTML: 4,266,596 bytes, SHA256
+0644ab39f5a08fef711abc5da19f3c703c2db260b10fda851ea512857377966c.
+Same bytes as the earlier snapshot. Old files preserved. All 2,838 book-local
+anchor references resolve, nine direct display assets present. The canonical
+scribble-common.js returned 404; the offline replacement is explicitly an
+upstream Racket supplement with its own provenance, not a canonical asset.
+
+1. Open extensions before closed objects
+
+READ: 5.4.1-4, 8.2.1-4, 8.4.1.3-8.4.4.
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.M.E%29
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Recursively_.Constrained_.Types%29
+
+Context C, inherited target V and result W vary independently: V→C→W in the
+book's super-first convention. Heterogeneous extensions form a category for
+fixed C; C=V=W is a useful closed special case, not the general construction.
+Targets include functions, numbers, nested specifications and type descriptors.
+
+PROPOSED self-first convention: Ext C V W=C→V→W, with
+compose parent child self base=child self (parent self base).
+All ancestors see ONE eventual self; super denotes the whole inherited target.
+Source annotations must retain the three types and an explicit order convention.
+
+A value-dependent family V self over a fixed C does not yet provide modular
+future-self typing. Separately compiled extensions must quantify over future
+self/super TYPES satisfying requirements while preserving unknown row members.
+Self-dependent associated types, binary methods and nested families test this.
+The book supplies proposals, not a checked complete decidable type theory: choose
+an annotated checking fragment and prove its own metatheory. Ember explicitly
+permits changing Bend's types/core; existing Data rules are not a source ceiling.
+
+2. Operational lazy construction, distinct from equations
+
+READ: 5.3.2.3-5, 5.5.4, 10.3.2; original poof section 3 and EOOMI section 5.2.
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Lazy_.Y%29
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.S.Ro.Ro.S%29
+
+Deferral applies to arbitrary computations, not just functions; sharing applies
+per allocated thunk, not automatically to every equal function application.
+Whole-record suspension and individually suspended fields are different.
+An equation x=f(x) alone is not successful construction: every value solves
+x=id(x), while operational fix(id) has no weak-head result.
+
+PROPOSED: independent weak-head CBN source meaning; call-by-need graph executor
+with suspended/evaluating/cached cells and update frames, common self pointer,
+and lazy fields. Prove result adequacy separately from sharing and costs. Relate
+cyclic heaps by a graph relation, not naïve finite textual expansion. Capacity
+exhaustion is resumable suspension. An observable blackhole error needs an
+explicit source/refusal contract, not an unproved claim of divergence.
+
+Clocked CPS can implement lazy semantics if it represents delayed expressions,
+captures and forcing faithfully. Clocking a strict interpreter does not suffice:
+keep(7,fix(identity)) and {good=7,bad=self.bad}.good must both return 7. A Data/table
+backend can represent closures and generic targets, but needs an embedding and
+adequacy proof; the representation does not require Data-only source captures.
+
+3. First-class incomplete specifications and reflection
+
+READ: 6.1.2.3-6.1.4.
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.First_.Issue__.Incomplete_.Specifications%29
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.R.C%29
+
+An incomplete or divergent target must not prevent inspecting and extending its
+specification. Reflection through recursive self must still recover that spec.
+PROPOSED: keep generic computational Fix; explicitly construct a prototype with
+specification plus lazy target (and declared metadata), by tying self around the
+wrapper INSIDE the fixed point. Do not redefine every generic fix as an object.
+A descriptor containing selector names alone is not the extension computation.
+Reflection must name which syntax, identities, code/environment or semantic
+operations are observable; optimization equivalence depends on that boundary.
+
+Book 10.6 is mostly an outline and 10.6.1 an empty heading, not a completed MOP.
+Cross-check actual reflection work in First-Class Implementations and Climbing:
+https://fare.tunes.org/files/fci2017/fci.html
+https://fare.tunes.org/files/climbing/climbing.html
+
+4. Laws, proofs, ownership and authority are separate
+
+READ: 8.4.3, 9.1.6, 9.2.9.
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Inherited_.Interfaces_vs_.Orthogonal_.Protocols%29
+
+General extension may be nonmonotonic. Retaining every old law is one chosen
+compatible-interface policy, not a universal consequence of inheritance.
+PROPOSED: unrestricted first-class construction; explicit retained contracts
+with actual provider evidence; separate current authority to publish/adopt/run.
+Allow after-the-fact protocols in a scoped implementation environment rather
+than requiring shared class ancestry or ungoverned ambient mutation.
+
+Shared closures need transitively shareable captures/results; immutable wrappers
+must not hide affine obligations. Resource addresses being copyable data does
+not establish resource ownership. Suspension/checkpoint must conserve ownership;
+no duplication and terminal discharge are safety obligations, while eventual
+consumption of a suspended/diverging computation needs additional liveness.
+Pure fields may describe actions; executing an effect while forcing a shared
+field requires an explicit sharing-sensitive effect semantics.
+
+Keep unrestricted recursion out of total proof construction and definitional
+conversion. This does NOT forbid total logic from proving equations, contextual
+equivalence, simulations or safety about partial program syntax. A finite trace
+is useful evidence of termination, not the only meaningful law about recursion.
+
+5. C4 and suffixes require the right input structure
+
+READ: 7.3.3, all 7.3.5 constraints, 7.4.2-6, 10.4.2; accompanying pommette.scm
+c4-linearize and its tests (read, not executed).
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Shape_.Determinism__.Consistency_across_.Equivalent_.Ancestries%29
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Suffix_.Specifications%29
+
+Suffix means contiguous TAIL of descendants' precedence lists, stronger than
+subsequence monotonicity; incompatible suffix ancestry must be rejected. Explicit
+mix(E,E) applies twice, while one generative DAG identity shared by a diamond
+appears once. Equal code/captures do not automatically identify DAG nodes.
+
+The book's bare-DAG shape-determinism wording is too strong. Its implementation
+maps ((C A)(C B)) to C A B O and reversed presentation to C B A O, despite the
+same partial order. Deterministic equivariance under the swap automorphism of a
+symmetric bare poset cannot choose one strict total order. PROPOSED theorem:
+renaming/isomorphism invariance of the ORDERED presentation, including local
+parent sequences and suffix marks. Do not advertise canonical order from a bare
+DAG. Some stronger heuristic claims in the book are explicitly conjectural.
+Nested-focus optimization must preserve inherited ordering even for ancestors
+whose own extension does not modify that focus (9.1.6.4).
+
+6. Persistence is of continuing computation
+
+READ: LTUO 6.3.2; First-Class Implementations 2-5, Climbing 2-5; Persistence Model
+execution contexts, domains, synchronization, atomicity and schema upgrade.
+https://fare.tunes.org/files/cs/poof/ltuo.html#%28part._.Mo.Ia.C.U%29
+https://github.com/mighty-gerbils/gerbil-persist/blob/master/persist.md
+
+PROPOSED: preserve heap, aliases/cache, control/frames, captures, code revisions,
+effect journal, ownership and fencing. Distinguish stable object identity, code
+revision, pinned in-flight invocation and upgrade policy. A serialized Data
+residual is not inherently safe to migrate: the same continuation tag may now
+interpret an old cents payload as dollars, or replay an uncertain external act.
+A total old→new field converter does not relate continuation meaning.
+
+Migration needs observe-old→abstract-continuation→realize-new plus effect/resource
+correspondence. Quiescence is one valid policy; transferring complete uncertain
+recovery state with fencing is another if proved. From arbitrary reachable
+interruptions, observation itself needs bounded/nonblocking progress to an
+abstract safe state. Forward stuttering simulation alone proves none of this.
+The runtime owner reports current carrier evolution uses a new revision/instance
+with old behavior pinned; that is narrower than same-identity live-frame migration.
+
+7. What to prove and consume next
+
+* Elaboration convergence correspondence under supported source observations,
+  including heterogeneous targets, final self, whole super and captured closures.
+* Operational lazy adequacy, sharing/update invariant, and progress for RUNNING
+  states; separate initialization, terminal correspondence, refusal honesty and
+  completeness. Rank decrease cannot be demanded of terminal self-loop states.
+* Approximation adequacy through ground observations or related higher-order
+  values. Exact syntactic WHNF equality is too strong: fix(λs.λb.λx.s) yields a
+  closure containing fix, while finite approximants contain finite unrollings.
+* Future-row typing and contract substitution, with closed-object discharge of
+  assumptions about final self; no total-core consistency transferred silently.
+* Ordered C4/suffix soundness, diagnostics and generative identity semantics.
+* Checkpoint/resume and backend migration from reachable interruptions, preserving
+  continuation, cache aliases, ownership and visible effect history.
+
+Independent actual .obend consumers were authored in
+/Users/ember/workbox/fareoo-primary-scholar-20261003/source-consumers/:
+LazyUnusedArgument.obend -> Nat 7 despite fix(identity) in the unused argument;
+LazyUnusedField.obend -> Nat 7 despite a cyclic unused record field;
+LazySharedField.obend -> Nat 512, with its expensive field initialized once per
+thunk identity (not automatic memoization of ordinary calls). EXPECTATIONS.txt
+states the separate result/cost/checkpoint obligations. Compiler and world owners
+received these for independent consumption; authored source alone is not a pass.
+
+Full reading notes and both council critiques remain in the assigned scholar
+workbox as SYNTHESIS.txt and COUNCIL-CRITIQUE.txt. Owner reports already reflect
+changes to heterogeneous extensions, operational fix/prototype separation,
+optional contracts and explicit lazy execution; these are integration decisions,
+not independently established implementation/refinement evidence.

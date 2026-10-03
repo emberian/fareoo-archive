@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Sat, 03 Oct 2026 12:51:30 GMT
+Server: Apache/2.4.59 (Debian) OpenSSL/1.1.1n
+Last-Modified: Tue, 29 Sep 2026 17:36:35 GMT
+ETag: "411a64-65ca29fcc5504"
+Accept-Ranges: bytes
+Content-Length: 4266596
+Vary: Accept-Encoding
+Content-Type: text/html
+

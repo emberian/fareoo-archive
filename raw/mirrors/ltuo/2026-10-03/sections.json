@@ -1,0 +1,1967 @@
+[
+  {
+    "title": "Lambda: The Ultimate Object Object Orientation Elucidated ",
+    "anchor": "(part._.Lambda__.The_.Ultimate_.Object________.Object_.Orientation_.Elucidated________)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Lambda__.The_.Ultimate_.Object________.Object_.Orientation_.Elucidated________)"
+  },
+  {
+    "title": "1 Introduction",
+    "anchor": "(part._.Intro)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Intro)"
+  },
+  {
+    "title": "1.1 Wherefore the Book",
+    "anchor": "(part._.Wherefore_the_.Book)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Wherefore_the_.Book)"
+  },
+  {
+    "title": "1.1.1 Curiosity about OO, Familiarity with FP",
+    "anchor": "(part._.Curiosity_about_.O.O__.Familiarity_with_.F.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Curiosity_about_.O.O__.Familiarity_with_.F.P)"
+  },
+  {
+    "title": "1.1.2 Decades Too Late, But Still Decades Ahead",
+    "anchor": "(part._.Decades_.Too_.Late__.But_.Still_.Decades_.Ahead)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Decades_.Too_.Late__.But_.Still_.Decades_.Ahead)"
+  },
+  {
+    "title": "1.1.3 Towards a Rebirth of OO",
+    "anchor": "(part._.Towards_a_.Rebirth_of_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Towards_a_.Rebirth_of_.O.O)"
+  },
+  {
+    "title": "1.2 Whence the Book",
+    "anchor": "(part._.Whence_the_.Book)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Whence_the_.Book)"
+  },
+  {
+    "title": "1.2.1 Proximate Cause",
+    "anchor": "(part._.Proximate_.Cause)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Proximate_.Cause)"
+  },
+  {
+    "title": "1.2.2 Ultimate Cause",
+    "anchor": "(part._.Ultimate_.Cause)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ultimate_.Cause)"
+  },
+  {
+    "title": "1.3 What the Book",
+    "anchor": "(part._.What_the_.Book)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.What_the_.Book)"
+  },
+  {
+    "title": "1.3.1 A Theory of OO",
+    "anchor": "(part._a.To.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._a.To.O.O)"
+  },
+  {
+    "title": "1.3.2 Multiple Variants of Inheritance",
+    "anchor": "(part._.Multiple_.Variants_of_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Variants_of_.Inheritance)"
+  },
+  {
+    "title": "1.3.3 Optimal Inheritance",
+    "anchor": "(part._.Optimal_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Optimal_.Inheritance)"
+  },
+  {
+    "title": "1.4 How the Book",
+    "anchor": "(part._.How_the_.Book)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.How_the_.Book)"
+  },
+  {
+    "title": "1.4.1 Plan of the Book",
+    "anchor": "(part._.Plan_of_the_.Book)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Plan_of_the_.Book)"
+  },
+  {
+    "title": "1.4.2 Stop and Go",
+    "anchor": "(part._.Stop_and_.Go)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Stop_and_.Go)"
+  },
+  {
+    "title": "1.4.3 Self-Description",
+    "anchor": "(part._.Self-.Description)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Self-.Description)"
+  },
+  {
+    "title": "1.4.4 Being Objectively Subjective",
+    "anchor": "(part._.Being_.Objectively_.Subjective)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Being_.Objectively_.Subjective)"
+  },
+  {
+    "title": "1.4.5 Technical Nomenclature",
+    "anchor": "(part._.Technical_.Nomenclature)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Technical_.Nomenclature)"
+  },
+  {
+    "title": "2 What Object Orientation is (Overview)",
+    "anchor": "(part._.W.O.Oi.I.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.W.O.Oi.I.O)"
+  },
+  {
+    "title": "2.1 Extensible Modular Specifications",
+    "anchor": "(part._.Extensible_.Modular_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extensible_.Modular_.Specifications)"
+  },
+  {
+    "title": "2.1.1 Partial specifications",
+    "anchor": "(part._.Partial_specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Partial_specifications)"
+  },
+  {
+    "title": "2.1.2 Modularity (Overview)",
+    "anchor": "(part._.M.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.O)"
+  },
+  {
+    "title": "2.1.3 Extensibility (Overview)",
+    "anchor": "(part._.E.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.E.O)"
+  },
+  {
+    "title": "2.1.4 Internality",
+    "anchor": "(part._.Internality)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Internality)"
+  },
+  {
+    "title": "2.2 Prototypes and Classes",
+    "anchor": "(part._.P~26.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.P~26.C)"
+  },
+  {
+    "title": "2.2.1 Prototype OO vs Class OO",
+    "anchor": "(part._.Prototype_.O.O_vs_.Class_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Prototype_.O.O_vs_.Class_.O.O)"
+  },
+  {
+    "title": "2.2.2 Classes as Prototypes for Types",
+    "anchor": "(part._.Ca.Pf.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ca.Pf.T)"
+  },
+  {
+    "title": "2.2.3 Classes in Dynamic and Static Languages",
+    "anchor": "(part._.Classes_in_.Dynamic_and_.Static_.Languages)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Classes_in_.Dynamic_and_.Static_.Languages)"
+  },
+  {
+    "title": "2.3 More Fundamental than Prototypes and Classes",
+    "anchor": "(part._.M.Ft.Pa.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.Ft.Pa.C)"
+  },
+  {
+    "title": "2.3.1 Specifications and Targets",
+    "anchor": "(part._.Sa.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Sa.T)"
+  },
+  {
+    "title": "2.3.2 Prototypes as Conflation",
+    "anchor": "(part._.Pa.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Pa.C)"
+  },
+  {
+    "title": "2.3.3 Modularity of Conflation",
+    "anchor": "(part._.Mo.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mo.C)"
+  },
+  {
+    "title": "2.3.4 Conflation and Confusion",
+    "anchor": "(part._.Conflation_and_.Confusion)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Conflation_and_.Confusion)"
+  },
+  {
+    "title": "2.4 Inheritance (Overview)",
+    "anchor": "(part._.Inheritance__.Overview_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inheritance__.Overview_)"
+  },
+  {
+    "title": "2.4.1 Inheritance as Modular Extension of Specifications",
+    "anchor": "(part._.Inheritance_as_.Modular_.Extension_of_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inheritance_as_.Modular_.Extension_of_.Specifications)"
+  },
+  {
+    "title": "2.4.2 Single Inheritance (Overview)",
+    "anchor": "(part._.Single_.Inheritance__.Overview_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Single_.Inheritance__.Overview_)"
+  },
+  {
+    "title": "2.4.3 Multiple Inheritance (Overview)",
+    "anchor": "(part._.M.U.L.I.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.U.L.I.O)"
+  },
+  {
+    "title": "2.4.4 Mixin Inheritance (Overview)",
+    "anchor": "(part._.M.I.X.I.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.I.X.I.O)"
+  },
+  {
+    "title": "3 What Object Orientation is not",
+    "anchor": "(part._.W.O.Oin)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.W.O.Oin)"
+  },
+  {
+    "title": "3.1 Things OO isn’t (that many claim it is)",
+    "anchor": "(part._.Things_.O.O_isn~e2~80~99t__that_many_claim_it_is_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Things_.O.O_isn~e2~80~99t__that_many_claim_it_is_)"
+  },
+  {
+    "title": "3.1.1 OO isn’t Whatever C++ is",
+    "anchor": "(part._.O.O_isn~e2~80~99t_.Whatever_.C___is)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_isn~e2~80~99t_.Whatever_.C___is)"
+  },
+  {
+    "title": "3.1.1.1 Influential, Yet Atypical",
+    "anchor": "(part._.Influential__.Yet_.Atypical)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Influential__.Yet_.Atypical)"
+  },
+  {
+    "title": "3.1.1.2 OO isn’t Defined by Any Particular Language or System",
+    "anchor": "(part._.O.O_isn~e2~80~99t_.Defined_by_.Any_.Particular_.Language_or_.System)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_isn~e2~80~99t_.Defined_by_.Any_.Particular_.Language_or_.System)"
+  },
+  {
+    "title": "3.1.2 OO isn’t Classes Only",
+    "anchor": "(part._.O.Oin.C.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oin.C.O)"
+  },
+  {
+    "title": "3.1.3 OO isn’t Imperative Programming",
+    "anchor": "(part._.O.Oin.I.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oin.I.P)"
+  },
+  {
+    "title": "3.1.4 OO isn’t Encapsulation",
+    "anchor": "(part._.O.Oin.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oin.E)"
+  },
+  {
+    "title": "3.1.4.1 The Information Hidden: Modularity",
+    "anchor": "(part._.The_.Information_.Hidden__.Modularity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Information_.Hidden__.Modularity)"
+  },
+  {
+    "title": "3.1.4.2 Tunnel Vision: Visibility",
+    "anchor": "(part._.Tunnel_.Vision__.Visibility)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Tunnel_.Vision__.Visibility)"
+  },
+  {
+    "title": "3.1.4.3 William R. Cook",
+    "anchor": "(part._.Cook)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cook)"
+  },
+  {
+    "title": "3.1.5 OO isn’t Opposite to FP",
+    "anchor": "(part._.O.O_isn~e2~80~99t_.Opposite_to_.F.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_isn~e2~80~99t_.Opposite_to_.F.P)"
+  },
+  {
+    "title": "3.1.5.1 The Long Flamewar",
+    "anchor": "(part._.The_.Long_.Flamewar)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Long_.Flamewar)"
+  },
+  {
+    "title": "3.1.5.2 Composition vs Inheritance",
+    "anchor": "(part._.Cv.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cv.I)"
+  },
+  {
+    "title": "3.1.5.3 Beyond Heuristics: Understanding",
+    "anchor": "(part._.B.H.U)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.B.H.U)"
+  },
+  {
+    "title": "3.1.5.4 The Real Opposition between OO and FP",
+    "anchor": "(part._.The_.Real_.Opposition_between_.O.O_and_.F.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Real_.Opposition_between_.O.O_and_.F.P)"
+  },
+  {
+    "title": "3.1.6 OO isn’t Message Passing",
+    "anchor": "(part._.O.Oin.M.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oin.M.P)"
+  },
+  {
+    "title": "3.1.7 OO isn’t a Model of the World",
+    "anchor": "(part._.Oia.Mot.W)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Oia.Mot.W)"
+  },
+  {
+    "title": "3.1.7.1 OO is No Theory of Everything",
+    "anchor": "(part._.O.O_is_.No_.Theory_of_.Everything)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_is_.No_.Theory_of_.Everything)"
+  },
+  {
+    "title": "3.1.7.2 OO is not Data Modeling",
+    "anchor": "(part._.O.Oin.D.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oin.D.M)"
+  },
+  {
+    "title": "3.1.7.3 OO is not what Goguen did",
+    "anchor": "(part._.Goguen)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Goguen)"
+  },
+  {
+    "title": "3.2 OO vs Objects",
+    "anchor": "(part._.O.O_vs_.Objects)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_vs_.Objects)"
+  },
+  {
+    "title": "3.2.1 An Ambiguous Word",
+    "anchor": "(part._.A.A.W)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A.A.W)"
+  },
+  {
+    "title": "3.2.2 OO without Objects",
+    "anchor": "(part._.O.Owo.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Owo.O)"
+  },
+  {
+    "title": "3.2.3 Objects without OO",
+    "anchor": "(part._.Owo.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Owo.O.O)"
+  },
+  {
+    "title": "3.2.4 The Naming of OO",
+    "anchor": "(part._.O.Onaming)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Onaming)"
+  },
+  {
+    "title": "3.3 Misunderstandings about Inheritance",
+    "anchor": "(part._.Misunderstandings_about_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Misunderstandings_about_.Inheritance)"
+  },
+  {
+    "title": "3.3.1 Absurd Rejection of “Inheritance of Implementation”",
+    "anchor": "(part._.Absurd_.Rejection_of_~e2~80~9c.Inheritance_of_.Implementation~e2~80~9d)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Absurd_.Rejection_of_~e2~80~9c.Inheritance_of_.Implementation~e2~80~9d)"
+  },
+  {
+    "title": "3.3.2 False Dichotomy between Inheritance and Delegation",
+    "anchor": "(part._.False_.Dichotomy_between_.Inheritance_and_.Delegation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.False_.Dichotomy_between_.Inheritance_and_.Delegation)"
+  },
+  {
+    "title": "3.4 Epistemological Digression",
+    "anchor": "(part._.Epistemology)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Epistemology)"
+  },
+  {
+    "title": "3.4.1 Is my definition correct?",
+    "anchor": "(part._.Imdc)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Imdc)"
+  },
+  {
+    "title": "3.4.2 Does it even mean anything for a definition to be correct?",
+    "anchor": "(part._.Does_it_even_mean_anything_for_a_definition_to_be_correct_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Does_it_even_mean_anything_for_a_definition_to_be_correct_)"
+  },
+  {
+    "title": "3.4.3 Is there an authority on those words?",
+    "anchor": "(part._.Is_there_an_authority_on_those_words_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Is_there_an_authority_on_those_words_)"
+  },
+  {
+    "title": "3.4.4 Shouldn’t I just use the same definition as Alan Kay?",
+    "anchor": "(part._.Kay)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Kay)"
+  },
+  {
+    "title": "3.4.5 Shouldn’t I just let others define “OO” however they want?",
+    "anchor": "(part._.Shouldn~e2~80~99t_.I_just_let_others_define_~e2~80~9c.O.O~e2~80~9d_however_they_want_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Shouldn~e2~80~99t_.I_just_let_others_define_~e2~80~9c.O.O~e2~80~9d_however_they_want_)"
+  },
+  {
+    "title": "3.4.6 Can’t we at least let experts determine what concepts to name?",
+    "anchor": "(part._.Experts)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Experts)"
+  },
+  {
+    "title": "3.4.7 So what phenomena count as OO?",
+    "anchor": "(part._.So_what_phenomena_count_as_.O.O_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.So_what_phenomena_count_as_.O.O_)"
+  },
+  {
+    "title": "4 OO as Internal Modular Extensibility",
+    "anchor": "(part._.O.Oa.I.E.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oa.I.E.M)"
+  },
+  {
+    "title": "4.1 Modularity",
+    "anchor": "(part._.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M)"
+  },
+  {
+    "title": "4.1.1 Division of Labor",
+    "anchor": "(part._.Division_of_.Labor)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Division_of_.Labor)"
+  },
+  {
+    "title": "4.1.2 First- to Fourth-class, Internal or External",
+    "anchor": "(part._.First-_to_.Fourth-class__.Internal_or_.External)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.First-_to_.Fourth-class__.Internal_or_.External)"
+  },
+  {
+    "title": "4.1.3 Criterion for Modularity",
+    "anchor": "(part._.Cf.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cf.M)"
+  },
+  {
+    "title": "4.1.4 Historical Modularity Breakthroughs",
+    "anchor": "(part._.Historical_.Modularity_.Breakthroughs)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Historical_.Modularity_.Breakthroughs)"
+  },
+  {
+    "title": "4.1.5 Modularity and Complexity",
+    "anchor": "(part._.Modularity_and_.Complexity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Modularity_and_.Complexity)"
+  },
+  {
+    "title": "4.1.5.1 Runtime Processes Make Bad Compile-Time Modules",
+    "anchor": "(part._.Runtime_.Processes_.Make_.Bad_.Compile-.Time_.Modules)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Runtime_.Processes_.Make_.Bad_.Compile-.Time_.Modules)"
+  },
+  {
+    "title": "4.1.6 Implementing Modularity",
+    "anchor": "(part._.Implementing_.Modularity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_.Modularity)"
+  },
+  {
+    "title": "4.1.6.1 Initializing Recursive Structures",
+    "anchor": "(part._.I.R.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.I.R.S)"
+  },
+  {
+    "title": "4.2 Extensibility",
+    "anchor": "(part._.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.E)"
+  },
+  {
+    "title": "4.2.1 Extending an Entity",
+    "anchor": "(part._.Extending_an_.Entity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extending_an_.Entity)"
+  },
+  {
+    "title": "4.2.2 First-class to Fourth-class Extensibility",
+    "anchor": "(part._.First-class_to_.Fourth-class_.Extensibility)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.First-class_to_.Fourth-class_.Extensibility)"
+  },
+  {
+    "title": "4.2.3 A Criterion for Extensibility",
+    "anchor": "(part._.Cf.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cf.E)"
+  },
+  {
+    "title": "4.2.4 Historical Extensibility Breakthroughs",
+    "anchor": "(part._.Historical_.Extensibility_.Breakthroughs)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Historical_.Extensibility_.Breakthroughs)"
+  },
+  {
+    "title": "4.2.5 Extensibility without Modularity",
+    "anchor": "(part._.Ew.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ew.M)"
+  },
+  {
+    "title": "4.2.6 Extensibility and Complexity",
+    "anchor": "(part._.Extensibility_and_.Complexity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extensibility_and_.Complexity)"
+  },
+  {
+    "title": "4.2.7 Implementing Extensibility",
+    "anchor": "(part._.Implementing_.Extensibility)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_.Extensibility)"
+  },
+  {
+    "title": "4.3 Modular Extensibility",
+    "anchor": "(part._.M.E4)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.E4)"
+  },
+  {
+    "title": "4.3.1 A Dynamic Duo",
+    "anchor": "(part._.A_.Dynamic_.Duo)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Dynamic_.Duo)"
+  },
+  {
+    "title": "4.3.2 Modular Extensibility Breakthroughs: A History of OO",
+    "anchor": "(part._.H.M.E.B)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.H.M.E.B)"
+  },
+  {
+    "title": "4.3.2.1 Before “OO” was OO: 1961-1975",
+    "anchor": "(part._.Before_~e2~80~9c.O.O~e2~80~9d_was_.O.O__1961-1975)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Before_~e2~80~9c.O.O~e2~80~9d_was_.O.O__1961-1975)"
+  },
+  {
+    "title": "4.3.2.2 OO in the Lab: 1976-1988",
+    "anchor": "(part._.O.Oit.L)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.Oit.L)"
+  },
+  {
+    "title": "4.3.2.3 OO at Work: 1989-2009",
+    "anchor": "(part._.O.O_at_.Work__1989-2009)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_at_.Work__1989-2009)"
+  },
+  {
+    "title": "4.3.2.4 OO: So Normal It’s Boring: 2010-",
+    "anchor": "(part._.O.O__.So_.Normal_.It~e2~80~99s_.Boring__2010-)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O__.So_.Normal_.It~e2~80~99s_.Boring__2010-)"
+  },
+  {
+    "title": "4.3.3 Modular Extensible Specifications",
+    "anchor": "(part._.Modular_.Extensible_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Modular_.Extensible_.Specifications)"
+  },
+  {
+    "title": "4.4 Why a Minimal Model of First-Class OO using FP?",
+    "anchor": "(part._.Why_a_.Minimal_.Model_of_.First-.Class_.O.O_using_.F.P_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_a_.Minimal_.Model_of_.First-.Class_.O.O_using_.F.P_)"
+  },
+  {
+    "title": "4.4.1 Why a Formal Model?",
+    "anchor": "(part._.Why_a_.Formal_.Model_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_a_.Formal_.Model_)"
+  },
+  {
+    "title": "4.4.2 Why a Minimal Model?",
+    "anchor": "(part._.Why_a_.Minimal_.Model_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_a_.Minimal_.Model_)"
+  },
+  {
+    "title": "4.4.3 Why Functional Programming?",
+    "anchor": "(part._.Why_.Functional_.Programming_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_.Functional_.Programming_)"
+  },
+  {
+    "title": "4.4.4 Why an Executable Model?",
+    "anchor": "(part._.Why_an_.Executable_.Model_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_an_.Executable_.Model_)"
+  },
+  {
+    "title": "4.4.5 Why First-Class?",
+    "anchor": "(part._.Why_.First-.Class_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_.First-.Class_)"
+  },
+  {
+    "title": "4.4.6 What Precedents?",
+    "anchor": "(part._.What_.Precedents_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.What_.Precedents_)"
+  },
+  {
+    "title": "4.4.7 Why Scheme?",
+    "anchor": "(part._.W.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.W.S)"
+  },
+  {
+    "title": "5 Minimal OO",
+    "anchor": "(part._.M.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.O.O)"
+  },
+  {
+    "title": "5.1 Minimal First-Class Extensibility",
+    "anchor": "(part._.Minimal_.First-.Class_.Extensibility)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Minimal_.First-.Class_.Extensibility)"
+  },
+  {
+    "title": "5.1.1 Extensions as Functions",
+    "anchor": "(part._.Extensions_as_.Functions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extensions_as_.Functions)"
+  },
+  {
+    "title": "5.1.2 Coloring a Point",
+    "anchor": "(part._.Coloring_a_.Point)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Coloring_a_.Point)"
+  },
+  {
+    "title": "5.1.3 Extending Arbitrary Values",
+    "anchor": "(part._.Extending_.Arbitrary_.Values)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extending_.Arbitrary_.Values)"
+  },
+  {
+    "title": "5.1.4 Applying or Composing Extensions",
+    "anchor": "(part._.Applying_or_.Composing_.Extensions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Applying_or_.Composing_.Extensions)"
+  },
+  {
+    "title": "5.1.5 Top Value",
+    "anchor": "(part._.Top_.Value)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Top_.Value)"
+  },
+  {
+    "title": "5.1.6 Here there is no Y",
+    "anchor": "(part._.Here_there_is_no_.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Here_there_is_no_.Y)"
+  },
+  {
+    "title": "5.2 Minimal First-Class Modularity",
+    "anchor": "(part._.M.F.C.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.F.C.M)"
+  },
+  {
+    "title": "5.2.1 Modeling Modularity (Overview)",
+    "anchor": "(part._.Modeling_.Modularity__.Overview_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Modeling_.Modularity__.Overview_)"
+  },
+  {
+    "title": "5.2.2 Records",
+    "anchor": "(part._.Records)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Records)"
+  },
+  {
+    "title": "5.2.2.1 Record Nomenclature",
+    "anchor": "(part._.Record_.Nomenclature)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Record_.Nomenclature)"
+  },
+  {
+    "title": "5.2.2.2 Typing Records",
+    "anchor": "(part._.Typing_.Records)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Typing_.Records)"
+  },
+  {
+    "title": "5.2.2.3 Implementing Records",
+    "anchor": "(part._.Implementing_.Records)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_.Records)"
+  },
+  {
+    "title": "5.2.2.4 Merging Records",
+    "anchor": "(part._.Merging_.Records)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Merging_.Records)"
+  },
+  {
+    "title": "5.2.3 Modular Definitions",
+    "anchor": "(part._.Modular_.Definitions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Modular_.Definitions)"
+  },
+  {
+    "title": "5.2.4 Open Modular Definitions",
+    "anchor": "(part._.O.M.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.M.D)"
+  },
+  {
+    "title": "5.2.5 Linking Modular Module Definitions: Y",
+    "anchor": "(part._.Linking_.Modular_.Module_.Definitions__.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Linking_.Modular_.Module_.Definitions__.Y)"
+  },
+  {
+    "title": "5.3 Underappreciated Practical Subtleties of the λ-calculus",
+    "anchor": "(part._.U.P.S.L.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.U.P.S.L.C)"
+  },
+  {
+    "title": "5.3.1 Function Arity and Currying",
+    "anchor": "(part._.Function_.Arity_and_.Currying)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Function_.Arity_and_.Currying)"
+  },
+  {
+    "title": "5.3.1.1 Curried Syntax",
+    "anchor": "(part._.Curried_.Syntax)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Curried_.Syntax)"
+  },
+  {
+    "title": "5.3.1.2 Lots of Irritating and Superfluous Parentheses",
+    "anchor": "(part._.Lots_of_.Irritating_and_.Superfluous_.Parentheses)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Lots_of_.Irritating_and_.Superfluous_.Parentheses)"
+  },
+  {
+    "title": "5.3.1.3 Abandoning Functional Style",
+    "anchor": "(part._.Abandoning_.Functional_.Style)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Abandoning_.Functional_.Style)"
+  },
+  {
+    "title": "5.3.1.4 Extending Scheme for Functional Style",
+    "anchor": "(part._.Extending_.Scheme_for_.Functional_.Style)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extending_.Scheme_for_.Functional_.Style)"
+  },
+  {
+    "title": "5.3.2 Many Y Combinators",
+    "anchor": "(part._.M.Y.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.Y.C)"
+  },
+  {
+    "title": "5.3.2.1 Applicative Y",
+    "anchor": "(part._.Applicative_.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Applicative_.Y)"
+  },
+  {
+    "title": "5.3.2.2 Stateful (Applicative) Y",
+    "anchor": "(part._.Stateful__.Applicative__.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Stateful__.Applicative__.Y)"
+  },
+  {
+    "title": "5.3.2.3 Lazy Y",
+    "anchor": "(part._.Lazy_.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Lazy_.Y)"
+  },
+  {
+    "title": "5.3.2.4 Lazy on top of Applicative",
+    "anchor": "(part._.Lazy_on_top_of_.Applicative)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Lazy_on_top_of_.Applicative)"
+  },
+  {
+    "title": "5.3.2.5 Minimally Lazy Y",
+    "anchor": "(part._.M.L.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.L.Y)"
+  },
+  {
+    "title": "5.3.2.6 Second-class Y",
+    "anchor": "(part._.Second-class_.Y)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Second-class_.Y)"
+  },
+  {
+    "title": "5.3.2.7 My Editorial Choice",
+    "anchor": "(part._.My_.Editorial_.Choice)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.My_.Editorial_.Choice)"
+  },
+  {
+    "title": "5.4 Minimal First-Class Modular Extensibility",
+    "anchor": "(part._.M.F.C.M.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.F.C.M.E)"
+  },
+  {
+    "title": "5.4.1 Modular Extensions",
+    "anchor": "(part._.M.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.E)"
+  },
+  {
+    "title": "5.4.2 Composing Modular Extensions",
+    "anchor": "(part._.Composing_.Modular_.Extensions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Composing_.Modular_.Extensions)"
+  },
+  {
+    "title": "5.4.3 Closing Modular Extensions",
+    "anchor": "(part._.Closing_.Modular_.Extensions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Closing_.Modular_.Extensions)"
+  },
+  {
+    "title": "5.4.4 Default and non-default Top Type",
+    "anchor": "(part._.Default_and_non-default_.Top_.Type)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Default_and_non-default_.Top_.Type)"
+  },
+  {
+    "title": "5.5 Minimal OO Indeed",
+    "anchor": "(part._.M.O.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.O.I)"
+  },
+  {
+    "title": "5.5.1 Minimally Specifying Records",
+    "anchor": "(part._.M.S.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.S.R)"
+  },
+  {
+    "title": "5.5.2 Minimal Colored Point",
+    "anchor": "(part._.Minimal_.Colored_.Point)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Minimal_.Colored_.Point)"
+  },
+  {
+    "title": "5.5.3 Minimal Extensibility and Modularity Examples",
+    "anchor": "(part._.Minimal_.Extensibility_and_.Modularity_.Examples)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Minimal_.Extensibility_and_.Modularity_.Examples)"
+  },
+  {
+    "title": "5.5.4 Interaction of Modularity and Extensibility",
+    "anchor": "(part._.Io.Ma.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Io.Ma.E)"
+  },
+  {
+    "title": "6 Rebuilding OO from its Minimal Core",
+    "anchor": "(part._.R.O.Ofi.M.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.O.Ofi.M.C)"
+  },
+  {
+    "title": "6.1 Rebuilding Prototype OO",
+    "anchor": "(part._.R.P.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.P.O.O)"
+  },
+  {
+    "title": "6.1.1 What did I just do?",
+    "anchor": "(part._.Wd.Ijd)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Wd.Ijd)"
+  },
+  {
+    "title": "6.1.2 Conflation: Crouching Typecast, Hidden Product",
+    "anchor": "(part._.C.C.T.H.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C.C.T.H.P)"
+  },
+  {
+    "title": "6.1.2.1 Notional Pair",
+    "anchor": "(part._.Notional_.Pair)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Notional_.Pair)"
+  },
+  {
+    "title": "6.1.2.2 Trivial Implementation",
+    "anchor": "(part._.Trivial_.Implementation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Trivial_.Implementation)"
+  },
+  {
+    "title": "6.1.2.3 First Issue: Incomplete Specifications",
+    "anchor": "(part._.First_.Issue__.Incomplete_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.First_.Issue__.Incomplete_.Specifications)"
+  },
+  {
+    "title": "6.1.2.4 Second Issue: Recursion",
+    "anchor": "(part._.Second_.Issue__.Recursion)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Second_.Issue__.Recursion)"
+  },
+  {
+    "title": "6.1.3 Recursive Conflation",
+    "anchor": "(part._.R.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.C)"
+  },
+  {
+    "title": "6.1.4 Conflation for Records",
+    "anchor": "(part._.Cf.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cf.R)"
+  },
+  {
+    "title": "6.1.5 Conflation from U-encoding",
+    "anchor": "(part._.Cf.Ue)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cf.Ue)"
+  },
+  {
+    "title": "6.1.5.1 Y U NO APPLY SELF?",
+    "anchor": "(part._.Y_.U_.N.O_.A.P.P.L.Y_.S.E.L.F_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Y_.U_.N.O_.A.P.P.L.Y_.S.E.L.F_)"
+  },
+  {
+    "title": "6.1.5.2 Y: Double U",
+    "anchor": "(part._.Y__.Double_.U)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Y__.Double_.U)"
+  },
+  {
+    "title": "6.1.5.3 For or Against U, Y?",
+    "anchor": "(part._.For_or_.Against_.U__.Y_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.For_or_.Against_.U__.Y_)"
+  },
+  {
+    "title": "6.1.5.4 Inheriting from U means…",
+    "anchor": "(part._.Inheriting_from_.U_means~e2~80~a6)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inheriting_from_.U_means~e2~80~a6)"
+  },
+  {
+    "title": "6.1.5.5 Choosing U, Y?",
+    "anchor": "(part._.Choosing_.U__.Y_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Choosing_.U__.Y_)"
+  },
+  {
+    "title": "6.1.6 Small-Scale Advantages of Conflation: Performance, Sharing",
+    "anchor": "(part._.S.S.Ao.C.P.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.S.Ao.C.P.S)"
+  },
+  {
+    "title": "6.1.7 Large-Scale Advantages of Conflation: More Modularity",
+    "anchor": "(part._.L.S.Ao.C.M.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.L.S.Ao.C.M.M)"
+  },
+  {
+    "title": "6.1.8 Implicit Recognition of Conflation in OO Lore and Literature",
+    "anchor": "(part._.I.Ro.Ci.O.La.L)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.I.Ro.Ci.O.La.L)"
+  },
+  {
+    "title": "6.2 Rebuilding Class OO",
+    "anchor": "(part._.R.C.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.C.O.O)"
+  },
+  {
+    "title": "6.2.1 A Class is a Prototype for a Type",
+    "anchor": "(part._.A_.Class_is_a_.Prototype_for_a_.Type)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Class_is_a_.Prototype_for_a_.Type)"
+  },
+  {
+    "title": "6.2.2 Simple First-Class Type Descriptors",
+    "anchor": "(part._.S.F.C.T.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.F.C.T.D)"
+  },
+  {
+    "title": "6.2.3 Parametric First-Class Type Descriptors",
+    "anchor": "(part._.P.F.C.T.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.P.F.C.T.D)"
+  },
+  {
+    "title": "6.2.4 Class Style vs Typeclass Style",
+    "anchor": "(part._.C.Sv.T.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C.Sv.T.S)"
+  },
+  {
+    "title": "6.2.5 A Class is Second-Class in Most Class OO",
+    "anchor": "(part._.A_.Class_is_.Second-.Class_in_.Most_.Class_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Class_is_.Second-.Class_in_.Most_.Class_.O.O)"
+  },
+  {
+    "title": "6.2.6 Type-Level Language Restrictions",
+    "anchor": "(part._.Type-.Level_.Language_.Restrictions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Type-.Level_.Language_.Restrictions)"
+  },
+  {
+    "title": "6.2.7 More Popular yet Less Fundamental",
+    "anchor": "(part._.More_.Popular_yet_.Less_.Fundamental)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.More_.Popular_yet_.Less_.Fundamental)"
+  },
+  {
+    "title": "6.3 Stateful OO",
+    "anchor": "(part._.S.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.O.O)"
+  },
+  {
+    "title": "6.3.1 Mutability of Fields as Orthogonal to OO",
+    "anchor": "(part._.Mutability_of_.Fields_as_.Orthogonal_to_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mutability_of_.Fields_as_.Orthogonal_to_.O.O)"
+  },
+  {
+    "title": "6.3.2 Mutability of Inheritance as Code Upgrade",
+    "anchor": "(part._.Mo.Ia.C.U)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mo.Ia.C.U)"
+  },
+  {
+    "title": "6.3.3 Mutability of Inheritance as Low-Level Scaffolding",
+    "anchor": "(part._.Mo.Ia.L.L.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mo.Ia.L.L.R)"
+  },
+  {
+    "title": "6.3.4 Further Notes about Mutation",
+    "anchor": "(part._.Further_.Notes_about_.Mutation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Further_.Notes_about_.Mutation)"
+  },
+  {
+    "title": "7 Inheritance: Mixin, Single, Multiple, or Optimal",
+    "anchor": "(part._.I.M.S.M.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.I.M.S.M.O)"
+  },
+  {
+    "title": "7.1 Mixin Inheritance",
+    "anchor": "(part._.Mx.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mx.I)"
+  },
+  {
+    "title": "7.1.1 The Last Shall Be First",
+    "anchor": "(part._.The_.Last_.Shall_.Be_.First)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Last_.Shall_.Be_.First)"
+  },
+  {
+    "title": "7.1.2 Mixin Semantics",
+    "anchor": "(part._.Mixin_.Semantics)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mixin_.Semantics)"
+  },
+  {
+    "title": "7.2 Single Inheritance",
+    "anchor": "(part._.S.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.I)"
+  },
+  {
+    "title": "7.2.1 Semantics of Single Inheritance",
+    "anchor": "(part._.Semantics_of_.Single_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Semantics_of_.Single_.Inheritance)"
+  },
+  {
+    "title": "7.2.2 Comparing Mixin and Single Inheritance",
+    "anchor": "(part._.C.M.S.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C.M.S.I)"
+  },
+  {
+    "title": "7.2.2.1 Mixin Inheritance is Simpler than Single Inheritance, assuming FP",
+    "anchor": "(part._.Mixin_.Inheritance_is_.Simpler_than_.Single_.Inheritance__assuming_.F.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mixin_.Inheritance_is_.Simpler_than_.Single_.Inheritance__assuming_.F.P)"
+  },
+  {
+    "title": "7.2.2.2 Mixin Inheritance is More Extensible than Single Inheritance",
+    "anchor": "(part._.M.Is.M.Et.S.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.Is.M.Et.S.I)"
+  },
+  {
+    "title": "7.2.2.3 Mixin Inheritance is More Modular than Single Inheritance",
+    "anchor": "(part._.Mixin_.Inheritance_is_.More_.Modular_than_.Single_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mixin_.Inheritance_is_.More_.Modular_than_.Single_.Inheritance)"
+  },
+  {
+    "title": "7.2.2.4 Mixin Inheritance is Less Performant than Single Inheritance",
+    "anchor": "(part._.Mixin_.Inheritance_is_.Less_.Performant_than_.Single_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mixin_.Inheritance_is_.Less_.Performant_than_.Single_.Inheritance)"
+  },
+  {
+    "title": "7.3 Multiple Inheritance",
+    "anchor": "(part._.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.I)"
+  },
+  {
+    "title": "7.3.1 Correct and Incorrect Semantics for Multiple Inheritance",
+    "anchor": "(part._.C~26.I.S4.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C~26.I.S4.M.I)"
+  },
+  {
+    "title": "7.3.2 Specifications as DAGs of Modular Extensions",
+    "anchor": "(part._.Specifications_as_.D.A.Gs_of_.Modular_.Extensions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Specifications_as_.D.A.Gs_of_.Modular_.Extensions)"
+  },
+  {
+    "title": "7.3.3 Representing Specifications as DAG Nodes",
+    "anchor": "(part._.R.Sa.D.N)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.Sa.D.N)"
+  },
+  {
+    "title": "7.3.4 Difficulty of Method Resolution in Multiple Inheritance",
+    "anchor": "(part._.D.M.R.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.D.M.R.M.I)"
+  },
+  {
+    "title": "7.3.4.1 The Diamond Problem",
+    "anchor": "(part._.The_.Diamond_.Problem)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Diamond_.Problem)"
+  },
+  {
+    "title": "7.3.4.2 Cooperation not Conflict",
+    "anchor": "(part._.Cooperation_not_.Conflict)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Cooperation_not_.Conflict)"
+  },
+  {
+    "title": "7.3.5 Consistency in Method Resolution",
+    "anchor": "(part._.Ci.M.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ci.M.R)"
+  },
+  {
+    "title": "7.3.5.1 Inheritance Order: Consistency with Inheritance",
+    "anchor": "(part._.Inheritance_.Order__.Consistency_with_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inheritance_.Order__.Consistency_with_.Inheritance)"
+  },
+  {
+    "title": "7.3.5.2 Linearity: Conservation of Information",
+    "anchor": "(part._.Linearity__.Conservation_of_.Information)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Linearity__.Conservation_of_.Information)"
+  },
+  {
+    "title": "7.3.5.3 Linearization: Consistency across Methods",
+    "anchor": "(part._.Linearization__.Consistency_across_.Methods)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Linearization__.Consistency_across_.Methods)"
+  },
+  {
+    "title": "7.3.5.4 Local Order: Consistency with User-Provided Order",
+    "anchor": "(part._.Local_.Order__.Consistency_with_.User-.Provided_.Order)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Local_.Order__.Consistency_with_.User-.Provided_.Order)"
+  },
+  {
+    "title": "7.3.5.5 Extended Precedence: Consistency in Preferences",
+    "anchor": "(part._.Extended_.Precedence__.Consistency_in_.Preferences)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Extended_.Precedence__.Consistency_in_.Preferences)"
+  },
+  {
+    "title": "7.3.5.6 Monotonicity: Consistency across Ancestry",
+    "anchor": "(part._.Monotonicity__.Consistency_across_.Ancestry)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Monotonicity__.Consistency_across_.Ancestry)"
+  },
+  {
+    "title": "7.3.5.7 Shape Determinism: Consistency across Equivalent Ancestries",
+    "anchor": "(part._.Shape_.Determinism__.Consistency_across_.Equivalent_.Ancestries)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Shape_.Determinism__.Consistency_across_.Equivalent_.Ancestries)"
+  },
+  {
+    "title": "7.3.5.8 Global Precedence: Consistency across All Ancestries",
+    "anchor": "(part._.Global_.Precedence__.Consistency_across_.All_.Ancestries)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Global_.Precedence__.Consistency_across_.All_.Ancestries)"
+  },
+  {
+    "title": "7.3.6 Computing the Precedence List",
+    "anchor": "(part._.Computing_the_.Precedence_.List)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Computing_the_.Precedence_.List)"
+  },
+  {
+    "title": "7.3.7 Mixin Inheritance plus Precedence List",
+    "anchor": "(part._.Mixin_.Inheritance_plus_.Precedence_.List)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mixin_.Inheritance_plus_.Precedence_.List)"
+  },
+  {
+    "title": "7.3.8 Notes on Types for Multiple Inheritance",
+    "anchor": "(part._.No.Tf.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.No.Tf.M.I)"
+  },
+  {
+    "title": "7.3.9 Comparing Multiple and Mixin Inheritance",
+    "anchor": "(part._.Comparing_.Multiple_and_.Mixin_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Comparing_.Multiple_and_.Mixin_.Inheritance)"
+  },
+  {
+    "title": "7.3.9.1 Multiple Inheritance is less Simple than Mixin Inheritance",
+    "anchor": "(part._.Multiple_.Inheritance_is_less_.Simple_than_.Mixin_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Inheritance_is_less_.Simple_than_.Mixin_.Inheritance)"
+  },
+  {
+    "title": "7.3.9.2 Multiple Inheritance is as Extensible as Mixin Inheritance",
+    "anchor": "(part._.Multiple_.Inheritance_is_as_.Extensible_as_.Mixin_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Inheritance_is_as_.Extensible_as_.Mixin_.Inheritance)"
+  },
+  {
+    "title": "7.3.9.3 Multiple Inheritance is more Modular than Mixin Inheritance",
+    "anchor": "(part._.Multiple_.Inheritance_is_more_.Modular_than_.Mixin_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Inheritance_is_more_.Modular_than_.Mixin_.Inheritance)"
+  },
+  {
+    "title": "7.3.9.4 Multiple Inheritance is slightly less Performant than Mixin Inheritance",
+    "anchor": "(part._.Multiple_.Inheritance_is_slightly_less_.Performant_than_.Mixin_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Inheritance_is_slightly_less_.Performant_than_.Mixin_.Inheritance)"
+  },
+  {
+    "title": "7.4 Optimal Inheritance: Single and Multiple Inheritance Together",
+    "anchor": "(part._.O.I.S.M.I.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.I.S.M.I.T)"
+  },
+  {
+    "title": "7.4.1 State of the Art in Mixing Single and Multiple Inheritance",
+    "anchor": "(part._.Sot.Ai.M.Sa.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Sot.Ai.M.Sa.M.I)"
+  },
+  {
+    "title": "7.4.2 The Key to Single Inheritance Performance",
+    "anchor": "(part._.The_.Key_to_.Single_.Inheritance_.Performance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Key_to_.Single_.Inheritance_.Performance)"
+  },
+  {
+    "title": "7.4.3 Best of Both Worlds",
+    "anchor": "(part._.Best_of_.Both_.Worlds)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Best_of_.Both_.Worlds)"
+  },
+  {
+    "title": "7.4.4 C4, or C3 Extended",
+    "anchor": "(part._.C4)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C4)"
+  },
+  {
+    "title": "7.4.5 C3 Tie-Breaking Heuristic: Extended Precedence",
+    "anchor": "(part._.C.T.B.H)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.C.T.B.H)"
+  },
+  {
+    "title": "7.4.6 Prototypes with Optimal Inheritance",
+    "anchor": "(part._.P.O.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.P.O.I)"
+  },
+  {
+    "title": "8 Types for OO",
+    "anchor": "(part._.Tf.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Tf.O.O)"
+  },
+  {
+    "title": "8.1 Thinking about Types for OO",
+    "anchor": "(part._.Thinking_about_.Types_for_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Thinking_about_.Types_for_.O.O)"
+  },
+  {
+    "title": "8.1.1 Dynamic Typing",
+    "anchor": "(part._.Dynamic_.Typing)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Dynamic_.Typing)"
+  },
+  {
+    "title": "8.1.2 Static Typing",
+    "anchor": "(part._.Static_.Typing)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Static_.Typing)"
+  },
+  {
+    "title": "8.1.3 Partial Record Knowledge as Subtyping",
+    "anchor": "(part._.Partial_.Record_.Knowledge_as_.Subtyping)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Partial_.Record_.Knowledge_as_.Subtyping)"
+  },
+  {
+    "title": "8.2 Simple Types for OO",
+    "anchor": "(part._.S.Tf.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.Tf.O.O)"
+  },
+  {
+    "title": "8.2.1 Trivial Non-Modular Types for Modular Extensions",
+    "anchor": "(part._.T.N.M.Tf.M.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.T.N.M.Tf.M.E)"
+  },
+  {
+    "title": "8.2.2 Strict Subtypes for Modular Single Inheritance",
+    "anchor": "(part._.S.Sf.M.S.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.Sf.M.S.I)"
+  },
+  {
+    "title": "8.2.3 Stricter Subtypes for Modular Mixin Inheritance",
+    "anchor": "(part._.Sr.Sf.M.M.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Sr.Sf.M.M.I)"
+  },
+  {
+    "title": "8.2.4 Strictest Subtypes for Multiple Inheritance",
+    "anchor": "(part._.St.Sf.Mu.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.St.Sf.Mu.I)"
+  },
+  {
+    "title": "8.3 The NNOOTT: Naïve Non-recursive OO Type Theory",
+    "anchor": "(part._.N.N.O.O.T.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.N.N.O.O.T.T)"
+  },
+  {
+    "title": "8.3.1 Obvious Simple Theory",
+    "anchor": "(part._.O.S.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.S.T)"
+  },
+  {
+    "title": "8.3.2 Limits of the NNOOTT",
+    "anchor": "(part._.Lot.N)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Lot.N)"
+  },
+  {
+    "title": "8.3.3 Why NNOOTT?",
+    "anchor": "(part._.Why_.N.N.O.O.T.T_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_.N.N.O.O.T.T_)"
+  },
+  {
+    "title": "8.4 Beyond the NNOOTT",
+    "anchor": "(part._.Bt.N)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Bt.N)"
+  },
+  {
+    "title": "8.4.1 Self Types",
+    "anchor": "(part._.S.T)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.T)"
+  },
+  {
+    "title": "8.4.1.1 Deconfusing Types for Specification and Target",
+    "anchor": "(part._.Deconfusing_.Types_for_.Specification_and_.Target)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Deconfusing_.Types_for_.Specification_and_.Target)"
+  },
+  {
+    "title": "8.4.1.2 Reconstructing Visibility Rules",
+    "anchor": "(part._.Reconstructing_.Visibility_.Rules)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Reconstructing_.Visibility_.Rules)"
+  },
+  {
+    "title": "8.4.1.3 Recursively Constrained Types",
+    "anchor": "(part._.Recursively_.Constrained_.Types)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Recursively_.Constrained_.Types)"
+  },
+  {
+    "title": "8.4.2 Advantages of Typing OO as Modular Extensions",
+    "anchor": "(part._.Advantages_of_.Typing_.O.O_as_.Modular_.Extensions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Advantages_of_.Typing_.O.O_as_.Modular_.Extensions)"
+  },
+  {
+    "title": "8.4.3 Typing First-Class OO",
+    "anchor": "(part._.Typing_.First-.Class_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Typing_.First-.Class_.O.O)"
+  },
+  {
+    "title": "8.4.3.1 Note on Types for Second-Class Class OO",
+    "anchor": "(part._.Note_on_.Types_for_.Second-.Class_.Class_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Note_on_.Types_for_.Second-.Class_.Class_.O.O)"
+  },
+  {
+    "title": "8.4.4 First-Class OO Beyond Classes",
+    "anchor": "(part._.First-.Class_.O.O_.Beyond_.Classes)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.First-.Class_.O.O_.Beyond_.Classes)"
+  },
+  {
+    "title": "8.5 OO Type Theory and Practice",
+    "anchor": "(part._.O.O_.Type_.Theory_and_.Practice)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_.Type_.Theory_and_.Practice)"
+  },
+  {
+    "title": "8.5.1 Expressiveness vs Decidability",
+    "anchor": "(part._.Expressiveness_vs_.Decidability)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Expressiveness_vs_.Decidability)"
+  },
+  {
+    "title": "8.5.1.1 F≤: System F with subtyping",
+    "anchor": "(part.___struct_traverse-element___procedure____lib_render-cond_rkt_39_12____struct_traverse-element___procedure____lib_render-cond_rkt_39_12____.System_.F_with_subtyping)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part.___struct_traverse-element___procedure____lib_render-cond_rkt_39_12____struct_traverse-element___procedure____lib_render-cond_rkt_39_12____.System_.F_with_subtyping)"
+  },
+  {
+    "title": "8.5.1.2 F-bounded Polymorphism",
+    "anchor": "(part._.F-bounded_.Polymorphism)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.F-bounded_.Polymorphism)"
+  },
+  {
+    "title": "8.5.1.3 Recursively Constrained Types: Putting Constraints Apart",
+    "anchor": "(part._.Recursively_.Constrained_.Types__.Putting_.Constraints_.Apart)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Recursively_.Constrained_.Types__.Putting_.Constraints_.Apart)"
+  },
+  {
+    "title": "8.5.2 OO Type Theory",
+    "anchor": "(part._.O.O_.Type_.Theory)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_.Type_.Theory)"
+  },
+  {
+    "title": "8.5.3 OO Type Practice",
+    "anchor": "(part._.O.O.T.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O.T.P)"
+  },
+  {
+    "title": "9 Extending the Scope of OO",
+    "anchor": "(part._.Et.So.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Et.So.O)"
+  },
+  {
+    "title": "9.1 Optics for OO",
+    "anchor": "(part._.Of.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Of.O.O)"
+  },
+  {
+    "title": "9.1.1 Optics: A Pure Functional Approach to Pointers (and more)",
+    "anchor": "(part._.Optics__.A_.Pure_.Functional_.Approach_to_.Pointers__and_more_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Optics__.A_.Pure_.Functional_.Approach_to_.Pointers__and_more_)"
+  },
+  {
+    "title": "9.1.2 Focused Specifications",
+    "anchor": "(part._.Focused_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Focused_.Specifications)"
+  },
+  {
+    "title": "9.1.3 Short Recap on Lenses",
+    "anchor": "(part._.S.Ro.L)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.Ro.L)"
+  },
+  {
+    "title": "9.1.3.1 Monomorphic Lens",
+    "anchor": "(part._.Monomorphic_.Lens)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Monomorphic_.Lens)"
+  },
+  {
+    "title": "9.1.3.2 Polymorphic Lens",
+    "anchor": "(part._.Polymorphic_.Lens)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Polymorphic_.Lens)"
+  },
+  {
+    "title": "9.1.3.3 Skew Lens",
+    "anchor": "(part._.Skew_.Lens)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Skew_.Lens)"
+  },
+  {
+    "title": "9.1.3.4 View and Update",
+    "anchor": "(part._.View_and_.Update)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.View_and_.Update)"
+  },
+  {
+    "title": "9.1.3.5 Getter and Setter",
+    "anchor": "(part._.Getter_and_.Setter)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Getter_and_.Setter)"
+  },
+  {
+    "title": "9.1.3.6 Composing Lenses",
+    "anchor": "(part._.Composing_.Lenses)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Composing_.Lenses)"
+  },
+  {
+    "title": "9.1.3.7 Field Lens",
+    "anchor": "(part._.F.L)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.F.L)"
+  },
+  {
+    "title": "9.1.4 Focusing a Modular Extension",
+    "anchor": "(part._.F.M.E)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.F.M.E)"
+  },
+  {
+    "title": "9.1.4.1 Skewing a Modular Extension",
+    "anchor": "(part._.Skewing_a_.Modular_.Extension)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Skewing_a_.Modular_.Extension)"
+  },
+  {
+    "title": "9.1.4.2 Metaphors for Modular Extensions and Skew Lenses",
+    "anchor": "(part._.Metaphors_for_.Modular_.Extensions_and_.Skew_.Lenses)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Metaphors_for_.Modular_.Extensions_and_.Skew_.Lenses)"
+  },
+  {
+    "title": "9.1.4.3 Focused Specification",
+    "anchor": "(part._.Focused_.Specification)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Focused_.Specification)"
+  },
+  {
+    "title": "9.1.5 Adjusting Context and Focus",
+    "anchor": "(part._.Adjusting_.Context_and_.Focus)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Adjusting_.Context_and_.Focus)"
+  },
+  {
+    "title": "9.1.5.1 Adjusting both together",
+    "anchor": "(part._.Adjusting_both_together)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Adjusting_both_together)"
+  },
+  {
+    "title": "9.1.5.2 Adjusting the Extension Focus",
+    "anchor": "(part._.Adjusting_the_.Extension_.Focus)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Adjusting_the_.Extension_.Focus)"
+  },
+  {
+    "title": "9.1.5.3 Broadening the Focus",
+    "anchor": "(part._.Broadening_the_.Focus)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Broadening_the_.Focus)"
+  },
+  {
+    "title": "9.1.5.4 Adjusting the Context",
+    "anchor": "(part._.Adjusting_the_.Context)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Adjusting_the_.Context)"
+  },
+  {
+    "title": "9.1.6 Optics for Specifications and Prototypes",
+    "anchor": "(part._.Of.Sa.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Of.Sa.P)"
+  },
+  {
+    "title": "9.1.6.1 Specification Methods",
+    "anchor": "(part._.Specification_.Methods)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Specification_.Methods)"
+  },
+  {
+    "title": "9.1.6.2 Prototype Specification",
+    "anchor": "(part._.P.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.P.S)"
+  },
+  {
+    "title": "9.1.6.3 Nested Specifications",
+    "anchor": "(part._.N.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.N.S)"
+  },
+  {
+    "title": "9.1.6.4 Interaction of Nesting and Inheritance",
+    "anchor": "(part._.Io.Na.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Io.Na.I)"
+  },
+  {
+    "title": "9.1.6.5 Nested Prototypes",
+    "anchor": "(part._.N.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.N.P)"
+  },
+  {
+    "title": "9.1.7 Optics for Classes",
+    "anchor": "(part._.Of.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Of.C)"
+  },
+  {
+    "title": "9.1.7.1 Optics for Class Instance Methods",
+    "anchor": "(part._.Optics_for_.Class_.Instance_.Methods)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Optics_for_.Class_.Instance_.Methods)"
+  },
+  {
+    "title": "9.1.7.2 Simple Class Initialization",
+    "anchor": "(part._.Simple_.Class_.Initialization)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Simple_.Class_.Initialization)"
+  },
+  {
+    "title": "9.2 Method Combinations",
+    "anchor": "(part._.M.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.C)"
+  },
+  {
+    "title": "9.2.1 Win-Win",
+    "anchor": "(part._.Win-.Win)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Win-.Win)"
+  },
+  {
+    "title": "9.2.2 Uses of Method Combinations",
+    "anchor": "(part._.Uses_of_.Method_.Combinations)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Uses_of_.Method_.Combinations)"
+  },
+  {
+    "title": "9.2.3 Effective Methods and Method Qualifiers",
+    "anchor": "(part._.Effective_.Methods_and_.Method_.Qualifiers)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Effective_.Methods_and_.Method_.Qualifiers)"
+  },
+  {
+    "title": "9.2.4 Representing Sub-Methods",
+    "anchor": "(part._.Representing_.Sub-.Methods)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Representing_.Sub-.Methods)"
+  },
+  {
+    "title": "9.2.5 Standard Method Combination",
+    "anchor": "(part._.Standard_.Method_.Combination)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Standard_.Method_.Combination)"
+  },
+  {
+    "title": "9.2.6 Simple Method Combination",
+    "anchor": "(part._.Simple_.Method_.Combination)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Simple_.Method_.Combination)"
+  },
+  {
+    "title": "9.2.7 User-defined Method Combinations",
+    "anchor": "(part._.User-defined_.Method_.Combinations)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.User-defined_.Method_.Combinations)"
+  },
+  {
+    "title": "9.2.8 Simula’s inner: Superclass-Controlled Extension",
+    "anchor": "(part._.Inner)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inner)"
+  },
+  {
+    "title": "9.2.8.1 Concatenation Semantics",
+    "anchor": "(part._.Concatenation_.Semantics)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Concatenation_.Semantics)"
+  },
+  {
+    "title": "9.2.8.2 Inheritance from Before Structured Programming",
+    "anchor": "(part._.Inheritance_from_.Before_.Structured_.Programming)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inheritance_from_.Before_.Structured_.Programming)"
+  },
+  {
+    "title": "9.2.8.3 Inner as Method Combination",
+    "anchor": "(part._.Inner_as_.Method_.Combination)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inner_as_.Method_.Combination)"
+  },
+  {
+    "title": "9.2.8.4 Usability Matters",
+    "anchor": "(part._.Usability_.Matters)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Usability_.Matters)"
+  },
+  {
+    "title": "9.2.9 Inherited Interfaces vs Orthogonal Protocols",
+    "anchor": "(part._.Inherited_.Interfaces_vs_.Orthogonal_.Protocols)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Inherited_.Interfaces_vs_.Orthogonal_.Protocols)"
+  },
+  {
+    "title": "9.2.10 Generic Functions",
+    "anchor": "(part._.G.F)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.G.F)"
+  },
+  {
+    "title": "9.3 Multiple Dispatch",
+    "anchor": "(part._.M.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.D)"
+  },
+  {
+    "title": "9.3.1 Multimethods",
+    "anchor": "(part._.Multimethods)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multimethods)"
+  },
+  {
+    "title": "9.3.2 Binary Methods Done Right",
+    "anchor": "(part._.Binary_.Methods_.Done_.Right)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Binary_.Methods_.Done_.Right)"
+  },
+  {
+    "title": "9.3.3 Multiple Multiple Inheritance",
+    "anchor": "(part._.Multiple_.Multiple_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Multiple_.Multiple_.Inheritance)"
+  },
+  {
+    "title": "9.3.4 Base Classes and Specializers",
+    "anchor": "(part._.Base_.Classes_and_.Specializers)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Base_.Classes_and_.Specializers)"
+  },
+  {
+    "title": "9.3.5 Implementing Multiple Dispatch",
+    "anchor": "(part._.Implementing_.Multiple_.Dispatch)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_.Multiple_.Dispatch)"
+  },
+  {
+    "title": "9.3.5.1 Who Owns the Methods?",
+    "anchor": "(part._.Who_.Owns_the_.Methods_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Who_.Owns_the_.Methods_)"
+  },
+  {
+    "title": "9.3.5.2 Calling Conventions",
+    "anchor": "(part._.Calling_.Conventions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Calling_.Conventions)"
+  },
+  {
+    "title": "9.3.6 Subjective Dispatch",
+    "anchor": "(part._.Subjective_.Dispatch)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Subjective_.Dispatch)"
+  },
+  {
+    "title": "9.3.7 Global Dispatch Tables",
+    "anchor": "(part._.Global_.Dispatch_.Tables)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Global_.Dispatch_.Tables)"
+  },
+  {
+    "title": "9.4 Dynamic vs Static Dispatch",
+    "anchor": "(part._.Dv.S.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Dv.S.D)"
+  },
+  {
+    "title": "9.4.1 Two Different Semantics for Class Method Call",
+    "anchor": "(part._.Two_.Different_.Semantics_for_.Class_.Method_.Call)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Two_.Different_.Semantics_for_.Class_.Method_.Call)"
+  },
+  {
+    "title": "9.4.2 Method Dictionaries",
+    "anchor": "(part._.Method_.Dictionaries)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Method_.Dictionaries)"
+  },
+  {
+    "title": "9.4.3 First-class vs second-class modularity",
+    "anchor": "(part._.First-class_vs_second-class_modularity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.First-class_vs_second-class_modularity)"
+  },
+  {
+    "title": "9.4.4 Choosing between Static and Dynamic Dispatch",
+    "anchor": "(part._.Choosing_between_.Static_and_.Dynamic_.Dispatch)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Choosing_between_.Static_and_.Dynamic_.Dispatch)"
+  },
+  {
+    "title": "9.4.4.1 Dynamic Dispatch",
+    "anchor": "(part._.D.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.D.D)"
+  },
+  {
+    "title": "9.4.4.2 Static Dispatch",
+    "anchor": "(part._.S.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.D)"
+  },
+  {
+    "title": "9.4.4.3 Some Historical Perspective",
+    "anchor": "(part._.Some_.Historical_.Perspective)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Some_.Historical_.Perspective)"
+  },
+  {
+    "title": "9.5 Maximal OO",
+    "anchor": "(part._.Maximal_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Maximal_.O.O)"
+  },
+  {
+    "title": "10 Efficient Object Implementation",
+    "anchor": "(part._.E.O.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.E.O.I)"
+  },
+  {
+    "title": "10.1 The Meaning of Implementation",
+    "anchor": "(part._.T.Mo.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.T.Mo.I)"
+  },
+  {
+    "title": "10.1.1 Implementing the Right Thing",
+    "anchor": "(part._.Implementing_the_.Right_.Thing)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_the_.Right_.Thing)"
+  },
+  {
+    "title": "10.1.2 Implementing It Right",
+    "anchor": "(part._.Implementing_.It_.Right)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Implementing_.It_.Right)"
+  },
+  {
+    "title": "10.1.3 Layers of Implementation",
+    "anchor": "(part._.Layers_of_.Implementation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Layers_of_.Implementation)"
+  },
+  {
+    "title": "10.2 Representing Records",
+    "anchor": "(part._.R.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.R)"
+  },
+  {
+    "title": "10.2.1 Records Matter",
+    "anchor": "(part._.Records_.Matter)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Records_.Matter)"
+  },
+  {
+    "title": "10.2.1.1 As Fundamental as Inheritance",
+    "anchor": "(part._.As_.Fundamental_as_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.As_.Fundamental_as_.Inheritance)"
+  },
+  {
+    "title": "10.2.1.2 Semantics First",
+    "anchor": "(part._.Semantics_.First)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Semantics_.First)"
+  },
+  {
+    "title": "10.2.2 Records as Functions",
+    "anchor": "(part._.Ra.F)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ra.F)"
+  },
+  {
+    "title": "10.2.2.1 A Universal Strategy",
+    "anchor": "(part._.A_.Universal_.Strategy)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Universal_.Strategy)"
+  },
+  {
+    "title": "10.2.2.2 Issues with Records as Arbitrary Functions",
+    "anchor": "(part._.Issues_with_.Records_as_.Arbitrary_.Functions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Issues_with_.Records_as_.Arbitrary_.Functions)"
+  },
+  {
+    "title": "10.2.2.3 Not-so-Arbitrary Functions",
+    "anchor": "(part._.Not-so-.Arbitrary_.Functions)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Not-so-.Arbitrary_.Functions)"
+  },
+  {
+    "title": "10.2.3 Records as Finite Maps",
+    "anchor": "(part._.Ra.F.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ra.F.M)"
+  },
+  {
+    "title": "10.2.3.1 From Implicit to Explicit Alists",
+    "anchor": "(part._.From_.Implicit_to_.Explicit_.Alists)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.From_.Implicit_to_.Explicit_.Alists)"
+  },
+  {
+    "title": "10.2.3.2 Finite Maps Beyond Alists",
+    "anchor": "(part._.Finite_.Maps_.Beyond_.Alists)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Finite_.Maps_.Beyond_.Alists)"
+  },
+  {
+    "title": "10.2.3.3 Mutable Records",
+    "anchor": "(part._.Mutable_.Records)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mutable_.Records)"
+  },
+  {
+    "title": "10.2.4 What One Knows When",
+    "anchor": "(part._.What_.One_.Knows_.When)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.What_.One_.Knows_.When)"
+  },
+  {
+    "title": "10.2.4.1 A Note on Power",
+    "anchor": "(part._.A_.Note_on_.Power)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Note_on_.Power)"
+  },
+  {
+    "title": "10.2.4.2 Staging the Computation",
+    "anchor": "(part._.Staging_the_.Computation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Staging_the_.Computation)"
+  },
+  {
+    "title": "10.2.5 Records as Records",
+    "anchor": "(part._.Ra.R)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Ra.R)"
+  },
+  {
+    "title": "10.2.5.1 Class Disparities",
+    "anchor": "(part._.Class_.Disparities)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Class_.Disparities)"
+  },
+  {
+    "title": "10.2.5.2 From Each According to Its Shape",
+    "anchor": "(part._.From_.Each_.According_to_.Its_.Shape)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.From_.Each_.According_to_.Its_.Shape)"
+  },
+  {
+    "title": "10.2.5.3 The General vs The Common",
+    "anchor": "(part._.The_.General_vs_.The_.Common)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.General_vs_.The_.Common)"
+  },
+  {
+    "title": "10.2.5.4 The Means of Record Production",
+    "anchor": "(part._.The_.Means_of_.Record_.Production)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Means_of_.Record_.Production)"
+  },
+  {
+    "title": "10.3 Representing Recursion",
+    "anchor": "(part._.Representing_.Recursion)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Representing_.Recursion)"
+  },
+  {
+    "title": "10.3.1 Where did the Fixpoint Go?",
+    "anchor": "(part._.Where_did_the_.Fixpoint_.Go_)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Where_did_the_.Fixpoint_.Go_)"
+  },
+  {
+    "title": "10.3.1.1 No Place for Fixpoints",
+    "anchor": "(part._.No_.Place_for_.Fixpoints)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.No_.Place_for_.Fixpoints)"
+  },
+  {
+    "title": "10.3.1.2 Fixpoints are for Computations, not Values",
+    "anchor": "(part._.Fixpoints_are_for_.Computations__not_.Values)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Fixpoints_are_for_.Computations__not_.Values)"
+  },
+  {
+    "title": "10.3.2 Suspended Records or Records of Suspensions",
+    "anchor": "(part._.S.Ro.Ro.S)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.Ro.Ro.S)"
+  },
+  {
+    "title": "10.3.3 Recursion through Mutation",
+    "anchor": "(part._.Rt.M)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Rt.M)"
+  },
+  {
+    "title": "10.3.3.1 A Popular Strategy to Implement Recursion",
+    "anchor": "(part._.A_.Popular_.Strategy_to_.Implement_.Recursion)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.Popular_.Strategy_to_.Implement_.Recursion)"
+  },
+  {
+    "title": "10.3.3.2 Initialization Order",
+    "anchor": "(part._.I.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.I.O)"
+  },
+  {
+    "title": "10.3.3.3 Initialization through Mutation is Too Low-level",
+    "anchor": "(part._.Initialization_through_.Mutation_is_.Too_.Low-level)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Initialization_through_.Mutation_is_.Too_.Low-level)"
+  },
+  {
+    "title": "10.3.3.4 Mutation-over-Purity",
+    "anchor": "(part._.Mutation-over-.Purity)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Mutation-over-.Purity)"
+  },
+  {
+    "title": "10.3.4 From Computation to Structure",
+    "anchor": "(part._.From_.Computation_to_.Structure)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.From_.Computation_to_.Structure)"
+  },
+  {
+    "title": "10.4 Object Layout",
+    "anchor": "(part._.O.L)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.L)"
+  },
+  {
+    "title": "10.4.1 Objects From Computation to Structure",
+    "anchor": "(part._.Objects_.From_.Computation_to_.Structure)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Objects_.From_.Computation_to_.Structure)"
+  },
+  {
+    "title": "10.4.1.1 Modular and Unmodular Object Initialization",
+    "anchor": "(part._.Modular_and_.Unmodular_.Object_.Initialization)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Modular_and_.Unmodular_.Object_.Initialization)"
+  },
+  {
+    "title": "XXX EDIT HERE XXX",
+    "anchor": "(part._.X.X.X.X._1)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.X.X.X.X._1)"
+  },
+  {
+    "title": "10.4.2 Suffix Specifications",
+    "anchor": "(part._.Suffix_.Specifications)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Suffix_.Specifications)"
+  },
+  {
+    "title": "10.4.3 Repeated Inheritance",
+    "anchor": "(part._.R.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.R.I)"
+  },
+  {
+    "title": "10.5 Efficient Dispatch",
+    "anchor": "(part._.E.D)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.E.D)"
+  },
+  {
+    "title": "10.6 BOP: Meta-Object Protocol, Unconflated",
+    "anchor": "(part._.M.O.P)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.M.O.P)"
+  },
+  {
+    "title": "10.6.1 Reflection: Introspection and Intercession",
+    "anchor": "(part._.Reflection__.Introspection_and_.Intercession)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Reflection__.Introspection_and_.Intercession)"
+  },
+  {
+    "title": "10.7 Tower of Implementation",
+    "anchor": "(part._.Tower_of_.Implementation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Tower_of_.Implementation)"
+  },
+  {
+    "title": "10.7.1 Side Effects",
+    "anchor": "(part._.Side_.Effects)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Side_.Effects)"
+  },
+  {
+    "title": "10.8 Bootstrapping an Implementation",
+    "anchor": "(part._.Bootstrapping_an_.Implementation)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Bootstrapping_an_.Implementation)"
+  },
+  {
+    "title": "10.9 Interactions with lower-level subsystems",
+    "anchor": "(part._.Interactions_with_lower-level_subsystems)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Interactions_with_lower-level_subsystems)"
+  },
+  {
+    "title": "10.10 Finale: Putting It All Together",
+    "anchor": "(part._.Finale__.Putting_.It_.All_.Together)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Finale__.Putting_.It_.All_.Together)"
+  },
+  {
+    "title": "11 Conclusion",
+    "anchor": "(part._.Conclusion)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Conclusion)"
+  },
+  {
+    "title": "11.1 Scientific Contributions",
+    "anchor": "(part._.S.C)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.S.C)"
+  },
+  {
+    "title": "11.1.1 OO is Internal Modular Extensibility",
+    "anchor": "(part._.O.O_is_.Internal_.Modular_.Extensibility)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_is_.Internal_.Modular_.Extensibility)"
+  },
+  {
+    "title": "11.1.2 My Theory of OO is Constructive",
+    "anchor": "(part._.My_.Theory_of_.O.O_is_.Constructive)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.My_.Theory_of_.O.O_is_.Constructive)"
+  },
+  {
+    "title": "11.1.3 Precise Characterization of those Principles",
+    "anchor": "(part._.Precise_.Characterization_of_those_.Principles)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Precise_.Characterization_of_those_.Principles)"
+  },
+  {
+    "title": "11.1.4 Demarcation of OO and non-OO",
+    "anchor": "(part._.Demarcation_of_.O.O_and_non-.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Demarcation_of_.O.O_and_non-.O.O)"
+  },
+  {
+    "title": "11.1.5 OO is naturally Pure Lazy FP with first-class Prototypes",
+    "anchor": "(part._.O.O_is_naturally_.Pure_.Lazy_.F.P_with_first-class_.Prototypes)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_is_naturally_.Pure_.Lazy_.F.P_with_first-class_.Prototypes)"
+  },
+  {
+    "title": "11.1.6 Conflation of Specification and Target as All-Important",
+    "anchor": "(part._.Conflation_of_.Specification_and_.Target_as_.All-.Important)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Conflation_of_.Specification_and_.Target_as_.All-.Important)"
+  },
+  {
+    "title": "11.1.7 Open Modular Extensions as Fundamental",
+    "anchor": "(part._.Open_.Modular_.Extensions_as_.Fundamental)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Open_.Modular_.Extensions_as_.Fundamental)"
+  },
+  {
+    "title": "11.1.8 Flavorful Multiple Inheritance is Most Modularly Extensible",
+    "anchor": "(part._.Flavorful_.Multiple_.Inheritance_is_.Most_.Modularly_.Extensible)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Flavorful_.Multiple_.Inheritance_is_.Most_.Modularly_.Extensible)"
+  },
+  {
+    "title": "11.1.9 The Suffix Property, not Single Inheritance, matters",
+    "anchor": "(part._.The_.Suffix_.Property__not_.Single_.Inheritance__matters)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Suffix_.Property__not_.Single_.Inheritance__matters)"
+  },
+  {
+    "title": "11.1.10 There is an Optimal Inheritance",
+    "anchor": "(part._.There_is_an_.Optimal_.Inheritance)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.There_is_an_.Optimal_.Inheritance)"
+  },
+  {
+    "title": "11.1.11 The Most Comprehensive Account of OO in Pure FP to date",
+    "anchor": "(part._.The_.Most_.Comprehensive_.Account_of_.O.O_in_.Pure_.F.P_to_date)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.Most_.Comprehensive_.Account_of_.O.O_in_.Pure_.F.P_to_date)"
+  },
+  {
+    "title": "11.1.12 A More Truthful History of OO",
+    "anchor": "(part._.A_.More_.Truthful_.History_of_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A_.More_.Truthful_.History_of_.O.O)"
+  },
+  {
+    "title": "11.2 Why Bragging Matters",
+    "anchor": "(part._.Why_.Bragging_.Matters)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Why_.Bragging_.Matters)"
+  },
+  {
+    "title": "11.2.1 Spreading New Ideas",
+    "anchor": "(part._.Spreading_.New_.Ideas)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Spreading_.New_.Ideas)"
+  },
+  {
+    "title": "11.2.2 Spreading Coherent Theories",
+    "anchor": "(part._.Spreading_.Coherent_.Theories)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Spreading_.Coherent_.Theories)"
+  },
+  {
+    "title": "11.3 Epilogue: OO in the age of AI",
+    "anchor": "(part._.Epilogue__.O.O_in_the_age_of_.A.I)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Epilogue__.O.O_in_the_age_of_.A.I)"
+  },
+  {
+    "title": "11.3.1 Farewell to the OO you know",
+    "anchor": "(part._.Farewell_to_the_.O.O_you_know)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Farewell_to_the_.O.O_you_know)"
+  },
+  {
+    "title": "11.3.2 OO will still matter in the end",
+    "anchor": "(part._.O.O_will_still_matter_in_the_end)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.O.O_will_still_matter_in_the_end)"
+  },
+  {
+    "title": "11.3.3 The OO OODA loop",
+    "anchor": "(part._.The_.O.O_.O.O.D.A_loop)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.The_.O.O_.O.O.D.A_loop)"
+  },
+  {
+    "title": "11.3.4 Not your grandfather’s OO",
+    "anchor": "(part._.Not_your_grandfather~e2~80~99s_.O.O)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.Not_your_grandfather~e2~80~99s_.O.O)"
+  },
+  {
+    "title": "Annotated Bibliography",
+    "anchor": "(part._.A.B)",
+    "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html#(part._.A.B)"
+  }
+]

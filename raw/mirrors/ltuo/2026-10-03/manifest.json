@@ -1,0 +1,118 @@
+{
+  "canonical_url": "https://fare.tunes.org/files/cs/poof/ltuo.html",
+  "fetched_utc": "2026-10-03T12:51:09.850292+00:00",
+  "http_headers": "ltuo.http-headers.txt",
+  "canonical_html_bytes": 4266596,
+  "canonical_html_sha256": "0644ab39f5a08fef711abc5da19f3c703c2db260b10fda851ea512857377966c",
+  "old_snapshot": {
+    "path": "raw/html/poof-ltuo.html",
+    "sha256": "0644ab39f5a08fef711abc5da19f3c703c2db260b10fda851ea512857377966c",
+    "identical": true
+  },
+  "assets": [
+    {
+      "local_path": "scribble.css",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/scribble.css",
+      "fetched_utc": "2026-10-03T12:55:52.428525+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/scribble.css",
+      "bytes": 9828,
+      "sha256": "7b38c8e16bd4ed9d13fed152f14e82ab794e271eeb961bb691790ab641e34a52"
+    },
+    {
+      "local_path": "footnote.css",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/footnote.css",
+      "fetched_utc": "2026-10-03T12:55:52.852442+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/footnote.css",
+      "bytes": 473,
+      "sha256": "35a8cfc9f2ed1b7494b5bf4aa71ba1a04b048de8f1350e412a6d2046b51d73dc"
+    },
+    {
+      "local_path": "autobib.css",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/autobib.css",
+      "fetched_utc": "2026-10-03T12:55:53.243873+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/autobib.css",
+      "bytes": 121,
+      "sha256": "f9807ae2df748cb845e70cdfc2b275142194a435bee2eef389e7e43883d0cf51"
+    },
+    {
+      "local_path": "scribble-style.css",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/scribble-style.css",
+      "fetched_utc": "2026-10-03T12:55:53.653434+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/scribble-style.css",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "scribble-common.js",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/scribble-common.js",
+      "fetched_utc": "2026-10-03T12:55:54.147813+00:00",
+      "canonical_error": "HTTP Error 404: Not Found",
+      "status": 200,
+      "source_url": "https://raw.githubusercontent.com/racket/scribble/master/scribble-lib/scribble/scribble-common.js",
+      "note": "Offline supplemental upstream Scribble support script; canonical same-directory script returned HTTP 404. Not claimed to be Faré's historical script.",
+      "bytes": 8018,
+      "sha256": "b303e876b5eee1b70cc79cd0c429a63328be81f30af8a6ba9db9b57ba2f7dc12"
+    },
+    {
+      "local_path": "resources/pic/cube.svg",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/resources/pic/cube.svg",
+      "fetched_utc": "2026-10-03T12:55:54.659227+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/resources/pic/cube.svg",
+      "bytes": 4476,
+      "sha256": "82754a3884149a801d63719580ad6c823c2cdbc7ff1a54d391a888c725cb58af"
+    },
+    {
+      "local_path": "cube.svg",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/cube.svg",
+      "fetched_utc": "2026-10-03T12:55:55.099750+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/cube.svg",
+      "bytes": 4476,
+      "sha256": "82754a3884149a801d63719580ad6c823c2cdbc7ff1a54d391a888c725cb58af"
+    },
+    {
+      "local_path": "C3_linearization_example.png",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/C3_linearization_example.png",
+      "fetched_utc": "2026-10-03T12:55:55.549882+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/C3_linearization_example.png",
+      "bytes": 30293,
+      "sha256": "d8f2eea0789d780c7bc75d01f5e3d368aeb59550172bf2c9aaa5d9e4f61c6d77"
+    },
+    {
+      "local_path": "C3_linearization_example_2.png",
+      "requested_url": "https://fare.tunes.org/files/cs/poof/C3_linearization_example_2.png",
+      "fetched_utc": "2026-10-03T12:55:56.202992+00:00",
+      "status": 200,
+      "source_url": "https://fare.tunes.org/files/cs/poof/C3_linearization_example_2.png",
+      "bytes": 303875,
+      "sha256": "83c3793741edbbb5e46c53e345aae1b7088533d9c355112608e7ed04663cac24"
+    }
+  ],
+  "scope": "Canonical single-file book and its directly referenced display assets only. No article/link crawl. Canonical HTML bytes unchanged.",
+  "verification": {
+    "book_local_anchor_references": 2838,
+    "unique_anchor_names": 1474,
+    "broken_book_local_anchors": [],
+    "direct_assets_present": 9,
+    "css_secondary_assets": 0,
+    "other_relative_navigation_links_not_crawled": [],
+    "browser_check": "Codex in-app browser loaded loopback-served mirror and navigated to §5.4.1 anchor; text, math, code and side footnote rendered; no console errors/warnings reported. Temporary server and tab closed after verification."
+  },
+  "readable_extraction": {
+    "path": "ltuo-readable.txt",
+    "tool": "pandoc 3.11",
+    "arguments": "-f html -t plain --wrap=none",
+    "bytes": 2706646,
+    "sha256": "99f6d39b504cea5dcf5c678e2b274a5c6b5b25aab60abb84d551a694886821a3",
+    "old_plain_identical": true,
+    "existing_catalog": "sources/ltuo-book.md",
+    "existing_catalog_preserved": true
+  },
+  "fetch_time_basis": "Local file completion timestamp from canonical curl download; HTTP Date also preserved."
+}
